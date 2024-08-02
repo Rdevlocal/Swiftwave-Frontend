@@ -97,15 +97,15 @@ const HeroSection: React.FC = () => {
             px="0"
             title={
               <FallInPlace>
-                Build beautiful
-                <Br /> software faster
+                Build your dreams
+                <Br /> faster
               </FallInPlace>
             }
             description={
               <FallInPlace delay={0.4} fontWeight="medium">
-                Saas UI is a <Em>React component library</Em>
-                <Br /> that doesn&apos;t get in your way and helps you <Br />{" "}
-                build intuitive SaaS products with speed.
+                Swiftwave is a <Em>AI automation tool</Em>
+                <Br /> that doesn't get in your way and helps you <Br />{" "}
+                build your business faster.
               </FallInPlace>
             }
           >
@@ -135,7 +135,7 @@ const HeroSection: React.FC = () => {
                     />
                   }
                 >
-                  View demo
+                  Login
                 </ButtonLink>
               </ButtonGroup>
             </FallInPlace>
@@ -219,10 +219,8 @@ const HighlightsSection = () => {
       <HighlightsItem colSpan={[1, null, 2]} title="Core components">
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
-            Get started for free with <Em>30+ open source components</Em>.
-            Including authentication screens with Clerk, Supabase and Magic.
-            Fully functional forms with React Hook Form. Data tables with React
-            Table.
+            Get started for free with <Em>30+ products ready to use</Em>.
+            Including automatic helpcentre, ai pricing and much more
           </Text>
 
           <Flex
@@ -278,8 +276,8 @@ const HighlightsSection = () => {
         title="Start your next idea two steps ahead"
       >
         <Text color="muted" fontSize="lg">
-          We took care of all your basic frontend needs, so you can start
-          building functionality that makes your product unique.
+          We took care of all your basic backend needs, so you can start
+          building a website that makes your product(s) unique.
         </Text>
         <Wrap mt="8">
           {[
@@ -329,7 +327,7 @@ const FeaturesSection = () => {
           as="p"
         >
           Not your standard
-          <Br /> dashboard template.
+          <Br /> Software.
         </Heading>
       }
       description={
