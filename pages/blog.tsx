@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { compareDesc, format, parseISO } from 'date-fns'
-import { allPosts } from 'contentlayer/generated'
+import { allPosts } from 'posts'
 import { useMDXComponent } from 'next-contentlayer/hooks'
 
 const Blog: NextPage = ({ posts }: any) => {
