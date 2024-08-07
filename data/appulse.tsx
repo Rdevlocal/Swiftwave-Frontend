@@ -19,12 +19,12 @@ export const Logo = () => {
         x2="292.203"
         y2="298.074"
       >
-        <stop offset="0" stopColor="#652ee3" />
+        <stop offset="0" stopColor="#4662e4" />
         <stop offset=".548" stopColor="#4662e4" />
-        <stop offset=".848" stopColor="#48a2e5" />
-        <stop offset=".874" stopColor="#46a9e3" />
-        <stop offset=".914" stopColor="#42bede" />
-        <stop offset=".962" stopColor="#3adfd5" />
+        <stop offset=".848" stopColor="#4662e4" />
+        <stop offset=".874" stopColor="#4662e4" />
+        <stop offset=".914" stopColor="#4662e4" />
+        <stop offset=".962" stopColor="#4662e4" />
         <stop offset="1" stopColor="#3fc" />
       </linearGradient>
       <circle cx="217.7" cy="223.6" r="105.4" fill="url(#SVGID_1_)" />
@@ -36,9 +36,9 @@ export const Logo = () => {
         x2="217.184"
         y2="165.376"
       >
-        <stop offset="0" stopColor="#652ee3" />
+        <stop offset="0" stopColor="#4662e4" />
         <stop offset=".548" stopColor="#4662e4" />
-        <stop offset="1" stopColor="#48a2e5" />
+        <stop offset="1" stopColor="#4662e4" />
       </linearGradient>
       <circle cx="140.4" cy="165.4" r="76.8" fill="url(#SVGID_2_)" />
       <path
