@@ -219,7 +219,7 @@ const HighlightsSection = () => {
       <HighlightsItem colSpan={[1, null, 2]} title="Core components">
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
-            Get started for free with <Em>30+ products ready to use</Em>.
+            Get started for free with <Em> products ready to use</Em>.
             Including automatic helpcentre, ai pricing and much more
           </Text>
 
