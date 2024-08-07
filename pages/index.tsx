@@ -65,8 +65,8 @@ const Home: NextPage = () => {
   return (
     <Box>
       <SEO
-        title="Saas UI Landingspage"
-        description="Free SaaS landingspage starter kit"
+        title="Swiftwave.io"
+        description="A Plug and Play Automation Center"
       />
       <Box>
         <HeroSection />
@@ -104,8 +104,8 @@ const HeroSection: React.FC = () => {
             description={
               <FallInPlace delay={0.4} fontWeight="medium">
                 Swiftwave is a <Em>AI automation tool</Em>
-                <Br /> that doesn't get in your way and helps you <Br />{" "}
-                build your business faster.
+                <Br /> that helps you focus on the <Br />{" "}
+                things that you do best.
               </FallInPlace>
             }
           >
@@ -176,7 +176,7 @@ const HeroSection: React.FC = () => {
           {
             title: "Accessible",
             icon: FiSmile,
-            description: "All components strictly follow WAI-ARIA standards.",
+            description: "Only pay for the things you use. We scale our pricing with your demands",
             iconPosition: "left",
             delay: 0.6,
           },
@@ -184,7 +184,7 @@ const HeroSection: React.FC = () => {
             title: "Themable",
             icon: FiSliders,
             description:
-              "Fully customize all components to your brand with theme support and style props.",
+              "Fully customize all components to your brand with theme support and style intergrations.",
             iconPosition: "left",
             delay: 0.8,
           },
@@ -200,7 +200,7 @@ const HeroSection: React.FC = () => {
             title: "Productive",
             icon: FiThumbsUp,
             description:
-              "Designed to reduce boilerplate and fully typed, build your product at speed.",
+              "Designed to reduce time spend on everyday tasks.",
             iconPosition: "left",
             delay: 1.1,
           },
