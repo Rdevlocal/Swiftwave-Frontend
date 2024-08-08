@@ -13,7 +13,7 @@ const providers = {
     icon: FaGoogle,
   },
   github: {
-    name: 'Github',
+    name: 'facebook',
     icon: FaGithub,
     variant: 'solid',
   },
