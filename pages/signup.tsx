@@ -70,7 +70,6 @@ const Login: NextPage = () => {
           </Box>
           <Center height="100%" flex="1">
             <Box width="container.sm" pt="8" px="8">
-
             </Box>
           </Center>
         </Stack>

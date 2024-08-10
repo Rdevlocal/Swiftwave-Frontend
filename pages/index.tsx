@@ -234,14 +234,7 @@ const HighlightsSection = () => {
             bg="primary.900"
             _dark={{ bg: "gray.900" }}
           >
-            <Box>
-              <Text color="yellow.400" display="inline">
-                yarn add
-              </Text>{" "}
-              <Text color="cyan.300" display="inline">
-                @saas-ui/react
-              </Text>
-            </Box>
+
             <IconButton
               icon={hasCopied ? <FiCheck /> : <FiCopy />}
               aria-label="Copy install command"
