@@ -174,33 +174,33 @@ const HeroSection: React.FC = () => {
         pt="20"
         features={[
           {
-            title: "Accessible",
+            title: "User-Friendly",
             icon: FiSmile,
-            description: "Only pay for the things you use. We scale our pricing with your demands",
+            description: "Designed with an intuitive interface, allowing users without technical expertise to easily navigate the tool and set up automations.",
             iconPosition: "left",
             delay: 0.6,
           },
           {
-            title: "Themable",
+            title: "Scalable",
             icon: FiSliders,
             description:
-              "Fully customize all components to your brand with theme support and style intergrations.",
+              "Suitable for both small and large organizations, with the flexibility to adapt to your growing business needs and processes.",
             iconPosition: "left",
             delay: 0.8,
           },
           {
-            title: "Composable",
+            title: "Efficiency Improvement",
             icon: FiGrid,
             description:
-              "Compose components to fit your needs and mix them together to create new ones.",
+              "Automates repetitive tasks, reducing manual input and increasing productivity, thereby saving valuable time and resources.",
             iconPosition: "left",
             delay: 1,
           },
           {
-            title: "Productive",
+            title: "Customizable",
             icon: FiThumbsUp,
             description:
-              "Designed to reduce time spend on everyday tasks.",
+              "Offers extensive customization options, allowing you to configure the tool to meet the specific workflows and requirements of your organization.",
             iconPosition: "left",
             delay: 1.1,
           },
@@ -216,7 +216,7 @@ const HighlightsSection = () => {
 
   return (
     <Highlights>
-      <HighlightsItem colSpan={[1, null, 2]} title="Core components">
+      <HighlightsItem colSpan={[1, null, 2]} title="About us">
         <VStack alignItems="flex-start" spacing="8">
           <Text color="muted" fontSize="xl">
             Get started for free with <Em> products ready to use</Em>.
