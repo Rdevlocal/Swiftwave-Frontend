@@ -36,7 +36,7 @@ export default function LargeTestimonial() {
               it's become my go-to tool for everything.”
             </p>
             <div className="text-sm font-medium text-gray-500">
-              <span className="text-gray-700">Frank Hendriks</span>{" "}
+              <span className="text-gray-700">Helene Michelles</span>{" "}
             </div>
           </div>
         </div>
