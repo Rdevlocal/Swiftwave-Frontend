@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Sign Up - Simple",
+  title: "Sign Up - Swiftwave",
   description: "Page description",
 };
 
@@ -24,7 +24,7 @@ export default function SignUp() {
               id="name"
               className="form-input w-full py-2"
               type="text"
-              placeholder="Corey Barker"
+              placeholder="Lionel messi"
               required
             />
           </div>
@@ -39,7 +39,7 @@ export default function SignUp() {
               id="email"
               className="form-input w-full py-2"
               type="email"
-              placeholder="corybarker@email.com"
+              placeholder="lionelmessi@email.com"
               required
             />
           </div>
@@ -81,7 +81,7 @@ export default function SignUp() {
           </button>
           <div className="text-center text-sm italic text-gray-400">Or</div>
           <button className="btn w-full bg-gradient-to-t from-gray-900 to-gray-700 bg-[length:100%_100%] bg-[bottom] text-white shadow hover:bg-[length:100%_150%]">
-            Continue with GitHub
+            Continue with Google
           </button>
         </div>
       </form>

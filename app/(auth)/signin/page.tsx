@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Sign In - Simple",
-  description: "Page description",
+  title: "Sign In - Swiftwave",
+  description: "Sign in to your Swiftwave account",
 };
 
 import Link from "next/link";

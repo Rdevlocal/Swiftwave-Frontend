@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Home - Simple",
-  description: "Page description",
+  title: "Home - Swiftwave.io",
+  description: "Home - Swiftwave.io",
 };
 
 import Hero from "@/components/hero-home";
