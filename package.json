@@ -1,0 +1,16 @@
+{
+  "name": "swiftwave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "next.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.3.1",
+    "tailwind": "^4.0.0"
+  }
+}
