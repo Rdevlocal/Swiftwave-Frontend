@@ -30,17 +30,13 @@ export default function LargeTestimonial() {
               />
             </div>
             <p className="text-2xl font-bold text-gray-900">
-              “Simple has simplified my life in more ways than one. From
+              Swiftwave has simplified my business in more ways than one. From
               managing my sites to{" "}
-              <em className="italic text-gray-500">keeping track of tasks</em>,
+              <em className="italic text-gray-500">automating a huge part of customer suport</em>,
               it's become my go-to tool for everything.”
             </p>
             <div className="text-sm font-medium text-gray-500">
-              <span className="text-gray-700">Mary Sullivan</span>{" "}
-              <span className="text-gray-400">/</span>{" "}
-              <a className="text-blue-500" href="#0">
-                CTO at Microsoft
-              </a>
+              <span className="text-gray-700">Frank Hendriks</span>{" "}
             </div>
           </div>
         </div>
