@@ -39,7 +39,7 @@ export default function Accordion({
               fill="none"
             >
               <path
-                d="m2 .586 3 3 3-3L9.414 2 5.707 5.707a1 1 0 0 1-1.414 0L.586 2 2 .586Z"
+                d="m2 .586 3 3 3-3L9.414 2 5.707 5.707a1 f1 0 0 1-1.414 0L.586 2 2 .586Z"
                 clipRule="evenodd"
               />
             </svg>
