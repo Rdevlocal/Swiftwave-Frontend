@@ -1,30 +1,38 @@
 {
-  "name": "simple-next",
-  "version": "0.1.0",
+  "name": "nextjs-template",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@headlessui/react": "^2.0.4",
-    "@types/node": "^20.10.4",
-    "@types/react": "^18.2.42",
-    "@types/react-dom": "^18.2.17",
-    "aos": "^3.0.0-beta.6",
-    "next": "^14.0.3",
-    "prettier-plugin-tailwindcss": "^0.6.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "typescript": "^5.3.3"
+    "build": "turbo build ",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo clean",
+    "db:push": "cd ./packages/db/ && bun db:push",
+    "dev": "turbo dev --parallel",
+    "dev:web": "turbo dev --parallel --filter !stripe",
+    "format": "turbo format --continue -- --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
+    "format:fix": "turbo format --continue -- --write --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
+    "lint": "turbo lint -- --quiet -- --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg check",
+    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location 'node_modules/.cache/.eslintcache' ",
+    "typecheck": "turbo typecheck",
+    "postinstall": "bun run check-deps",
+    "check-deps": "check-dependency-version-consistency .",
+    "gen": "turbo gen --config 'turbo/generators/config.ts'"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.7",
-    "@types/aos": "^3.0.7",
-    "autoprefixer": "^10.4.16",
-    "postcss": "^8.4.32",
-    "tailwindcss": "^3.3.6"
-  }
+    "@turbo/gen": "1.13.3",
+    "check-dependency-version-consistency": "4.1.0",
+    "prettier": "3.2.5",
+    "tailwind-config-viewer": "^2.0.4",
+    "turbo": "1.13.3",
+    "typescript": "5.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "prettier": "@saasfly/prettier-config",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ],
+  "packageManager": "bun@v1.1.10"
 }
