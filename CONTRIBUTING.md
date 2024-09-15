@@ -1,51 +1,29 @@
-## Can I create a pull request for saasfly?
+# Contributing to Float UI
 
-Yes or no, it depends on what you will try to do. Since I don't want to waste your time, be sure to **create an empty draft pull request or open an issue, so we can have a discussion first**. Especially for a large pull request or you don't know if it will be merged or not.
+Looking to contribute something to Float UI? Whether you’re a designer, developer, or just an enthusiastic user, we’d love to hear your ideas and feedback. **Here are a few guidelines that will help you along the way.**
 
-Here are some references:
+## Feature requests
 
-### ✅ Usually accepted
+Feature requests are welcome. But take a moment to find out whether your idea
+fits with the scope and aims of the project. Please
+provide as much detail and context as possible, and ask first before starting work on any significant new features.
 
-- Bug fix
-- Security fix
-- Adding notification providers
-- Adding new language keys
+## Pull requests
 
-### ⚠️ Discussion required
+Good pull requests patches, improvements, new features, components, website templates, typos are a fantastic
+help. They should remain focused in scope and avoid containing unrelated
+commits.
 
-- Large pull requests
-- New features
+- **UI components:** you can improve, or fix a bug in an existing component, and to add a new component, please make sure it's unique, modern, responsive, and not duplicated, or taken from another platform, here are few steps you can follow to submit your component:
+  <br />
+  1 - Enter this directory "UIcomponents/LTR".<br />
+  2 - Enter the component section you want to add your component to, for example: "UIcomponents/LTR/heroes".
+  <br />
+  3 - Create component file and add your code for example "UIcomponents/LTR/heroes/HeroWithLargeImage.jsx" and create a pull request.
 
-### ❌ Won't be merged
-
-- Do not pass the auto-test(we dont have auto-test now)
-- Any breaking changes
-- Duplicated pull requests
-- Buggy
-- UI/UX is not close to saasfly
-- Modifications or deletions of existing logic without a valid reason.
-- Adding functions that is completely out of scope
-- Converting existing code into other programming languages
-- Unnecessarily large code changes that are hard to review and cause conflicts with other PRs.
-
-The above cases may not cover all possible situations.
-
-If your pull request does not meet my expectations, I will reject it, no matter how much time you spent on it. Therefore, it is essential to have a discussion beforehand.
-
-I will assign your pull request to a [milestone](https://github.com/saasfly/saasfly/milestones), if I plan to review and merge it.
-
-Also, please don't rush or ask for an ETA, because I have to understand the pull request, make sure it is no breaking changes and stick to my vision of this project, especially for large pull requests.
-
-### Recommended Pull Request Guideline
-
-Before deep into coding, discussion first is preferred. Creating an empty pull request for discussion would be recommended.
-
-1. Fork the project
-2. Clone your fork repo to local
-3. Create a new branch
-4. Create an empty commit: `git commit -m "<YOUR TASK NAME>" --allow-empty`
-5. Push to your fork repo
-6. Prepare a pull request: https://github.com/saasfly/saasfly/compare
-7. Write a proper description. You can mention @tianzx in it, so @tianzx will get the notification.
-8. Create your pull request as a Draft
-9. Wait for the discussion
+- **Website templates:** you can improve, or fix a bug in an existing template, and to submit a new template, please make sure it's unique, modern, responsive, not duplicated, or taken from another platform, and follow best practices, here are few steps you can follow to submit your template:
+  1 - Create your template using Nextjs and use best practices.
+  <br />
+  2 - Push your code to Github.
+  <br />
+  3 - Deploy your template on Vercel and open a new Feature request.
