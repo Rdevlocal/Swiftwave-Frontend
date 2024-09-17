@@ -4,11 +4,10 @@ export default () => (
   <section className="mt-32 custom-screen">
     <div className="max-w-3xl mx-auto space-y-4 text-center">
       <h2 className="text-4xl heading">
-        Make your ideas come to life with no time
+        A partner that never sleeps
       </h2>
       <p className="text-zinc-400 max-w-xl mx-auto">
-        Copy and paste our ready to use components into your apps, and save
-        time, or use it in MarsX.
+        Use the AI agents to power your team, don't limit your company make the most of it
       </p>
       <div className="flex flex-wrap items-center justify-center gap-3">
         <LinkItem
@@ -23,7 +22,7 @@ export default () => (
           target="_blank"
           className="inline-block w-full sm:w-auto"
         >
-          Use in MarsX
+          Learn more
         </LinkItem>
       </div>
     </div>

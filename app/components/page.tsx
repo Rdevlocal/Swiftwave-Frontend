@@ -5,9 +5,9 @@ import { serialize } from "next-mdx-remote/serialize";
 import MDXRemoteClient from "components/MDXRemoteClient";
 import SupportedLibraries from "components/ui/SupportedLibraries";
 
-const title = "Float UI - Introduction";
+const title = "Swiftwave - a plug and play data company";
 const description =
-  "Beautiful and responsive UI components and templates for React and Vue with Tailwind CSS.";
+  "Assist but not replace";
 
 export const metadata = {
   metadataBase: new URL("https://floatui.com"),

@@ -5,7 +5,7 @@ import { buttonVariants } from "components/variants";
 interface Props extends HTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   className?: string;
-  variant?: "default" | "shiny";
+  variant?: "default" ;
 }
 
 export default ({

@@ -17,8 +17,8 @@ type Feature = {
 export default () => {
   const features: Feature[] = [
     {
-      title: "Beautifully designed",
-      desc: "Float UI allows you build beautiful and modern websites regardless of your design skills.",
+      title: "Fully Customizable",
+      desc: "Swiftwave.io agents and products are  fully custimizable to your needs.",
       icon: <IconPennibLine />,
     },
     {
