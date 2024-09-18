@@ -18,6 +18,13 @@ const marsNavigation = [
   { name: "UI generator", href: "https://uigenerator.org/" },
   { name: "E-commerce store generator", href: "https://marketsy.ai/" },
   { name: "Dev Hunt", href: "https://devhunt.org" },
+];  
+const Nav = [
+  { name: "Marsx", href: "https://www.marsx.dev/" },
+  { name: "Unicorn Platform", href: "https://unicornplatform.com" },
+  { name: "UI generator", href: "https://uigenerator.org/" },
+  { name: "E-commerce store generator", href: "https://marketsy.ai/" },
+  { name: "Dev Hunt", href: "https://devhunt.org" },
 ];
 
 export default () => (
@@ -29,21 +36,20 @@ export default () => (
         <div className="max-w-xs space-y-3">
           <Brand />
           <p className="text-sm text-zinc-300">
-            We are in a mission to make the proccess of building UI components
-            easier.
+          Empowering Your Financial Future, Seamlessly.
           </p>
           <div className="flex items-center gap-3">
             <a
               aria-label="Facebook account"
               target="_blank"
-              href="https://github.com/MarsX-dev/floatui"
+              href="https://facebook.com/swiftwave"
             >
               <IconGithub className="w-6 h-6 text-zinc-400" />
             </a>
             <a
               aria-label="Facebook account"
               target="_blank"
-              href="https://twitter.com/float_ui?s=09"
+              href="https://twitter.com/swiftwave"
             >
               <Image
                 src="/images/tw-icon.svg"
@@ -68,9 +74,9 @@ export default () => (
               </li>
             ))}
           </ul>
-          <ul className="space-y-2">
-            <li className="text-zinc-100 font-medium">Mars Verse</li>
-            {marsNavigation.map((item, idx) => (
+          <ul className="flex-grow max-w-[15rem] space-y-2">
+          <li className="text-zinc-100 font-medium">Resources</li>
+          {marsNavigation.map((item, idx) => (
               <li
                 key={idx}
                 className="text-sm text-zinc-400 hover:text-zinc-100 duration-200"
@@ -79,13 +85,28 @@ export default () => (
                   {item.name}
                 </Link>
               </li>
+              
+            ))}
+          </ul>
+          <ul className="flex-grow max-w-[15rem] space-y-2">
+            <li className="text-zinc-100 font-medium">Mars Verse</li>
+            {Nav.map((item, idx) => (
+              <li
+                key={idx}
+                className="text-sm text-zinc-400 hover:text-zinc-100 duration-200"
+              >
+                <Link href={item.href} target="_blank" className="block">
+                  {item.name}
+                </Link>
+              </li>
+              
             ))}
           </ul>
         </div>
       </div>
       <div className="text-sm custom-screen text-center border-t border-zinc-800">
         <div className="text-zinc-300 py-8">
-          &copy; 2023 Float UI. All rights reserved.
+          &copy; 2024 Swiftwave.io. All rights reserved.
         </div>
       </div>
     </div>
