@@ -18,7 +18,7 @@ export default () => {
     { title: "Templates", path: "/templates" },
     { title: "Demo", path: "/demo" },
     {
-      title: "Github",
+      title: "About",
       path: "https://github.com/MarsX-dev/floatui",
       props: { target: "_blank" },
     },

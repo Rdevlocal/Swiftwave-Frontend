@@ -4,11 +4,11 @@ import { ReactNode } from "react";
 const title = "Modern UI Components | Float UI";
 
 export const metadata = {
-  metadataBase: new URL("https://floatui.com"),
+  metadataBase: new URL("https://swiftwave.io"),
   title,
   openGraph: {
     title,
-    url: "https://floatui.com",
+    url: "https://swiftwave.io",
   },
   twitter: {
     title,

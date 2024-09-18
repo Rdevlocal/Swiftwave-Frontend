@@ -9,7 +9,6 @@ export default () => {
     <>
       <Hero />
       <Features />
-      <SupportedFrameworks />
       <TemplateCTA />
       <CTA />
     </>

@@ -9,7 +9,7 @@ const navigation = [
   { name: "Demo", href: "/demo" },
   { name: "License", href: "/license" },
   { name: "Privacy Policy", href: "/privacy-policy" },
-  { name: "Blog", href: "/blog" },
+  { name: "About us", href: "/about us" },
 ];
 
 const marsNavigation = [
