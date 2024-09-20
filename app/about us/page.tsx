@@ -1,4 +1,16 @@
-import React from "react"
+const title = "Swiftwave.io a plug and play datacompany";
+
+export const metadata = {
+  metadataBase: new URL("https://swiftwave.io"),
+  title,
+  openGraph: {
+    title,
+    url: "https://swiftwave.io",
+  },
+  twitter: {
+    title,
+  },
+};
 export default () => {
     return (
         <section className="relative max-w-screen-xl mx-auto py-4 px-4 md:px-8">

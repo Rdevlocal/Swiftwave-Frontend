@@ -1,11 +1,11 @@
-const title = "Float UI - Privacy Policy";
+const title = "Swiftwave.io a plug and play datacompany";
 
 export const metadata = {
-  metadataBase: new URL("https://floatui.com"),
+  metadataBase: new URL("https://swiftwave.io"),
   title,
   openGraph: {
     title,
-    url: "https://floatui.com",
+    url: "https://swiftwave.io",
   },
   twitter: {
     title,

@@ -1,3 +1,17 @@
+const title = "Swiftwave.io a plug and play datacompany";
+
+export const metadata = {
+  metadataBase: new URL("https://swiftwave.io"),
+  title,
+  openGraph: {
+    title,
+    url: "https://swiftwave.io",
+  },
+  twitter: {
+    title,
+  },
+};
+
 import { useState } from "react"
 
 export default () => {

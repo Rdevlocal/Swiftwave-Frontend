@@ -1,3 +1,16 @@
+const title = "Swiftwave.io a plug and play datacompany";
+
+export const metadata = {
+  metadataBase: new URL("https://swiftwave.io"),
+  title,
+  openGraph: {
+    title,
+    url: "https://swiftwave.io",
+  },
+  twitter: {
+    title,
+  },
+};
 const members = [
     {
         company_icon: <svg className="w-8 h-8" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
