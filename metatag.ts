@@ -1,5 +1,5 @@
 export default {
-  title: "Float UI - Free open source Tailwind UI components & Templates",
-  desc: "Beautiful and responsive website templates and UI components for React, Vue, Svelte, HTML with Tailwind CSS.",
+  title: "Swiftwave.io a plug and play data company",
+  desc: "Find agents to enhance your work daily.",
   ogImage: "/thumbnail.png?v2",
 };
