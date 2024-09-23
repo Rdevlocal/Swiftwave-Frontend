@@ -8,7 +8,7 @@ export const metadata = {
     url: "https://swiftwave.io",
   },
   twitter: {
-    title,
+    ,
   },
 };
 
