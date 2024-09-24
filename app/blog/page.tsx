@@ -17,7 +17,7 @@ export default () => {
     const posts = [
         {
             title: "The Future of Digital Payments in 2024",
-            desc: "Explore the latest trends in digital payments and how innovations like blockchain and AI are reshaping the financial landscape.",
+            desc: "Explore the latest trends in digital payments and how innovations like  and AI are reshaping the financial landscape.",
             img: "https://images.unsplash.com/photo-1567428485548-0c579f25484c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
             authorLogo: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
             authorName: "John Doe",
