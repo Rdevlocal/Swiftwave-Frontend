@@ -28,12 +28,10 @@ export const metadata = {
 
 const inter = Inter({ subsets: ["latin"] });
 
-const GA_ID = process.env.GA_ID;
-const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID; // Zorg ervoor dat de prefix 'NEXT_PUBLIC_' correct is
+const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION; // Ook hier
 
 export default function RootLayout({
-  // Layouts must accept a children prop.
-  // This will be populated with nested layouts or pages
   children,
 }: {
   children: React.ReactNode;
@@ -56,8 +54,8 @@ export default function RootLayout({
         <meta name="msvalidate.01" content="D00EDAC78FB47DDD869F2C18FD8A6572" />
         <meta name="robots" content="index, follow" />
       </head>
-      <UsermavenSetup />
       <body className={inter.className}>
+        <UsermavenSetup />
         <Navbar />
         <main>{children}</main>
         <Footer />
