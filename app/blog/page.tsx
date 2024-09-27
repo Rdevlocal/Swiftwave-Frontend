@@ -1,4 +1,4 @@
-const title = "Swiftwave.io a plug and play fintech company";
+const title = "Swiftwave.io - A Plug-and-Play Automation Company";
 
 export const metadata = {
   metadataBase: new URL("https://swiftwave.io"),
@@ -16,36 +16,36 @@ export default () => {
 
     const posts = [
         {
-            title: "The Future of Digital Payments in 2024",
-            desc: "Explore the latest trends in digital payments and how innovations like blockchain and AI are reshaping the financial landscape.",
-            img: "https://images.unsplash.com/photo-1567428485548-0c579f25484c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+            title: "The Future of Automation in 2024",
+            desc: "Explore how automation is revolutionizing industries from manufacturing to customer service and shaping the future of work.",
+            img: "https://images.unsplash.com/photo-1581091012184-49d28f1e47a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
             authorLogo: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
             authorName: "John Doe",
             date: "Jan 10 2024",
             href: "javascript:void(0)"
         },
         {
-            title: "How Fintech is Disrupting Traditional Banking",
-            desc: "An in-depth look at how fintech startups are challenging established banks, offering more agile and user-friendly financial solutions.",
-            img: "https://images.unsplash.com/photo-1567428485548-0c579f25484c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+            title: "How Automation is Transforming Fintech",
+            desc: "An in-depth look at how automation is enhancing financial services by streamlining operations, reducing errors, and improving customer experiences.",
+            img: "https://images.unsplash.com/photo-1538707749272-3173a4ef9b96?ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
             authorLogo: "https://api.uifaces.co/our-content/donated/FJkauyEa.jpg",
             authorName: "Jane Smith",
             date: "Feb 15 2024",
             href: "javascript:void(0)"
         },
         {
-            title: "The Rise of Decentralized Finance (DeFi)",
-            desc: "Learn how DeFi is creating new opportunities for users by removing intermediaries and providing decentralized financial services.",
-            img: "https://images.unsplash.com/photo-1573164713347-df1d6ae5294e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+            title: "AI and Automation: The Perfect Partnership",
+            desc: "Discover how artificial intelligence and automation are joining forces to revolutionize industries by improving productivity and decision-making.",
+            img: "https://images.unsplash.com/photo-1603791452906-8deca34bbd91?ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
             authorLogo: "https://randomuser.me/api/portraits/men/46.jpg",
             authorName: "Mark Johnson",
             date: "Mar 8 2024",
             href: "javascript:void(0)"
         },
         {
-            title: "AI and Machine Learning in Fintech",
-            desc: "Discover how AI and machine learning are being leveraged to enhance fraud detection, credit scoring, and personalized financial services.",
-            img: "https://images.unsplash.com/photo-1573164574399-4bc17d1d6df0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+            title: "Automation in Data Management",
+            desc: "Learn how automation is transforming data management processes, making data more accessible, reliable, and actionable for businesses.",
+            img: "https://images.unsplash.com/photo-1538757612019-2c6fae63635f?ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80",
             authorLogo: "https://api.uifaces.co/our-content/donated/KtCFjlD4.jpg",
             authorName: "Sarah Wilson",
             date: "Apr 12 2024",
@@ -57,10 +57,10 @@ export default () => {
         <section className="mt-12 mx-auto px-4 max-w-screen-xl md:px-8">
             <div className="text-center">
                 <h1 className="text-3xl text-gray-800 font-semibold">
-                    Fintech Blog
+                    Automation Blog
                 </h1>
                 <p className="mt-3 text-gray-500">
-                    Stay updated with the latest in fintech. Updated regularly.
+                    Stay updated with the latest in automation. Updated regularly.
                 </p>
             </div>
             <div className="mt-12 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">

@@ -1,4 +1,4 @@
-const title = "Swiftwave.io a plug and play datacompany";
+const title = "Swiftwave.io - A Plug-and-Play Automation Company";
 
 export const metadata = {
   metadataBase: new URL("https://swiftwave.io"),
@@ -15,80 +15,78 @@ export const metadata = {
 const Page = () => {
   return (
     <>
-      {/* Section 1 */}
-      <section className="relative max-w-screen-xl mx-auto py-4 px-4 md:px-8">
-        <div className="absolute top-0 left-0 w-full h-full bg-white opacity-40"></div>
+      {/* Hero Section */}
+      <section className="relative max-w-screen-xl mx-auto py-12 px-4 md:px-8">
         <div className="relative z-10 gap-5 items-center lg:flex">
           <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left">
-            <h3 className="text-3xl text-gray-800 font-semibold md:text-4xl">
-              build your websites with{" "}
-              <span className="text-indigo-600">high performance</span>
-            </h3>
-            <p className="text-gray-500 leading-relaxed mt-3">
-              Nam erat risus, sodales sit amet lobortis ut, finibus eget metus.
-              Cras aliquam ante ut tortor posuere feugiat. Duis sodales nisi id
-              porta lacinia.
+            <h1 className="text-4xl font-bold text-gray-900 md:text-5xl">
+              Transform Your Business with <span className="text-indigo-600">Automation</span>
+            </h1>
+            <p className="text-gray-600 mt-4">
+              At Swiftwave.io, we specialize in plug-and-play automation solutions across industries, empowering businesses to optimize operations and scale seamlessly.
             </p>
             <a
-              className="mt-5 px-4 py-2 text-indigo-600 font-medium bg-indigo-50 rounded-full inline-flex items-center"
-              href="javascript:void()"
+              className="mt-6 inline-block px-6 py-3 text-white bg-indigo-600 font-medium rounded-full hover:bg-indigo-700"
+              href="#services"
             >
-              Try it out
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 ml-1 duration-150"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 7l5 5m0 0l-5 5m5-5H6"
-                />
-              </svg>
+              Explore Our Solutions
             </a>
           </div>
           <div className="flex-1 mt-5 mx-auto sm:w-9/12 lg:mt-0 lg:w-auto">
             <img
-              src="https://i.postimg.cc/kgd4WhyS/container.png"
-              alt=""
-              className="w-full"
+              src="https://images.unsplash.com/photo-1591696333279-0a95f7dbad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Automation technology"
+              className="rounded-lg w-full shadow-lg"
             />
           </div>
         </div>
       </section>
 
-      {/* Section 2 */}
-      <section className="py-14">
+      {/* About Section */}
+      <section className="py-14 bg-gray-50">
         <div className="max-w-screen-xl mx-auto md:px-8">
           <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
-            <div className="flex-1 sm:hidden lg:block">
+            <div className="max-w-xl px-4 space-y-4 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
+              <h2 className="text-indigo-600 font-semibold text-3xl">
+                Who We Are
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                Swiftwave.io is an industry leader in automation technology, providing innovative solutions for businesses looking to streamline their operations. From manufacturing to retail, healthcare to fintech, we build custom automation software that adapts to your business needs.
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                Our mission is simple: to eliminate inefficiencies, improve productivity, and help companies thrive in the digital age. Whether you're automating workflows, managing data pipelines, or enhancing customer experience, Swiftwave.io has the tools you need to succeed.
+              </p>
+            </div>
+            <div className="flex-1 mt-6 lg:mt-0">
               <img
-                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
-                className="md:max-w-lg sm:rounded-lg"
-                alt=""
+                src="https://images.unsplash.com/photo-1515444744559-7be63e1600de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Team collaboration"
+                className="rounded-lg shadow-lg w-full"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="py-14">
+        <div className="max-w-screen-xl mx-auto md:px-8">
+          <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
             <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
-              <h3 className="text-indigo-600 font-semibold">
-                Professional services
-              </h3>
-              <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
-                Build your SaaS solution with help from our experts
+              <h2 className="text-indigo-600 font-semibold text-3xl">
+                Our Services
+              </h2>
+              <p className="text-gray-800 text-xl font-semibold">
+                Custom Automation Solutions
               </p>
               <p className="mt-3 text-gray-600">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                anim id est laborum.
+                We deliver customized automation solutions tailored to your specific industry needs. From AI-driven software to robotic process automation (RPA), we enable your business to stay ahead of the curve.
               </p>
               <a
-                href="javascript:void(0)"
+                href="#contact"
                 className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium"
               >
-                Learn more
+                Contact us
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
@@ -103,11 +101,36 @@ const Page = () => {
                 </svg>
               </a>
             </div>
+            <div className="flex-1 mt-5 mx-auto lg:mt-0 lg:w-auto">
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Automation software"
+                className="rounded-lg shadow-lg w-full"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Additional sections can follow the same structure */}
+      {/* Future Vision Section */}
+      <section className="py-28 bg-blue-600 text-white relative">
+        <div className="relative z-10 max-w-screen-xl mx-auto px-4 md:text-center md:px-8">
+          <div className="max-w-xl md:mx-auto">
+            <h2 className="text-4xl font-bold">
+              Our Vision for the Future
+            </h2>
+            <p className="text-blue-100 mt-4">
+              At Swiftwave.io, we're committed to shaping the future of automation. We aim to lead the way with groundbreaking technology that redefines how businesses operate. Our team of experts is dedicated to creating solutions that bring lasting impact.
+            </p>
+          </div>
+          <div className="mt-6">
+            <a href="#contact" className="inline-block py-2 px-4 bg-white text-gray-800 rounded-full font-medium hover:bg-gray-100 duration-150">
+              Partner with Us
+            </a>
+          </div>
+        </div>
+        <div className="absolute top-0 w-full h-full" style={{ background: "linear-gradient(268.24deg, rgba(59, 130, 246, 0.76) 50%, rgba(59, 130, 246, 0.545528) 80.61%, rgba(55, 48, 163, 0) 117.35%)" }}></div>
+      </section>
     </>
   );
 };

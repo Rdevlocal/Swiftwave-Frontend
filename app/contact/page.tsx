@@ -1,4 +1,4 @@
-const title = "Swiftwave.io a plug and play datacompany";
+const title = "Swiftwave.io - A Plug-and-Play Data Company";
 
 export const metadata = {
   metadataBase: new URL("https://swiftwave.io"),
@@ -11,8 +11,8 @@ export const metadata = {
     title,
   },
 };
-export default () => {
 
+export default () => {
     return (
         <main className="py-14">
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
@@ -24,7 +24,7 @@ export default () => {
                         Get in touch
                     </p>
                     <p>
-                        We’d love to hear from you! Please fill out the form bellow.
+                        We’d love to hear from you! Please fill out the form below.
                     </p>
                 </div>
                 <div className="mt-12 max-w-lg mx-auto">
@@ -70,14 +70,14 @@ export default () => {
                             </label>
                             <div className="relative mt-2">
                                 <div className="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
-                                    <select className="text-sm bg-transparent outline-none rounded-lg h-full">
+                                    <select aria-label="Country code" className="text-sm bg-transparent outline-none rounded-lg h-full">
                                         <option>US</option>
                                         <option>ES</option>
                                         <option>MR</option>
                                     </select>
                                 </div>
                                 <input
-                                    type="number"
+                                    type="tel"
                                     placeholder="+1 (555) 000-000"
                                     required
                                     className="w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
@@ -88,7 +88,10 @@ export default () => {
                             <label className="font-medium">
                                 Message
                             </label>
-                            <textarea required className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"></textarea>
+                            <textarea
+                                required
+                                className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                            ></textarea>
                         </div>
                         <button
                             className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
@@ -99,5 +102,5 @@ export default () => {
                 </div>
             </div>
         </main>
-    )
-}
+    );
+};
