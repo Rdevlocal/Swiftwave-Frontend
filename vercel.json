@@ -1,0 +1,26 @@
+{
+    "version": 2,
+    "env": {
+      "MY_VARIABLE": true
+    },
+    "build": {
+      "env": {
+        "MY_VARIABLE": true
+      }
+    },
+    "builds": [
+      {
+        "src": "nuxt.config.js",
+        "use": "@nuxtjs/vercel-builder",
+        "config": {
+          "serverFiles": ["server-middleware/**"]
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/app",
+        "dest": "/app/page.tsx"
+      }
+    ]
+  }

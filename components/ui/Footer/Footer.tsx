@@ -14,7 +14,7 @@ const navigation = [
 ];
 
 const marsNavigation = [
-  { name: "Pricingr", href: "/pricing" },
+  { name: "Pricing", href: "/pricing" },
   { name: "Products", href: "/productspage" },
   { name: "About us", href: "/aboutus" },
 ];  

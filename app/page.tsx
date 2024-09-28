@@ -11,7 +11,6 @@ export default () => {
     <Banner />
       <Hero />
       <Features />
-      <TemplateCTA />
       <CTA />
     </>
   );
