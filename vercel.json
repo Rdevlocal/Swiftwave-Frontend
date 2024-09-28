@@ -1,7 +1,7 @@
 {
     "version": 2,
     "env": {
-      "MY_VARIABLE": "true"  // Dit moet een string zijn
+      "MY_VARIABLE": "true"  // Zorg ervoor dat dit een string is
     },
     "builds": [
       {
