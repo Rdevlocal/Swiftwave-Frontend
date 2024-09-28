@@ -3,7 +3,10 @@
     "env": {
       "MY_VARIABLE": true
     },
-    "build": "next build",
+    "build": {
+      "buildCommand": "next build",
+      "devCommand": "next dev"
+    },
     "builds": [
       {
         "src": "nuxt.config.js",
