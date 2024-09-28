@@ -4,8 +4,7 @@
       "MY_VARIABLE": true
     },
     "build": {
-      "env": {
-        "MY_VARIABLE": true
+        "buildCommand": "next build"
       }
     },
     "builds": [
@@ -15,9 +14,6 @@
         "config": {
           "serverFiles": ["server-middleware/**"]
         }
-      }
-      {
-        "buildCommand": "next build"
       }
       {
         "devCommand": "next dev"
