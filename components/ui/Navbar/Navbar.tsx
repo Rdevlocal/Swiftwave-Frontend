@@ -8,11 +8,10 @@ import Link from "next/link";
 import NewsletterModal from "../NewsletterModal";
 import { SparklesIcon } from "@heroicons/react/24/outline";
 
-export default () => {
+const NavigationBar = () => {
   const [state, setState] = useState(false);
   const [isNewsletterModalActive, setNewsletterModalActive] = useState(false);
 
-  // Replace javascript:void(0) paths with your paths
   const navigation = [
     { title: "Pricing", path: "/pricing" },
     { title: "Products", path: "/productspage" },
@@ -20,9 +19,16 @@ export default () => {
   ];
 
   useEffect(() => {
-    document.onclick = (e) => {
+    const handleClickOutside = (e) => {
       const target = e.target as HTMLElement;
-      if (target && !target.closest(".menu-btn")) setState(false);
+      if (target && !target.closest(".menu-btn")) {
+        setState(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
     };
   }, []);
 
@@ -30,7 +36,7 @@ export default () => {
     <>
       <header className="h-[4rem] relative z-20">
         <nav
-          className={` ${
+          className={`${
             state
               ? "absolute inset-x-0 shadow-lg rounded-xl bg-zinc-900 border border-zinc-800 mx-2 pb-5 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0 md:bg-transparent md:pb-0"
               : ""
@@ -42,8 +48,6 @@ export default () => {
                 <Brand />
               </Link>
               <div className="flex md:hidden">
-                <div className="mr-3">
-                </div>
                 <button
                   aria-label="menu button"
                   className="menu-btn group"
@@ -63,19 +67,16 @@ export default () => {
               } `}
             >
               <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-                {navigation.map((item, idx) => {
-                  return (
-                    <li
-                      key={idx}
-                      className="font-medium text-sm text-zinc-400 hover:text-zinc-200 duration-200"
-                    >
-                      <Link {...item.props} href={item.path} className="block">
-                        {item.title}
-                      </Link>
-                    </li>
-                  );
-                })}
-
+                {navigation.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="font-medium text-sm text-zinc-400 hover:text-zinc-200 duration-200"
+                  >
+                    <Link href={item.path} className="block">
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
               <div className="mt-6 md:mt-0">
                 <LinkItem
@@ -97,3 +98,5 @@ export default () => {
     </>
   );
 };
+
+export default NavigationBar;

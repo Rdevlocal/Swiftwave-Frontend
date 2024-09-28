@@ -385,7 +385,5 @@ FUIPaginationStacked,
 FUITeamSectionWithVerticalImages,
       
 FUIVerticalTabsWithoutLine,
-      
-FUILogoGridWithHeader,
-      
+            
 }
