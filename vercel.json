@@ -9,11 +9,8 @@
     },
     "builds": [
       {
-        "src": "nuxt.config.js",
-        "use": "@nuxtjs/vercel-builder",
-        "config": {
-          "serverFiles": ["server-middleware/**"]
-        }
+        "src": "next.config.js",
+        "use": "@vercel/next"
       }
     ],
     "routes": [
