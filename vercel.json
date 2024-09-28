@@ -4,7 +4,6 @@
       "MY_VARIABLE": true
     },
     "build": {
-      "buildCommand": "next build",
       "devCommand": "next dev"
     },
     "builds": [
