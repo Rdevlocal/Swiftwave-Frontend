@@ -4,8 +4,8 @@
       "MY_VARIABLE": true
     },
     "build": {
-        "buildCommand": "next build"
-      }
+      "buildCommand": "next build",
+      "devCommand": "next dev"
     },
     "builds": [
       {
@@ -15,9 +15,6 @@
           "serverFiles": ["server-middleware/**"]
         }
       }
-      {
-        "devCommand": "next dev"
-      }
     ],
     "routes": [
       {
@@ -26,3 +23,4 @@
       }
     ]
   }
+  
