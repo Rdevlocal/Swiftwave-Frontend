@@ -1,13 +1,11 @@
 import LinkItem from "../LinkItem";
 
-export default () => (
+const PartnerSection = () => (
   <section className="mt-32 custom-screen">
     <div className="max-w-3xl mx-auto space-y-4 text-center">
-      <h2 className="text-4xl heading">
-        A partner that never sleeps
-      </h2>
+      <h2 className="text-4xl heading">A partner that never sleeps</h2>
       <p className="text-zinc-400 max-w-xl mx-auto">
-        Use the AI agents to power your team, don't limit your company make the most of it
+        Use AI agents to empower your team. Don't limit your company—make the most of it.
       </p>
       <div className="flex flex-wrap items-center justify-center gap-3">
         <LinkItem
@@ -18,7 +16,7 @@ export default () => (
           Get started
         </LinkItem>
         <LinkItem
-          href="https://marsx.dev/?ref=floatui"
+          href="https://signup.swiftwave.io/"
           target="_blank"
           className="inline-block w-full sm:w-auto"
         >
@@ -28,3 +26,5 @@ export default () => (
     </div>
   </section>
 );
+
+export default PartnerSection;

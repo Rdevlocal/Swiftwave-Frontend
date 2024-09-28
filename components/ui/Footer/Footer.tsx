@@ -6,18 +6,17 @@ import BgGradient from "./BgGradient";
 import { IconGithub } from "components/icons";
 
 const navigation = [
-  { name: "Demo", href: "/demo" },
-  { name: "License", href: "/license" },
+  { name: "Help center", href: "/helpcentrum" },
+  { name: "Contact", href: "/contact" },
+  { name: "Dev docs", href: "/docs" },
+  { name: "Blog", href: "/blog" },
   { name: "Privacy Policy", href: "/privacy-policy" },
-  { name: "About us", href: "/about us" },
 ];
 
 const marsNavigation = [
-  { name: "Marsx", href: "https://www.marsx.dev/" },
-  { name: "Unicorn Platform", href: "https://unicornplatform.com" },
-  { name: "UI generator", href: "https://uigenerator.org/" },
-  { name: "E-commerce store generator", href: "https://marketsy.ai/" },
-  { name: "Dev Hunt", href: "https://devhunt.org" },
+  { name: "Pricingr", href: "/pricing" },
+  { name: "Products", href: "/productspage" },
+  { name: "About us", href: "/aboutus" },
 ];  
 const Nav = [
   { name: "Marsx", href: "https://www.marsx.dev/" },
@@ -36,7 +35,7 @@ export default () => (
         <div className="max-w-xs space-y-3">
           <Brand />
           <p className="text-sm text-zinc-300">
-          Empowering Your Financial Future, Seamlessly.
+          Empowering Your Business, Seamlessly.
           </p>
           <div className="flex items-center gap-3">
             <a

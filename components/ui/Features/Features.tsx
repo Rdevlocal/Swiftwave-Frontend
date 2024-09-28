@@ -14,21 +14,21 @@ type Feature = {
   icon: ReactNode;
 };
 
-export default () => {
+const FeaturesSection = () => {
   const features: Feature[] = [
     {
-      title: "Fully Customizable",
-      desc: "Swiftwave.io agents and products are  fully custimizable to your needs.",
+      title: "Automate Your Workflows",
+      desc: "Swiftwave's automation tools streamline your operations, eliminating repetitive tasks and boosting productivity.",
       icon: <IconPennibLine />,
     },
     {
-      title: "Fully Responsive",
-      desc: "Responsive designed components and templates that look great on any screen.",
+      title: "Scalable Solutions",
+      desc: "Our automation products are built to scale with your business, ensuring seamless integration at any size.",
       icon: <IconArrowsexpandLeft />,
     },
     {
-      title: "Customizable",
-      desc: "copy and paste into your apps and experience the power of customizable components.",
+      title: "Tailored Customization",
+      desc: "Customize automation workflows to fit your unique business processes, enabling efficiency across all departments.",
       icon: <IconBxCustomize />,
     },
   ];
@@ -36,17 +36,18 @@ export default () => {
   return (
     <section className="custom-screen mt-32">
       <div className="max-w-xl mx-auto space-y-4 text-center">
-        <h2 className="text-4xl heading">Turn your ideas into reality</h2>
+        <h2 className="text-4xl heading">Empower Your Business with Automation</h2>
         <p className="text-zinc-400">
-          Float UI offers all the vital building blocks you need to transform
-          your idea into a great-looking startup.
+          Swiftwave offers a range of automation tools designed to optimize your business processes, allowing you to focus on growth.
         </p>
       </div>
       <ul className="space-y-6 gap-6 mt-8 max-w-7xl mx-auto grid-cols-2 sm:grid lg:grid-cols-3 sm:space-y-0">
         {features.map((item: Feature, key: number) => (
-          <Card icon={item.icon} title={item.title} desc={item.desc} />
+          <Card key={key} icon={item.icon} title={item.title} desc={item.desc} />
         ))}
       </ul>
     </section>
   );
 };
+
+export default FeaturesSection;
