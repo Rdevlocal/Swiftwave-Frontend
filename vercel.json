@@ -16,6 +16,9 @@
           "serverFiles": ["server-middleware/**"]
         }
       }
+      {
+        "buildCommand": "next build"
+      }
     ],
     "routes": [
       {
