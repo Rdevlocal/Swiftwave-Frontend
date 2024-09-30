@@ -1,3 +1,7 @@
+"use client"; // Add this line at the top to make it a client component
+
+import { useState } from "react";
+
 const title = "Swiftwave.io a plug and play data company";
 
 export const metadata = {
@@ -12,9 +16,7 @@ export const metadata = {
   },
 };
 
-import { useState } from "react";
-
-export default () => {
+const PricingPage = () => {
   const checkIcon = (
     <svg
       className="w-5 h-5 mx-auto text-indigo-600"
@@ -275,7 +277,6 @@ export default () => {
                       </td>
                       {/* For small devices */}
                       <td className="text-center w-[250px] px-6 py-4 whitespace-nowrap lg:hidden">
-                        {item[selectedPlan.toLowerCase()]}
                       </td>
                     </tr>
                   ))}
@@ -288,3 +289,5 @@ export default () => {
     </section>
   );
 };
+
+export default PricingPage; // Export the component as default
