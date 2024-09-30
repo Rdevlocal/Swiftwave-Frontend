@@ -1,52 +1,171 @@
-/** @type {import('next').NextConfig} */
+import { withPayload } from '@payloadcms/next/withPayload'
+import path from 'path'
+import { fileURLToPath } from 'node:url'
+const filename = fileURLToPath(import.meta.url)
+const dirname = path.dirname(filename)
 
-const nextConfig = {
-  env: {
-    DB_URI: process.env.DB_URI,
-    URL: process.env.URL,
-    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
+import { redirects } from './redirects.js'
 
-    API_KEY: process.env.API_KEY,
-    AUTH_DOMAIN: process.env.AUTH_DOMAIN,
-    PROJECT_ID: process.env.PROJECT_ID,
-    STORAGE_BUCKET: process.env.STORAGE_BUCKET,
-    MG_SENDER_ID: process.env.MG_SENDER_ID,
-    APP_ID: process.env.APP_ID,
-    JWT_SECRET: process.env.JWT_SECRET,
-    URL: process.env.URL,
-    CRYPTO_SCRETKEY: process.env.CRYPTO_SCRETKEY,
+import bundleAnalyzer from '@next/bundle-analyzer'
 
-    PADDLE_VENDOR_ID: process.env.PADDLE_VENDOR_ID,
-    VENDOR_API_CODE: process.env.VENDOR_API_CODE,
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+})
 
-    ANALYTICS_KEY: process.env.ANALYTICS_KEY,
+import { withSentryConfig } from '@sentry/nextjs'
 
-    GA_ID: process.env.GA_ID,
-    GOOGLE_SITE_VERIFICATION: process.env.GOOGLE_SITE_VERIFICATION,
+const localhost = process.env.NEXT_PUBLIC_IS_LIVE
+  ? []
+  : [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '3000',
+      },
+      {
+        protocol: 'http',
+        hostname: 'local.payloadcms.com',
+        port: '3000',
+      },
+      {
+        protocol: 'http',
+        hostname: 'cms.local.payloadcms.com',
+        port: '8000',
+      },
+      {
+        protocol: 'http',
+        hostname: 'cms.local.payloadcms.com',
+        port: '8001',
+      },
+    ]
 
-    CONVERTKIT_API_URL: process.env.CONVERTKIT_API_URL,
-    CONVERTKIT_API_KEY: process.env.CONVERTKIT_API_KEY,
+const nextConfig = withBundleAnalyzer({
+  eslint: {
+    ignoreDuringBuilds: true,
   },
+  reactStrictMode: true,
   images: {
+    minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year,
     remotePatterns: [
+      ...localhost,
       {
-        protocol: "https",
-        hostname: "avatars.githubusercontent.com",
+        protocol: 'https',
+        hostname: 'cms.payloadcms.com',
+        port: '',
       },
       {
-        protocol: "https",
-        hostname: "api.uifaces.co",
+        protocol: 'https',
+        hostname: 'cloud-api.payloadcms.com',
+        port: '',
       },
       {
-        protocol: "https",
-        hostname: "randomuser.me",
+        protocol: 'https',
+        hostname: 'cms.local.payloadcms.com',
+        port: '',
       },
       {
-        protocol: "https",
-        hostname: "images.unsplash.com",
+        protocol: 'https',
+        hostname: 'stage.cms.payloadcms.com',
+        port: '',
       },
-    ],
+      {
+        protocol: 'https',
+        hostname: 'cdn.discordapp.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        port: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+        port: '',
+      },
+    ].filter(Boolean),
   },
-};
+  webpack: config => {
+    const configCopy = { ...config }
+    configCopy.resolve = {
+      ...config.resolve,
+      extensions: ['.ts', '.tsx', '.js', '.jsx'],
+      extensionAlias: {
+        '.js': ['.ts', '.js', '.tsx', '.jsx'],
+        '.mjs': ['.mts', '.mjs'],
+      },
+      alias: {
+        ...config.resolve.alias,
+        '@scss': path.resolve(dirname, './src/css/'),
+        '@components': path.resolve(dirname, './src/components.js'),
+        '@cloud': path.resolve(dirname, './src/app/cloud'),
+        '@forms': path.resolve(dirname, './src/forms'),
+        '@blocks': path.resolve(dirname, './src/blocks'),
+        '@providers': path.resolve(dirname, './src/providers'),
+        '@icons': path.resolve(dirname, './src/icons'),
+        '@utilities': path.resolve(dirname, './src/utilities'),
+        '@types': path.resolve(dirname, './payload-types.ts'),
+        '@graphics': path.resolve(dirname, './src/graphics'),
+        '@graphql': path.resolve(dirname, './src/graphql'),
+        // IMPORTANT: the next lines are for development only
+        // keep them commented out unless actively developing local react modules
+        // modify their paths according to your local directory
+        // "payload-admin-bar": path.join(dirname, "../payload-admin-bar"),
+      },
+    }
+    return configCopy
+  },
+  redirects,
+  async headers() {
+    const headers = []
 
-module.exports = nextConfig;
+    if (!process.env.NEXT_PUBLIC_IS_LIVE) {
+      headers.push({
+        headers: [
+          {
+            key: 'X-Robots-Tag',
+            value: 'noindex',
+          },
+        ],
+        source: '/:path*',
+      })
+    }
+    return headers
+  },
+})
+
+// Injected content via Sentry wizard below
+
+export default withPayload(
+  withSentryConfig(
+    nextConfig,
+    {
+      // For all available options, see:
+      // https://github.com/getsentry/sentry-webpack-plugin#options
+
+      // Suppresses source map uploading logs during build
+      silent: true,
+      org: 'payload-cms',
+      project: 'website',
+    },
+    {
+      // For all available options, see:
+      // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
+
+      // Upload a larger set of source maps for prettier stack traces (increases build time)
+      widenClientFileUpload: true,
+
+      // Transpiles SDK to be compatible with IE11 (increases bundle size)
+      transpileClientSDK: true,
+
+      // Routes browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers (increases server load)
+      tunnelRoute: '/monitoring',
+
+      // Hides source maps from generated client bundles
+      hideSourceMaps: true,
+
+      // Automatically tree-shake Sentry logger statements to reduce bundle size
+      disableLogger: true,
+    },
+  ),
+)

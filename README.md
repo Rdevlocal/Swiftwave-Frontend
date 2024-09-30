@@ -1,39 +1,62 @@
-<p align="center">
-  <a href="https://floatui.com/" rel="noopener" target="_blank"><img width="200" src="public/logo.svg" alt="Float UI logo"></a>
-</p>
+# Payload Website
 
-Float UI is a collection of modern UI components and website templates built on top of React, and soon, Vue. With Tailwind CSS, the components are beautifully designed and expertly crafted, allowing you to build beautiful websites.
+This is the repository for [Payload's official website](https://payloadcms.com/). It was built completely in public using Payload itself, [more on that here](#⭐-the-cms).
 
-## Why Float UI?
+<img src="https://payloadcms.com/images/og-image.jpg" alt="Payload headless CMS website" />
 
-Float UI is fully free and open source. You don't need to pay anything to use it, and we are working on it full-time, so we'll keep improving and adding more UIs. If you’re working on a large project that requires a high level of UI customization or you find yourself repeating the same UI patterns across projects, consider creating an internal UI library. In this case, Float UI is a great choice. You should definitely use it.
+This site showcases lots of cool stuff like how to use Payload's GraphQL API to its fullest extent, how to build a super dynamic light / dark mode into a Next site without any first-load flickering, how to render remotely stored docs from MDX to Next.js pages, how to use Stripe to build a custom SaaS integration, and much more.
 
-## Prerequisites
+## ✨ Tech stack
 
-Before you begin, ensure you have met the following requirements:
+- [Payload](https://github.com/payloadcms/payload) (obviously)
+- TypeScript
+- Next.js 13 and its new App Router
+- SCSS Modules
+- GraphQL
+- MDX for docs
+- Stripe for Payload Cloud
 
-* You have installed the latest version of npm/yarn/pnpm.
-* You have a `Windows/Linux/Mac` machine.
+## ⭐ The CMS
 
-## Getting Started
+[Payload](https://github.com/payloadcms/payload) is leveraged for everything that this site does, outside of its documentation which is all stored as Markdown in the Payload repo on GitHub. The CMS powering this site is completely open-source and [can be found here](https://github.com/payloadcms/website-cms).
 
-First, install the dependencies. We highly recommend using pnpm, and run the development server:
+Both this repo and the CMS repo can be used as great examples to learn how to build Payload projects at scale.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## ☁️ Payload Cloud
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Payload Cloud](https://payloadcms.com/cloud-pricing) is out! This is a one-click integration to deploy production-ready instances of your Payload apps directly from your GitHub repo, [read the blog post](https://payloadcms.com/blog/launch-week-day-1-payload-cloud-is-here) to get all the details. The entire frontend of Payload Cloud has been built in public and is included within this repo 😱.
 
-### Quick start
+## 🚀 Running the project locally
 
-- <strong>[UI components](https://floatui.com/components) :</strong> UI components for React and Vue (soon) with Tailwind, every example support both directions LTR and RTL.
+To get started with this repo locally, follow the steps below:
 
-- <strong>[Website templates](https://floatui.com/templates) :</strong> A collection of professional and beautifully designed website templates, built on top of React, Next.js and Nuxt (soon) with Tailwind CSS.
+- Clone the repo
+- `yarn`
+- Run `cp .env.example .env` to create an `.env`
+- Fill out the values within your new `.env`, corresponding to your own environment
+- Run `yarn dev`
+- Bam
 
-## Contributing
+### Hosts file
 
-If you're interested in contributing to Float UI, please read our [contributing guide](https://github.com/MarsX-dev/floatui/blob/main/CONTRIBUTING.md) to learn about our development process before submitting a pull request.
+The locally running app must run on `local.payloadcms.com:3000` because of http-only cookie policies and how the GitHub App redirects the user back to the site after authenticating. To do this, you'll need to add the following to your hosts file:
+
+```
+127.0.0.1 local.payloadcms.com
+```
+
+> On Mac you can find the hosts file at `/etc/hosts`. On Windows, it's at `C:\Windows\System32\drivers\etc\hosts`:
+
+### Documentation
+
+The documentation for this site is stored in the [Payload repo](https://github.com/payloadcms/payload) as Markdown files. These are fetched at build time and rendered as pages on the site.
+
+You can also specify a `beta` version and `legacy` version to render different versions of the docs:
+- Set the environment variable `NEXT_PUBLIC_ENABLE_BETA_DOCS` to `true` to enable the beta docs.
+- Specify a branch, commit, or tag with `NEXT_PUBLIC_BETA_DOCS_REF`. The default for the beta docs is `beta`.
+- Set the environment variable `NEXT_PUBLIC_ENABLE_LEGACY_DOCS` to `true` to enable the legacy docs.
+- Specify a branch, commit, or tag with `NEXT_PUBLIC_LEGACY_DOCS_REF`. The default for the legacy docs is `null`, and will fallback to the `main` branch.
+
+### License
+
+The Payload website is available as open source under the terms of the [MIT license](https://github.com/payloadcms/website/blob/main/LICENSE).
