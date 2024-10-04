@@ -7,9 +7,10 @@ export default () => (
     <BgGradient className="absolute inset-x-0 mx-auto duration-500 top-0" />
     <div className="custom-screen relative z-10">
       <div className="max-w-xl mx-auto space-y-4 text-center">
-        <h2 className="text-4xl heading">Automation proudcts for Every Industry</h2>
+        <h2 className="text-4xl heading">Professional website templates</h2>
         <p className="text-zinc-400">
-          Explore a growing collection of customizable automation products designed to streamline your processes. Built on AI-driven tools, tailored to your needs, and easy to implement.
+          A collection of professional and beautifully designed website
+          templates, built on top of React, Next.js with Tailwind CSS.
         </p>
       </div>
 

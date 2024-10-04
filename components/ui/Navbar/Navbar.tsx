@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import LinkItem from "../LinkItem";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import Brand from "../Brand";
 import Link from "next/link";
 import NewsletterModal from "../NewsletterModal";
 import { SparklesIcon } from "@heroicons/react/24/outline";
@@ -55,6 +56,7 @@ export default () => {
           <div className="custom-screen-lg gap-x-14 items-center md:flex">
             <div className="flex items-center justify-between py-1 md:block">
               <Link href="/">
+                <Brand />
               </Link>
               <div className="flex md:hidden">
                 <div className="mr-3">

@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import Brand from "components/ui/Brand";
 import BorderGradient from "./BorderGradient";
 import BgGradient from "./BgGradient";
+import { IconGithub } from "components/icons";
 
 const navigation = [
   { name: "Demo", href: "/demo" },
@@ -25,6 +27,7 @@ export default () => (
       <BgGradient className="absolute inset-x-0 top-0 mx-auto" />
       <div className="custom-screen-lg pb-6 gap-x-8 items-start justify-between flex-wrap relative sm:flex">
         <div className="max-w-xs space-y-3">
+          <Brand />
           <p className="text-sm text-zinc-300">
             We are in a mission to make the proccess of building UI components
             easier.
@@ -35,6 +38,7 @@ export default () => (
               target="_blank"
               href="https://github.com/MarsX-dev/floatui"
             >
+              <IconGithub className="w-6 h-6 text-zinc-400" />
             </a>
             <a
               aria-label="Facebook account"
