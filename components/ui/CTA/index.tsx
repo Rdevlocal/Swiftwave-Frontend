@@ -4,11 +4,10 @@ export default () => (
   <section className="mt-32 custom-screen">
     <div className="max-w-3xl mx-auto space-y-4 text-center">
       <h2 className="text-4xl heading">
-        Make your ideas come to life with no time
+        Accelerate your automation projects in no time
       </h2>
       <p className="text-zinc-400 max-w-xl mx-auto">
-        Copy and paste our ready to use components into your apps, and save
-        time, or use it in MarsX.
+        Seamlessly integrate our pre-built automation components into your systems and save valuable time. Experience it firsthand with our platform.
       </p>
       <div className="flex flex-wrap items-center justify-center gap-3">
         <LinkItem
@@ -19,11 +18,11 @@ export default () => (
           Get started
         </LinkItem>
         <LinkItem
-          href="https://marsx.dev/?ref=floatui"
+          href="https://automation-platform.dev/?ref=company"
           target="_blank"
           className="inline-block w-full sm:w-auto"
         >
-          Use in MarsX
+          Explore the Platform
         </LinkItem>
       </div>
     </div>

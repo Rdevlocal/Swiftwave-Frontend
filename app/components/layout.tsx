@@ -1,14 +1,13 @@
-import Sidebar from "components/ui/Sidebar";
 import { ReactNode } from "react";
 
-const title = "Modern UI Components | Float UI";
+const title = "swiftwave.io - a plug and play data company";
 
 export const metadata = {
-  metadataBase: new URL("https://floatui.com"),
+  metadataBase: new URL("https://swiftwave.io"),
   title,
   openGraph: {
     title,
-    url: "https://floatui.com",
+    url: "https://swiftwave.io",
   },
   twitter: {
     title,
@@ -24,7 +23,6 @@ export default (props: Props) => {
   return (
     <main className="relative custom-screen-lg">
       <div className="lg:flex">
-        <Sidebar />
         <div className="flex-1 overflow-hidden mt-20 mb-12 xl:px-8 xl:mt-10">
           {children}
         </div>

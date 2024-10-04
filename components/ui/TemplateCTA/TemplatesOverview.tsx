@@ -8,10 +8,9 @@ import preview3 from "public/preview-3.svg";
 export default () => {
   return (
     <div className="flex-1 relative overflow-hidden border border-zinc-800 rounded-2xl p-8 bg-[linear-gradient(180deg,_rgba(15,_23,_42,_0.65)_0%,_rgba(24,_24,_27,_0.00)_100%)]">
-      <h3 className="text-zinc-100 font-semibold">Ready to use templates</h3>
+      <h3 className="text-zinc-100 font-semibold">Ready to use products</h3>
       <p className="text-zinc-300 max-w-md mt-3">
-        Explore pre-designed templates to quickly begin building your
-        application or website.
+        Explore no-code products to quickly begin automating your business.
       </p>
       <div className="flex mt-8 group h-52 sm:h-64 md:h-auto">
         <Image
