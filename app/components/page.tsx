@@ -10,12 +10,12 @@ const description =
   "Beautiful and responsive UI components and templates for React and Vue with Tailwind CSS.";
 
 export const metadata = {
-  metadataBase: new URL("https://floatui.com"),
+  metadataBase: new URL("https://Swiftwave.io"),
   title,
   description,
   openGraph: {
     title,
-    url: "https://floatui.com",
+    url: "https://Swiftwave.io",
     description,
   },
   twitter: {

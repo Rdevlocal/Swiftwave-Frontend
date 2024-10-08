@@ -7,11 +7,11 @@ import MDXRemoteClient from "components/MDXRemoteClient";
 const title = "Float UI - License";
 
 export const metadata = {
-  metadataBase: new URL("https://floatui.com"),
+  metadataBase: new URL("https://Swiftwave.io"),
   title,
   openGraph: {
     title,
-    url: "https://floatui.com",
+    url: "https://Swiftwave.io",
   },
   twitter: {
     title,
