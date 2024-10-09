@@ -7,7 +7,7 @@ export default () => {
     <section className="custom-screen mt-20">
       <div className="relative z-10 max-w-2xl mx-auto space-y-4 text-center">
         <h1 className="text-5xl heading">
-          Build and ship fast with Tailwind CSS UI components
+          A partner that never sleeps
         </h1>
         <p className="text-zinc-400">
           Move faster with beautiful, responsive UI components and website
