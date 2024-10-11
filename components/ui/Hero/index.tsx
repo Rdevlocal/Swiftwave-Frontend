@@ -28,7 +28,7 @@ export default () => {
             target="_blank"
           >
             <IconGithub className="w-5 h-5" />
-            Star on GitHub
+            Star on 
           </LinkItem>
         </div>
       </div>
