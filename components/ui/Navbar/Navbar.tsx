@@ -16,7 +16,17 @@ export default () => {
   const navigation = [
     { title: "Integrations", path: "/integrations" },
     { title: "Products", path: "/products" },
-    { title: "Recources", path: "/demo" },
+    { title: "Pricing", path: "/pricing" },
+    { title: "Recources", path: "/demo" }{
+          { title: "about", path: "/about" },
+          { title: "partners", path: "/partners"},
+          { title: "advantages", path: "/advantages"},
+          { title: "blog", path: "/blog"},
+          { title: "contact", path: "/contact"},
+          { title: "helpcenter", path: "/helpcenter"},
+
+    },
+
     {
       title: "Start now",
       path: "https://signup.swiftwave.io",
