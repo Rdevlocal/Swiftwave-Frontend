@@ -12,13 +12,7 @@ const navigation = [
   { name: "Blog", href: "/blog" },
 ];
 
-const marsNavigation = [
-  { name: "Marsx", href: "https://www.marsx.dev/" },
-  { name: "Unicorn Platform", href: "https://unicornplatform.com" },
-  { name: "UI generator", href: "https://uigenerator.org/" },
-  { name: "E-commerce store generator", href: "https://marketsy.ai/" },
-  { name: "Dev Hunt", href: "https://devhunt.org" },
-];
+
 
 export default () => (
   <footer className="relative mt-40 pt-24 overflow-hidden">

@@ -4,8 +4,6 @@ import {
   IconPennibLine,
 } from "components/icons";
 import { ReactNode } from "react";
-import featureCover from "public/feature-cover.svg";
-import Image from "next/image";
 import Card from "./Card";
 
 type Feature = {
@@ -17,18 +15,18 @@ type Feature = {
 export default () => {
   const features: Feature[] = [
     {
-      title: "Beautifully designed",
-      desc: "Float UI allows you build beautiful and modern websites regardless of your design skills.",
+      title: "Intelligent Automation",
+      desc: "Leverage AI to automate complex tasks, boosting efficiency and reducing human error across all operations.",
       icon: <IconPennibLine />,
     },
     {
-      title: "Fully Responsive",
-      desc: "Responsive designed components and templates that look great on any screen.",
+      title: "Seamless Integration",
+      desc: "Integrate AI-driven automation into your existing systems effortlessly, scaling with your business in real-time.",
       icon: <IconArrowsexpandLeft />,
     },
     {
-      title: "Customizable",
-      desc: "copy and paste into your apps and experience the power of customizable components.",
+      title: "Tailored AI Solutions",
+      desc: "Our AI tools are fully customizable to meet the unique needs of your business, offering flexibility without limits.",
       icon: <IconBxCustomize />,
     },
   ];
@@ -36,15 +34,14 @@ export default () => {
   return (
     <section className="custom-screen mt-32">
       <div className="max-w-xl mx-auto space-y-4 text-center">
-        <h2 className="text-4xl heading">Turn your ideas into reality</h2>
+        <h2 className="text-4xl heading">AI-Driven Automation for a Smarter Future</h2>
         <p className="text-zinc-400">
-          Float UI offers all the vital building blocks you need to transform
-          your idea into a great-looking startup.
+          Transform your business with scalable AI solutions that enhance productivity, streamline workflows, and empower innovation.
         </p>
       </div>
       <ul className="space-y-6 gap-6 mt-8 max-w-7xl mx-auto grid-cols-2 sm:grid lg:grid-cols-3 sm:space-y-0">
         {features.map((item: Feature, key: number) => (
-          <Card icon={item.icon} title={item.title} desc={item.desc} />
+          <Card icon={item.icon} title={item.title} desc={item.desc} key={key} />
         ))}
       </ul>
     </section>
