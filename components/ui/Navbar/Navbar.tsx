@@ -17,22 +17,20 @@ export default () => {
     { title: "Integrations", path: "/integrations" },
     { title: "Products", path: "/products" },
     { title: "Pricing", path: "/pricing" },
-    { title: "Recources", path: "/demo" }{
-          { title: "about", path: "/about" },
-          { title: "partners", path: "/partners"},
-          { title: "advantages", path: "/advantages"},
-          { title: "blog", path: "/blog"},
-          { title: "contact", path: "/contact"},
-          { title: "helpcenter", path: "/helpcenter"},
-
-    },
-
+    { title: "Recources", path: "/demo" },
+    { title: "About", path: "/about" },
+    { title: "Partners", path: "/partners" },
+    { title: "Advantages", path: "/advantages" },
+    { title: "Blog", path: "/blog" },
+    { title: "Contact", path: "/contact" },
+    { title: "Help Center", path: "/helpcenter" },
     {
       title: "Start now",
       path: "https://signup.swiftwave.io",
       props: { target: "_blank" },
     },
   ];
+  
 
   useEffect(() => {
     document.onclick = (e) => {
