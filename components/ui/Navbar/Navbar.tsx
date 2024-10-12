@@ -14,12 +14,12 @@ export default () => {
 
   // Replace javascript:void(0) paths with your paths
   const navigation = [
-    { title: "Components", path: "/components" },
-    { title: "Templates", path: "/templates" },
-    { title: "Demo", path: "/demo" },
+    { title: "Integrations", path: "/integrations" },
+    { title: "Products", path: "/products" },
+    { title: "Recources", path: "/demo" },
     {
-      title: "Github",
-      path: "https://github.com/MarsX-dev/floatui",
+      title: "Start now",
+      path: "https://signup.swiftwave.io",
       props: { target: "_blank" },
     },
   ];
