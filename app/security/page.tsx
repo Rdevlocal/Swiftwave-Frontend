@@ -1,17 +1,17 @@
-import fs from "fs";
+import fs from "fs"; 
 import path from "path";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
 import MDXRemoteClient from "components/MDXRemoteClient";
 
-const title = "Float UI - License";
+const title = "Swiftwave - Security Policy";
 
 export const metadata = {
   metadataBase: new URL("https://Swiftwave.io"),
   title,
   openGraph: {
     title,
-    url: "https://Swiftwave.io",
+    url: "https://Swiftwave.io/security",
   },
   twitter: {
     title,
@@ -20,7 +20,7 @@ export const metadata = {
 
 export default async () => {
   const markdownWithMeta = fs.readFileSync(
-    path.join(process.cwd(), "content/license.mdx"),
+    path.join(process.cwd(), "content/security.mdx"),
     "utf-8"
   );
   const { data: frontMatter, content } = matter(markdownWithMeta);
@@ -31,10 +31,10 @@ export default async () => {
       <main className="mt-20">
         <div className="text-center mx-4">
           <h1 className="text-4xl heading tracking-tight mb-4 sm:text-4.5xl">
-            License
+            Security Policy
           </h1>
           <p className="text-zinc-400 mt-3">
-            All you need to know about the Float UI licensing model
+            Learn more about how we protect your data and ensure secure operations.
           </p>
         </div>
         <article className="prose prose-invert mt-12 mx-4 sm:mx-auto">
