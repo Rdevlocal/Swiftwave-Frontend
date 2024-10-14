@@ -24,11 +24,6 @@ export default () => {
     { title: "Blog", path: "/blog" },
     { title: "Contact", path: "/contact" },
     { title: "Help Center", path: "/helpcenter" },
-    {
-      title: "Start now",
-      path: "https://signup.swiftwave.io",
-      props: { target: "_blank" },
-    },
   ];
   
 
@@ -38,18 +33,6 @@ export default () => {
       if (target && !target.closest(".menu-btn")) setState(false);
     };
   }, []);
-
-  function EditorWithAiButton() {
-    return (
-      <button
-        className="w-full font-medium text-sm text-zinc-400 hover:text-zinc-200 flex items-center gap-2 duration-200 group"
-        onClick={() => setNewsletterModalActive(true)}
-      >
-        Editor with AI
-        <SparklesIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 scale-50 group-hover:scale-125 duration-150" />
-      </button>
-    );
-  }
 
   return (
     <>
@@ -68,7 +51,6 @@ export default () => {
               </Link>
               <div className="flex md:hidden">
                 <div className="mr-3">
-                  <EditorWithAiButton />
                 </div>
                 <button
                   aria-label="menu button"
@@ -101,9 +83,6 @@ export default () => {
                     </li>
                   );
                 })}
-                <li>
-                  <EditorWithAiButton />
-                </li>
               </ul>
               <div className="mt-6 md:mt-0">
                 <LinkItem

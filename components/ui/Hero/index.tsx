@@ -1,5 +1,4 @@
 import LinkItem from "../LinkItem";
-import { IconGithub } from "components/icons";
 import HeroBgGradientClient from "./HeroBgGradient.Client";
 
 export default () => {
@@ -19,16 +18,15 @@ export default () => {
             variant="shiny"
             className="inline-block w-full hover:bg-zinc-700 sm:w-auto"
           >
-            Explore Solutions
+            Get started today
           </LinkItem>
           <LinkItem
-            href="https://github.com/YourCompany/ai-automation"
+            href=""
             variant="shiny"
             className="inline-flex w-full justify-center items-center gap-x-2 border border-zinc-800 hover:border-zinc-600 bg-zinc-950 hover:text-zinc-100 duration-200 sm:w-auto"
             target="_blank"
           >
-            <IconGithub className="w-5 h-5" />
-            Star on GitHub
+            explore solutions
           </LinkItem>
         </div>
       </div>

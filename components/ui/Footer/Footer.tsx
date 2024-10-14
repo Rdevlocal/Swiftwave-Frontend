@@ -13,9 +13,8 @@ const navigation = [
   { name: "Blog", href: "/blog" },
 ];
 
-// Mars navigation items (you can define this if it's needed)
+// Mars navigation items
 const marsNavigation = [
-  // Example structure, replace with actual items if needed
   { name: "Item 1", href: "https://example.com" },
   { name: "Item 2", href: "https://example.com" },
 ];
@@ -51,8 +50,8 @@ const Footer = () => {
               >
                 <Image
                   src="/images/tw-icon.svg"
-                  width="40"
-                  height="40"
+                  width={40}
+                  height={40}
                   alt="Twitter icon"
                 />
               </a>
