@@ -1,46 +1,85 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { serialize } from "next-mdx-remote/serialize";
-import MDXRemoteClient from "components/MDXRemoteClient";
+"use client"; // Indicate that this is a client component
 
-const title = "Float UI - License";
+import React from 'react';
 
-export const metadata = {
-  metadataBase: new URL("https://Swiftwave.io"),
-  title,
-  openGraph: {
-    title,
-    url: "https://Swiftwave.io",
-  },
-  twitter: {
-    title,
-  },
-};
-
-export default async () => {
-  const markdownWithMeta = fs.readFileSync(
-    path.join(process.cwd(), "content/license.mdx"),
-    "utf-8"
-  );
-  const { data: frontMatter, content } = matter(markdownWithMeta);
-  const mdxSource = await serialize(content);
+// ContactForm Component
+const ContactForm = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted");
+  };
 
   return (
-    <>
-      <main className="mt-20">
-        <div className="text-center mx-4">
-          <h1 className="text-4xl heading tracking-tight mb-4 sm:text-4.5xl">
-            License
-          </h1>
-          <p className="text-zinc-400 mt-3">
-            All you need to know about the Float UI licensing model
-          </p>
-        </div>
-        <article className="prose prose-invert mt-12 mx-4 sm:mx-auto">
-          <MDXRemoteClient mdxSource={{ ...mdxSource }} />
-        </article>
-      </main>
-    </>
+    <main className="py-14" style={{ backgroundColor: '#09090B' }}> {/* Set background color */}
+      <div className="max-w-lg mx-auto">
+        <h3 className="text-white text-3xl font-semibold text-center mb-6">Contact Us</h3>
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
+            <div>
+              <label className="font-medium text-white">First name</label>
+              <input
+                type="text"
+                required
+                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              />
+            </div>
+            <div>
+              <label className="font-medium text-white">Last name</label>
+              <input
+                type="text"
+                required
+                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              />
+            </div>
+          </div>
+          <div>
+            <label className="font-medium text-white">Email</label>
+            <input
+              type="email"
+              required
+              className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+            />
+          </div>
+          <div>
+            <label className="font-medium text-white">Phone number</label>
+            <div className="relative mt-2">
+              <div className="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
+                <select className="text-sm bg-transparent outline-none rounded-lg h-full text-gray-500">
+                  <option>US</option>
+                  <option>ES</option>
+                  <option>MR</option>
+                </select>
+              </div>
+              <input
+                type="tel"
+                placeholder="+1 (555) 000-000"
+                required
+                className="w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg text-gray-500"
+              />
+            </div>
+          </div>
+          <div>
+            <label className="font-medium text-white">Message</label>
+            <textarea
+              required
+              className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg text-gray-500"
+            ></textarea>
+          </div>
+          <button className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150">
+            Submit
+          </button>
+        </form>
+      </div>
+    </main>
   );
 };
+
+// Main Component
+const ContactPage = () => {
+  return (
+    <ContactForm />
+  );
+};
+
+export default ContactPage;

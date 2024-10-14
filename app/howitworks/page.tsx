@@ -101,6 +101,8 @@ const HowItWorksPage = () => {
       <HighPerformanceSection />
       <ProfessionalServicesSection />
       <BuildFutureSection />
+      <HighPerformanceSection /> {/* Repeated section */}
+      <ProfessionalServicesSection /> {/* Repeated section */}
     </>
   );
 };
