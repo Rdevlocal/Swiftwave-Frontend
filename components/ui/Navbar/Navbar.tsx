@@ -6,33 +6,55 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Brand from "../Brand";
 import Link from "next/link";
 import NewsletterModal from "../NewsletterModal";
-import { SparklesIcon } from "@heroicons/react/24/outline";
 
 export default () => {
   const [state, setState] = useState(false);
+  const [isDropdownOpen, setDropdownOpen] = useState(false); // State for Resources dropdown visibility
+  const [dropdownTimeout, setDropdownTimeout] = useState(null); // State for dropdown timeout
   const [isNewsletterModalActive, setNewsletterModalActive] = useState(false);
 
-  // Replace javascript:void(0) paths with your paths
+  // Main navigation items
   const navigation = [
     { title: "Integrations", path: "/integrations" },
     { title: "Products", path: "/products" },
     { title: "Pricing", path: "/pricing" },
-    { title: "Recources", path: "/demo" },
+    { title: "Resources", path: "/resources" }, // Keeping this for reference
+    { title: "Contact", path: "/contact" },
+  ];
+
+  // Resources dropdown items
+  const resources = [
     { title: "About", path: "/about" },
     { title: "Partners", path: "/partners" },
     { title: "Advantages", path: "/advantages" },
     { title: "Blog", path: "/blog" },
-    { title: "Contact", path: "/contact" },
     { title: "Help Center", path: "/helpcenter" },
   ];
-  
 
   useEffect(() => {
     document.onclick = (e) => {
       const target = e.target as HTMLElement;
-      if (target && !target.closest(".menu-btn")) setState(false);
+      if (target && !target.closest(".menu-btn")) {
+        setState(false);
+        closeDropdown();
+      }
     };
   }, []);
+
+  const openDropdown = () => {
+    setDropdownOpen(true);
+    clearTimeout(dropdownTimeout); // Clear any existing timeout
+  };
+
+  const closeDropdown = () => {
+    if (dropdownTimeout) return; // Prevent setting another timeout if one already exists
+    const timeoutId = setTimeout(() => {
+      setDropdownOpen(false);
+      setDropdownTimeout(null); // Clear the timeout reference
+    }, 1000); // Keep dropdown open for 1 second
+
+    setDropdownTimeout(timeoutId);
+  };
 
   return (
     <>
@@ -50,8 +72,7 @@ export default () => {
                 <Brand />
               </Link>
               <div className="flex md:hidden">
-                <div className="mr-3">
-                </div>
+                <div className="mr-3"></div>
                 <button
                   aria-label="menu button"
                   className="menu-btn group"
@@ -72,16 +93,44 @@ export default () => {
             >
               <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
                 {navigation.map((item, idx) => {
-                  return (
-                    <li
-                      key={idx}
-                      className="font-medium text-sm text-zinc-400 hover:text-zinc-200 duration-200"
-                    >
-                      <Link {...item.props} href={item.path} className="block">
-                        {item.title}
-                      </Link>
-                    </li>
-                  );
+                  if (item.title === "Resources") {
+                    return (
+                      <li
+                        key={idx}
+                        className="relative font-medium text-sm text-zinc-400 hover:text-zinc-200 duration-200"
+                        onMouseEnter={openDropdown} // Open dropdown on hover
+                        onMouseLeave={closeDropdown} // Close dropdown after timeout
+                      >
+                        <Link href={item.path} className="block">
+                          {item.title}
+                        </Link>
+                        {isDropdownOpen && (
+                          <ul className="absolute left-0 mt-2 w-40 bg-zinc-800 rounded-md shadow-lg z-10">
+                            {/* Dropdown items for Resources */}
+                            {resources.map((resource, resourceIdx) => (
+                              <li
+                                key={resourceIdx}
+                                className="py-2 px-4 text-zinc-400 hover:text-zinc-200"
+                              >
+                                <Link href={resource.path}>{resource.title}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    );
+                  } else {
+                    return (
+                      <li
+                        key={idx}
+                        className="font-medium text-sm text-zinc-400 hover:text-zinc-200 duration-200"
+                      >
+                        <Link {...item.props} href={item.path} className="block">
+                          {item.title}
+                        </Link>
+                      </li>
+                    );
+                  }
                 })}
               </ul>
               <div className="mt-6 md:mt-0">
