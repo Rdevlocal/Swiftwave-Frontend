@@ -5,19 +5,36 @@ import BorderGradient from "./BorderGradient";
 import BgGradient from "./BgGradient";
 import { IconGithub } from "components/icons";
 
-// Navigation items for the footer
-const navigation = [
-  { name: "Demo", href: "/demo" },
-  { name: "License", href: "/license" },
-  { name: "Privacy Policy", href: "/privacy-policy" },
-  { name: "Blog", href: "/blog" },
-];
-
-// Mars navigation items
-const marsNavigation = [
-  { name: "Item 1", href: "https://example.com" },
-  { name: "Item 2", href: "https://example.com" },
-];
+// Navigation items organized by category
+const navigation = {
+  Products: [
+    { name: "Homepage", href: "/" },
+    { name: "Advantages", href: "/advantages" },
+    { name: "Integrations", href: "/integrations" },
+    { name: "Pricing", href: "/pricing" },
+  ],
+  Help: [
+    { name: "Help Center", href: "/help-center", checked: true },
+    { name: "Contact", href: "/contact" },
+    { name: "Bug Bounty", href: "/bug-bounty" },
+  ],
+  Resources: [
+    { name: "Blog", href: "/blog" },
+    { name: "Affiliates", href: "/affiliates" },
+    { name: "Agencies", href: "/agencies" },
+    { name: "Ecosystems", href: "/ecosystems" },
+  ],
+  Company: [
+    { name: "About", href: "/about" },
+    { name: "Partners", href: "/partners" },
+    { name: "How It Works", href: "/howitworks" },
+  ],
+  Legal: [
+    { name: "License", href: "/license", checked: true },
+    { name: "Privacy Policy", href: "/privacy-policy", checked: true },
+    { name: "Security", href: "/security", checked: true },
+  ],
+};
 
 const Footer = () => {
   return (
@@ -60,34 +77,27 @@ const Footer = () => {
 
           {/* Navigation Links */}
           <div className="flex-1 mt-4 pb-8 flex flex-wrap gap-4 font-medium sm:justify-end sm:mt-0">
-            <ul className="flex-grow max-w-[15rem] space-y-2">
-              <li className="text-zinc-100 font-medium">Resources</li>
-              {navigation.map((item, idx) => (
-                <li key={idx} className="text-sm text-zinc-400 hover:text-zinc-100 duration-200">
-                  <Link href={item.href} className="block sm:inline-block">
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <ul className="space-y-2">
-              <li className="text-zinc-100 font-medium">Mars Verse</li>
-              {marsNavigation.map((item, idx) => (
-                <li key={idx} className="text-sm text-zinc-400 hover:text-zinc-100 duration-200">
-                  <Link href={item.href} target="_blank" rel="noopener noreferrer" className="block">
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {Object.entries(navigation).map(([category, items]) => (
+              <div key={category} className="flex-grow max-w-[15rem] space-y-2">
+                <div className="text-zinc-100 font-medium">{category}</div>
+                <div className="space-y-2">
+                  {items.map((item, idx) => (
+                    <div key={idx} className="text-sm text-zinc-400 hover:text-zinc-100 duration-200">
+                      <Link href={item.href} className="block sm:inline-block">
+                        {item.name}
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Footer Bottom Section */}
         <div className="text-sm custom-screen text-center border-t border-zinc-800">
           <div className="text-zinc-300 py-8">
-            &copy; 2023 Float UI. All rights reserved.
+            &copy; 2024 Swiftwave.io All rights reserved.
           </div>
         </div>
       </div>

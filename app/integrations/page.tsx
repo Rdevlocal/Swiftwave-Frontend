@@ -18,29 +18,109 @@ export const metadata = {
   },
 };
 
-export default async () => {
-  const markdownWithMeta = fs.readFileSync(
-    path.join(process.cwd(), "content/license.mdx"),
-    "utf-8"
-  );
-  const { data: frontMatter, content } = matter(markdownWithMeta);
-  const mdxSource = await serialize(content);
+const integrations = [
+  {
+    title: "Figma",
+    desc: "Ut enim ad minim veniam",
+    icon: (
+      <svg
+        className="w-10 h-10 mx-auto mb-4"
+        viewBox="0 0 43 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clipPath="url(#clip0_690_1894)">
+          <path
+            d="M14.1693 48C18.08 48 21.254 44.4159 21.254 39.9999V31.9999H14.1693C10.2586 31.9999 7.08459 35.5839 7.08459 39.9999C7.08459 44.4159 10.2586 48 14.1693 48Z"
+            fill="#0ACF83"
+          />
+          <path
+            d="M7.08459 23.9999C7.08459 19.5839 10.2586 15.9999 14.1693 15.9999H21.254V31.9998H14.1693C10.2586 32 7.08459 28.4159 7.08459 23.9999Z"
+            fill="#A259FF"
+          />
+          <path
+            d="M7.08459 8.00006C7.08459 3.58406 10.2586 0 14.1693 0H21.254V15.9999H14.1693C10.2586 15.9999 7.08459 12.4161 7.08459 8.00006Z"
+            fill="#F24E1E"
+          />
+          <path
+            d="M21.2535 0H28.3382C32.2489 0 35.4229 3.58406 35.4229 8.00006C35.4229 12.4161 32.2489 15.9999 28.3382 15.9999H21.2535V0Z"
+            fill="#FF7262"
+          />
+          <path
+            d="M35.4229 23.9999C35.4229 28.4159 32.2489 32 28.3382 32C24.4275 32 21.2535 28.4159 21.2535 23.9999C21.2535 19.5839 24.4275 15.9999 28.3382 15.9999C32.2489 15.9999 35.4229 19.5839 35.4229 23.9999Z"
+            fill="#1ABCFE"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_690_1894">
+            <rect width="42.5075" height="48" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    ),
+  },
+  {
+    title: "Github",
+    desc: "Ut enim ad minim veniam",
+    icon: (
+      <svg
+        className="w-10 h-10 mx-auto mb-4"
+        viewBox="0 0 48 48"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clipPath="url(#clip0_694_1831)">
+          <path
+            fillRule="evenodd"
+            clipRule="evenodd"
+            d="M24.0005 1C18.303 1.00296 12.7923 3.02092 8.45374 6.69305C4.11521 10.3652 1.23181 15.452 0.319089 21.044C-0.593628 26.636 0.523853 32.3684 3.47174 37.2164C6.41963 42.0643 11.0057 45.7115 16.4099 47.5059C17.6021 47.7272 18.0512 46.9883 18.0512 46.36C18.0512 45.7317 18.0273 43.91 18.0194 41.9184C11.3428 43.3608 9.93197 39.101 9.93197 39.101C8.84305 36.3349 7.26927 35.6078 7.26927 35.6078C5.09143 34.1299 7.43223 34.1576 7.43223 34.1576C9.84455 34.3275 11.1123 36.6194 11.1123 36.6194C13.2504 40.2667 16.7278 39.2116 18.0949 38.5952C18.3095 37.0501 18.9335 35.999 19.621 35.4023C14.2877 34.8017 8.68408 32.7548 8.68408 23.6108C8.65102 21.2394 9.53605 18.9461 11.156 17.2054C10.9096 16.6047 10.087 14.1785 11.3905 10.8829C11.3905 10.8829 13.4054 10.2427 17.9916 13.3289C21.9253 12.2592 26.0757 12.2592 30.0095 13.3289C34.5917 10.2427 36.6026 10.8829 36.6026 10.8829C37.9101 14.1706 37.0875 16.5968 36.8411 17.2054C38.4662 18.9464 39.353 21.2437 39.317 23.6187C39.317 32.7824 33.7015 34.8017 28.3602 35.3905C29.2186 36.1334 29.9856 37.5836 29.9856 39.8122C29.9856 43.0051 29.9578 45.5736 29.9578 46.36C29.9578 46.9962 30.391 47.7391 31.6071 47.5059C37.0119 45.7113 41.5984 42.0634 44.5462 37.2147C47.4941 32.3659 48.611 26.6326 47.6972 21.0401C46.7835 15.4476 43.8986 10.3607 39.5587 6.68921C35.2187 3.01771 29.7067 1.00108 24.0085 1H24.0005Z"
+            fill="#191717"
+          />
+          <path
+            d="M9.08887 35.264C9.03721 35.3826 8.84645 35.4181 8.69146 35.3351C8.53646 35.2522 8.42122 35.098 8.47686 34.9755C8.5325 34.853 8.71928 34.8214 8.87428 34.9044C9.02927 34.9874 9.14848 35.1455 9.08887 35.264Z"
+            fill="#191717"
+          />
+          <path
+            d="M10.0626 36.3428C9.98028 36.384 9.88612 36.3955 9.79622 36.3753C9.70632 36.3551 9.62629 36.3045 9.56979 36.2321C9.41479 36.0662 9.38298 35.837 9.50221 35.6069C9.62144 35.6131 9.86036 35.6068 10.0296 35.7738C10.2198 35.9402 10.1614 36.1971 10.0626 36.3428Z"
+            fill="#191717"
+          />
+          <path
+            d="M29.8423 35.1003C29.7082 35.1227 29.6239 34.9941 29.6617 34.8929C29.6995 34.7917 29.8459 34.6963 29.9825 34.6738C30.119 34.6513 30.2189 34.786 30.2179 34.8871C30.2169 34.9881 30.0748 35.116 29.8423 35.1003Z"
+            fill="#191717"
+          />
+          <path
+            d="M30.6808 36.2605C30.5915 36.2564 30.5114 36.2724 30.4528 36.2638C30.3942 36.2553 30.3595 36.1646 30.4257 36.0479C30.4919 35.9312 30.7088 35.9599 30.7553 36.0783C30.8019 36.1967 30.7201 36.3626 30.6808 36.2605Z"
+            fill="#191717"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_694_1831">
+            <rect width="48" height="48" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    ),
+  },
+];
 
+export default async function IntegrationPage() {
   return (
-    <>
-      <main className="mt-20">
-        <div className="text-center mx-4">
-          <h1 className="text-4xl heading tracking-tight mb-4 sm:text-4.5xl">
-            License
-          </h1>
-          <p className="text-zinc-400 mt-3">
-            All you need to know about the Float UI licensing model
-          </p>
+    <div className="py-20" style={{ backgroundColor: '#0A0707' }}>
+      <div className="container mx-auto text-center">
+        <h1 className="text-3xl font-bold text-white">Integrations</h1>
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {integrations.map((integration) => (
+            <div
+              key={integration.title}
+              className="bg-gray-800 rounded-lg p-6 text-center transition duration-300 hover:shadow-lg flex flex-col justify-center items-center"
+            >
+              <div className="mb-4">{integration.icon}</div>
+              <h2 className="text-xl font-semibold text-white">{integration.title}</h2>
+              <p className="text-gray-400">{integration.desc}</p>
+            </div>
+          ))}
         </div>
-        <article className="prose prose-invert mt-12 mx-4 sm:mx-auto">
-          <MDXRemoteClient mdxSource={{ ...mdxSource }} />
-        </article>
-      </main>
-    </>
+      </div>
+    </div>
   );
-};
+}
