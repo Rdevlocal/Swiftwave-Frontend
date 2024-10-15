@@ -23,7 +23,7 @@ const posts = [
       href: "javascript:void(0)"
   },
   {
-      title: "How to Use Root C++ Interpreter Shell to Write C++ Programs",
+      title: "How to Use sd C++ Interpreter Shell to Write C++ Programs",
       desc: "The powerful gravity waves resulting from the impact of the planets' moons — four in total — were finally resolved in 2015 when gravitational.",
       img: "https://images.unsplash.com/photo-1617529497471-9218633199c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       date: "Jan 4 2022",
