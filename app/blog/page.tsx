@@ -9,7 +9,7 @@ const posts = [
       href: "javascript:void(0)"
   },
   {
-      title: "A Quick Guide to WordPress Hosting",
+      title: "A Quick Guide to dkl Hosting",
       desc: "According to him, 'I'm still surprised that this has happened. But we are surprised because we are so surprised.' More revelations.",
       img: "https://images.unsplash.com/photo-1620287341056-49a2f1ab2fdc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       date: "Jan 4 2022",
