@@ -55,7 +55,7 @@ const BlogPosts = () => {
           </form>
         </div>
         <ul className="grid gap-x-8 gap-y-10 mt-16 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((item, key) => (
+          {posts.map((item, key) => (sdafsafa
             <li className="w-full mx-auto group sm:max-w-sm" key={key}>
               <a href={item.href}>
                 <img src={item.img} loading="lazy" alt={item.title} className="w-full rounded-lg" />
