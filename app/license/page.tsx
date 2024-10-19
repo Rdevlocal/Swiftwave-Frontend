@@ -1,11 +1,11 @@
-const title = "Swiftwave - Privacy Policy";
+const title = "Swiftwave - License Agreement";
 
 export const metadata = {
   metadataBase: new URL("https://Swiftwave.io"),
   title,
   openGraph: {
     title,
-    url: "https://Swiftwave.io/privacy",
+    url: "https://Swiftwave.io/license",
   },
   twitter: {
     title,
@@ -18,65 +18,51 @@ export default () => {
       <section className="mt-20">
         <div className="text-center mx-4">
           <h1 className="text-3xl heading font-extrabold tracking-tight mb-4 sm:text-4.5xl">
-            Licence
+            License Agreement
           </h1>
           <p className="text-zinc-400 mt-3">
-            Your data is protected and respected.
+            Understand your rights and responsibilities.
           </p>
         </div>
         <div className="prose prose-invert mt-12 mx-4 sm:mx-auto">
-          <h2>Collection of Non-Personal Information</h2>
+          <h2>License Grant</h2>
           <p>
-            When you visit our website, our servers automatically record
-            information that your browser sends. This data may include
-            information such as your device's IP address, browser type and
-            version, operating system type and version, language preferences,
-            the webpage you were visiting before you came to our website, pages
-            of our website that you visit, the time spent on those pages,
-            information you search for on our website, access times and dates,
-            and other statistics.
+            Subject to your compliance with these terms, Swiftwave grants you a non-exclusive, non-transferable license to use the software and services provided through our platform (the "Services"). This license allows you to access and use the Services for your personal or business purposes.
           </p>
-          <h2>Information Transfer and Storage</h2>
+          
+          <h2>Restrictions</h2>
           <p>
-            Depending on your location, data transfers may involve transferring
-            and storing your information in a country other than your own. You
-            are entitled to learn about the legal basis of information transfers
-            to a country outside the European Union or to any international
-            organization governed by public international law or set up by two
-            or more countries, such as the UN, and about the security measures
-            taken by us to safeguard your information. If any such transfer
-            takes place, you can find out more by checking the relevant sections
-            of this document or inquire with us using the information provided
-            in the Contact section.
+            You may not copy, modify, distribute, sell, or lease any part of the Services, nor may you reverse engineer or attempt to extract the source code of the software, unless permitted by law. You also agree not to use the Services for any illegal or unauthorized purpose.
           </p>
-          <h2>Newsletters</h2>
+          
+          <h2>Termination</h2>
           <p>
-            We offer electronic newsletters which you may voluntarily subscribe
-            to. You may choose to stop receiving our newsletter or marketing
-            emails by following the unsubscribe instructions included in these
-            emails or by contacting us. However, you will continue to receive
-            essential transactional emails.
+            Swiftwave reserves the right to terminate your access to the Services if you fail to comply with the terms of this license agreement. Upon termination, all rights granted to you will cease, and you must stop using the Services immediately.
           </p>
-          <h2>Cookies</h2>
+          
+          <h2>Disclaimer of Warranty</h2>
           <p>
-            Our website uses "cookies" to help personalize your online
-            experience. A cookie is a text file that is placed on your hard disk
-            by a web page server. Cookies cannot be used to run programs or
-            deliver viruses to your computer. Cookies are uniquely assigned to
-            you and can only be read by a web server in the domain that issued
-            the cookie to you. We may use cookies to collect, store, and track
-            information for statistical purposes to operate our website. You
-            have the ability to accept or decline cookies. Most web browsers
-            automatically accept cookies, but you can usually modify your
-            browser settings to decline cookies if you prefer.
+            The Services are provided on an "as-is" basis without any warranties of any kind. Swiftwave does not guarantee the accuracy, reliability, or completeness of the Services. Your use of the Services is at your own risk.
           </p>
+          
+          <h2>Limitation of Liability</h2>
           <p>
-            In addition to using cookies and related technologies as described
-            above, we may also permit certain third-party companies to help us
-            tailor advertising that we think may be of interest to users and to
-            collect and use other data about user activities on our website.
-            These companies may deliver ads that might also place cookies and
-            otherwise track user behavior.
+            To the fullest extent permitted by applicable law, Swiftwave shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or other intangible losses, arising from your use of or inability to use the Services.
+          </p>
+          
+          <h2>Governing Law</h2>
+          <p>
+            This license agreement shall be governed by and construed in accordance with the laws of the jurisdiction in which Swiftwave is established, without regard to its conflict of law principles.
+          </p>
+          
+          <h2>Changes to the License Agreement</h2>
+          <p>
+            Swiftwave reserves the right to update or modify this license agreement at any time. Any changes will be effective immediately upon posting the revised agreement on our website. Your continued use of the Services after any such changes constitutes your acceptance of the new terms.
+          </p>
+          
+          <h2>Contact Information</h2>
+          <p>
+            If you have any questions about this license agreement, please contact us using the information provided on our website.
           </p>
         </div>
       </section>

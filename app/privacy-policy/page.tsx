@@ -21,62 +21,37 @@ export default () => {
             Privacy Policy
           </h1>
           <p className="text-zinc-400 mt-3">
-            Your data is protected and respected.
+            Your privacy is our priority. Learn how we collect, use, and protect your personal information.
           </p>
         </div>
         <div className="prose prose-invert mt-12 mx-4 sm:mx-auto">
-          <h2>Collection of Non-Personal Information</h2>
+          <h2>Information We Collect</h2>
           <p>
-            When you visit our website, our servers automatically record
-            information that your browser sends. This data may include
-            information such as your device's IP address, browser type and
-            version, operating system type and version, language preferences,
-            the webpage you were visiting before you came to our website, pages
-            of our website that you visit, the time spent on those pages,
-            information you search for on our website, access times and dates,
-            and other statistics.
+            We collect both personal and non-personal information when you use our website or services. Personal information may include your name, email address, and other data you provide voluntarily. Non-personal information, such as device type, browser version, and site usage data, is collected automatically to enhance your experience.
           </p>
-          <h2>Information Transfer and Storage</h2>
+          <h2>How We Use Your Information</h2>
           <p>
-            Depending on your location, data transfers may involve transferring
-            and storing your information in a country other than your own. You
-            are entitled to learn about the legal basis of information transfers
-            to a country outside the European Union or to any international
-            organization governed by public international law or set up by two
-            or more countries, such as the UN, and about the security measures
-            taken by us to safeguard your information. If any such transfer
-            takes place, you can find out more by checking the relevant sections
-            of this document or inquire with us using the information provided
-            in the Contact section.
+            We use the data collected to operate and improve our website, provide customer support, personalize your experience, and communicate with you about updates or marketing offers. We will not sell, rent, or share your personal data with third parties without your consent, except as required by law.
           </p>
-          <h2>Newsletters</h2>
+          <h2>Third-Party Services and Data Sharing</h2>
           <p>
-            We offer electronic newsletters which you may voluntarily subscribe
-            to. You may choose to stop receiving our newsletter or marketing
-            emails by following the unsubscribe instructions included in these
-            emails or by contacting us. However, you will continue to receive
-            essential transactional emails.
+            We may work with third-party services to help us run our website and services, such as hosting providers or analytics platforms. These third parties may have access to your data but are required to handle it securely and in accordance with this privacy policy.
           </p>
-          <h2>Cookies</h2>
+          <h2>International Data Transfers</h2>
           <p>
-            Our website uses "cookies" to help personalize your online
-            experience. A cookie is a text file that is placed on your hard disk
-            by a web page server. Cookies cannot be used to run programs or
-            deliver viruses to your computer. Cookies are uniquely assigned to
-            you and can only be read by a web server in the domain that issued
-            the cookie to you. We may use cookies to collect, store, and track
-            information for statistical purposes to operate our website. You
-            have the ability to accept or decline cookies. Most web browsers
-            automatically accept cookies, but you can usually modify your
-            browser settings to decline cookies if you prefer.
+            If you are located outside of the country where our servers are based, your information may be transferred and stored internationally. We take appropriate safeguards to ensure that your data is protected in accordance with applicable privacy laws.
           </p>
+          <h2>Your Rights and Choices</h2>
           <p>
-            In addition to using cookies and related technologies as described
-            above, we may also permit certain third-party companies to help us
-            tailor advertising that we think may be of interest to users and to
-            collect and use other data about user activities on our website.
-            These companies may deliver ads that might also place cookies and
-            otherwise track user behavior.
+            You have the right to access, update, or delete your personal information at any time. You can also choose to opt-out of receiving marketing communications from us by following the unsubscribe link in our emails. If you have any concerns about your data, you can contact us for further assistance.
+          </p>
+          <h2>Cookies and Tracking Technologies</h2>
+          <p>
+            We use cookies to personalize your experience on our website. Cookies help us remember your preferences and improve your browsing experience. You can choose to accept or decline cookies through your browser settings. We may also use third-party tracking technologies to analyze website traffic and user behavior for improvement purposes.
+          </p>
+          <h2>Updates to This Policy</h2>
+          <p>
+            We may update our privacy policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. Any changes will be posted on this page, and significant updates will be communicated to you directly if applicable.
           </p>
         </div>
       </section>
