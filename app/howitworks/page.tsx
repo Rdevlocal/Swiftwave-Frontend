@@ -70,7 +70,7 @@ const ProfessionalServicesSection = () => {
   );
 };
 
-// BuildFutureSection.js
+// BuildFutureSection
 const BuildFutureSection = () => {
   return (
     <section className="py-28 relative bg-blue-600">
