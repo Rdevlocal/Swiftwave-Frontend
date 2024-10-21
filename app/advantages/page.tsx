@@ -13,7 +13,7 @@ const FeatureIcon: React.FC<{ icon: JSX.Element; name: string }> = ({ icon, name
 const AboutPage: React.FC = () => {
     const features = [
         {
-            name: "Trusted",
+            name: "Dependable",
             icon: (
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                     <path
@@ -24,7 +24,42 @@ const AboutPage: React.FC = () => {
                 </svg>
             ),
         },
-        // ... other features
+        {
+            name: "Innovative",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+                    <path
+                        fillRule="evenodd"
+                        d="M10 2a8 8 0 100 16 8 8 0 000-16zm1 11.414L15.414 11H12V4h-4v8H4.586L10 13.414z"
+                        clipRule="evenodd"
+                    />
+                </svg>
+            ),
+        },
+        {
+            name: "Flexible",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+                    <path
+                        fillRule="evenodd"
+                        d="M10 2a8 8 0 100 16 8 8 0 000-16zm3.586 10.586L10 12.414l-3.586 3.586A7.969 7.969 0 0110 18a7.97 7.97 0 013.586-.586zm0-4.586L10 8.414 6.414 5h7.172L13.586 8z"
+                        clipRule="evenodd"
+                    />
+                </svg>
+            ),
+        },
+        {
+            name: "Supportive",
+            icon: (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+                    <path
+                        fillRule="evenodd"
+                        d="M10 2a8 8 0 100 16 8 8 0 000-16zm2.646 8.354a.5.5 0 00-.708 0L10 13.293l-1.938-1.939a.5.5 0 00-.707.707L10 14.707l3.354-3.353a.5.5 0 000-.707z"
+                        clipRule="evenodd"
+                    />
+                </svg>
+            ),
+        },
     ];
 
     const [isVideoPoppedUp, setVideoPopUp] = useState(false);
@@ -41,10 +76,10 @@ const AboutPage: React.FC = () => {
                             ))}
                         </div>
                         <h1 className="text-4xl font-extrabold mx-auto md:text-5xl">
-                            Explore in-demand careers and develop cutting-edge skills
+                            Explore transformative learning experiences and advance your career
                         </h1>
                         <p className="max-w-xl mx-auto xl:mx-0">
-                            Sed ut perspiciatis unde omnis iste natus voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+                            Unlock your potential with our diverse courses designed to meet your needs.
                         </p>
                         <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0 xl:justify-start">
                             <a
@@ -64,7 +99,7 @@ const AboutPage: React.FC = () => {
                                 href="javascript:void(0)"
                                 className="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-900 hover:text-gray-600 font-medium duration-150 active:bg-gray-100 bg-white border rounded-lg md:inline-flex"
                             >
-                                Get access
+                                Join us today
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                     <path
                                         fillRule="evenodd"
@@ -80,7 +115,7 @@ const AboutPage: React.FC = () => {
                             <img
                                 src="https://images.unsplash.com/photo-1513258496099-48168024aec0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                                 className="rounded-lg"
-                                alt=""
+                                alt="Engaging with new skills"
                             />
                             <button
                                 className="absolute w-16 h-16 rounded-full inset-0 m-auto duration-150 bg-gray-200 hover:bg-gray-300 ring-offset-2 focus:ring text-white"
@@ -117,38 +152,25 @@ const AboutPage: React.FC = () => {
             <section className="py-14" style={{ background: "#09090B" }}>
                 <div className="max-w-screen-xl mx-auto px-4 text-gray-300 gap-x-12 items-start justify-between lg:flex md:px-8">
                     <div className="sm:hidden lg:block lg:w-1/2">
-                        <h2 className="text-3xl font-extrabold">Education is the passport to the future</h2>
+                        <h2 className="text-3xl font-extrabold">Education unlocks infinite potential</h2>
                         <p className="mt-3 text-gray-400">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
+                            Our platform offers a balanced mix of hands-on knowledge and academic insight, empowering learners to achieve their dreams.
                         </p>
                     </div>
-                    <div className="mt-6 lg:mt-0 lg:w-1/2">
-                        <ul className="space-y-4 divide-y divide-gray-800 sm:space-y-5">
-                            {/* Accordion Item */}
-                            <li className="pt-5">
-                                <details className="group relative duration-300 marker:content-['']">
-                                    <summary className="flex items-center gap-x-1.5 py-3 pr-5 text-lg font-medium text-gray-200 duration-300 cursor-pointer">
-                                        How do I get started with your services?
-                                        <span className="absolute right-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-gray-400 duration-300 group-open:rotate-180">
-                                                <path
-                                                    fillRule="evenodd"
-                                                    d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.72-3.72a.75.75 0 111.06 1.06l-4 4a.75.75 0 01-1.06 0l-4-4a.75.75 0 01.02-1.06z"
-                                                    clipRule="evenodd"
-                                                />
-                                            </svg>
-                                        </span>
-                                    </summary>
-                                    <p className="mt-3 text-gray-400">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    </p>
-                                </details>
-                            </li>
-                            {/* ... other accordion items */}
-                        </ul>
+                    <div className="mt-10 sm:mt-0 lg:w-1/2">
+                        <h2 className="text-3xl font-extrabold">Our Purpose</h2>
+                        <p className="mt-3 text-gray-400">
+                            We are committed to fostering an inclusive educational space where everyone can explore their interests and realize their dreams.
+                        </p>
+                        <h2 className="mt-10 text-3xl font-extrabold">Our Goal</h2>
+                        <p className="mt-3 text-gray-400">
+                            We aim to cultivate lifelong learners and equip them with the skills necessary for success in a rapidly evolving world.
+                        </p>
                     </div>
                 </div>
             </section>
+
+
                         {/* Section 1 */}
                         <section className="py-14">
                 <div className="max-w-screen-xl mx-auto md:px-8">

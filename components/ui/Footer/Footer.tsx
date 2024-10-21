@@ -3,7 +3,6 @@ import Image from "next/image";
 import Brand from "components/ui/Brand";
 import BorderGradient from "./BorderGradient";
 import BgGradient from "./BgGradient";
-import { IconGithub } from "components/icons";
 
 // Navigation items organized by category
 const navigation = {
@@ -14,9 +13,9 @@ const navigation = {
     { name: "Pricing", href: "/pricing" },
   ],
   Help: [
-    { name: "Help Center", href: "/help-center", checked: true },
+    { name: "Help Center", href: "/helpcenter", checked: true },
     { name: "Contact", href: "/contact" },
-    { name: "Bug Bounty", href: "/bug-bounty" },
+    { name: "Bug Bounty", href: "/bugbounty" },
   ],
   Resources: [
     { name: "Blog", href: "/blog" },
@@ -27,7 +26,6 @@ const navigation = {
   Company: [
     { name: "About", href: "/about" },
     { name: "Partners", href: "/partners" },
-    { name: "How It Works", href: "/howitworks" },
   ],
   Legal: [
     { name: "License", href: "/license", checked: true },
@@ -48,17 +46,9 @@ const Footer = () => {
           <div className="max-w-xs space-y-3">
             <Brand />
             <p className="text-sm text-zinc-300">
-              We are on a mission to make the process of building UI components easier.
+            Build the Future, Today
             </p>
             <div className="flex items-center gap-3">
-              <a
-                aria-label="GitHub account"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://github.com/MarsX-dev/floatui"
-              >
-                <IconGithub className="w-6 h-6 text-zinc-400" />
-              </a>
               <a
                 aria-label="Twitter account"
                 target="_blank"

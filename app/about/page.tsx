@@ -1,7 +1,7 @@
 export default () => {
     return (
         <>
-            {/* Section 1 - Professional AI Solutions */}
+            {/* Section 1 - Our Story */}
             <section className="py-14">
                 <div className="max-w-screen-xl mx-auto md:px-8">
                     <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
@@ -9,27 +9,25 @@ export default () => {
                             <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="md:max-w-lg sm:rounded-lg" alt="AI Technology" />
                         </div>
                         <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl text-white">
-                            <p className="text-3xl font-semibold sm:text-4xl">
-                                Our Story
-                            </p>
+                            <h3 className="text-3xl font-semibold sm:text-4xl">Our Story</h3>
                             <p className="mt-3">
-                            We started with a simple mission: to revolutionize how businesses harness the power of AI. What began as a small team of passionate technologists has now grown into a global company, serving clients across industries. From day one, innovation has been our driving force, and we're proud to continue leading the way in AI advancements.
+                                We started with a simple mission: to revolutionize how businesses harness the power of AI. From a small team of passionate technologists, we've grown into a global company, leading the way in AI advancements across industries.
                             </p>
                         </div>
                     </div>
                 </div>
             </section>
-            {/* Section 1 - Professional AI Solutions */}
+
+            {/* Section 2 - What We Do */}
             <section className="py-14">
                 <div className="max-w-screen-xl mx-auto md:px-8">
                     <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
                         <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl text-white">
-                            <p className="text-3xl font-semibold sm:text-4xl">
-                            What We Do
-                            </p>
+                            <h3 className="text-3xl font-semibold sm:text-4xl">What We Do</h3>
                             <p className="mt-3">
-                            At the core of our work is helping businesses thrive through cutting-edge AI solutions. We specialize in providing tailor-made AI strategies that address unique challenges, enhance operational efficiency, and drive growth. From data analysis to automation, our solutions are designed to deliver real, measurable results.                            </p>
-                            <a href="javascript:void(0)" className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium">
+                                At the core of our work is helping businesses thrive through cutting-edge AI solutions. We provide tailor-made strategies that enhance operational efficiency and drive growth. From data analysis to automation, our solutions deliver real, measurable results.
+                            </p>
+                            <a href="/services" className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium">
                                 Discover More
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                     <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
@@ -42,7 +40,8 @@ export default () => {
                     </div>
                 </div>
             </section>
-            {/* Section 2 - AI Product Launch */}
+
+            {/* Section 3 - Accelerate Your Product Launch */}
             <section className="py-14">
                 <div className="max-w-screen-xl mx-auto px-4 text-center text-gray-600 md:px-8">
                     <div className="max-w-2xl mx-auto">
@@ -75,92 +74,64 @@ export default () => {
                                 {
                                     icon: (
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v3m0 0v3m0-3h3m15 12v3m0 0v3m0-3h-3M3 21v-3m0 0v-3m0 3h3M21 3v3m0 0v3m0-3h-3" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v3m0 0v3m0-3h3m15 12v3m0 0v3m0-3h-3M3 21v-3m0 0v-3m0 3h3m6-3V3" />
                                         </svg>
                                     ),
-                                    title: "Cross-Platform Integration",
-                                    desc: "Seamlessly integrate your automation solutions across multiple devices and platforms."
+                                    title: "End-to-End Automation",
+                                    desc: "Streamline your operations from start to finish with our AI solutions."
                                 },
-                            ].map((item, idx) => (
-                                <li key={idx} className="bg-black space-y-3 p-4 border rounded-lg duration-300 hover:shadow-lg text-white">
-                                    <div className="text-white">
-                                        {item.icon}
+                            ].map(({ icon, title, desc }) => (
+                                <li key={title} className="relative p-6 rounded-lg bg-gradient-to-r from-[#2663EB] to-[#1E50B5] shadow-lg">
+                                    <div className="flex gap-4">
+                                        <div className="flex items-center justify-center w-10 h-10 text-[#2663EB] rounded-full bg-white">
+                                            {icon}
+                                        </div>
+                                        <div className="flex-1">
+                                            <h4 className="text-xl font-semibold text-white">{title}</h4>
+                                            <p className="mt-2 text-white">{desc}</p>
+                                        </div>
                                     </div>
-                                    <h4 className="text-lg font-semibold">{item.title}</h4>
-                                    <p>{item.desc}</p>
                                 </li>
                             ))}
                         </ul>
                     </div>
                 </div>
             </section>
-                        {/* Section 1 - Professional AI Solutions */}
-                        <section className="py-14">
-                <div className="max-w-screen-xl mx-auto md:px-8">
-                    <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
-                        <div className="flex-1 sm:hidden lg:block">
-                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="md:max-w-lg sm:rounded-lg" alt="AI Technology" />
-                        </div>
-                        <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl text-white">
-                            <h3 className="text-indigo-600 font-semibold">AI-Powered Automation</h3>
-                            <p className="text-3xl font-semibold sm:text-4xl">
-                                Scale Your Business with Custom AI Solutions
-                            </p>
-                            <p className="mt-3">
-                                Transform your workflows with cutting-edge AI technology. Optimize processes, enhance productivity, and reduce costs with our tailored solutions.
-                            </p>
-                            <a href="javascript:void(0)" className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium">
-                                Discover More
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                                    <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            {/* Section 1 - Professional AI Solutions */}
+
+            {/* Section 4 - AI-Powered Automation */}
             <section className="py-14">
                 <div className="max-w-screen-xl mx-auto md:px-8">
                     <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
                         <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl text-white">
-                            <h3 className="text-indigo-600 font-semibold">AI-Powered Automation</h3>
-                            <p className="text-3xl font-semibold sm:text-4xl">
-                                Scale Your Business with Custom AI Solutions
-                            </p>
+                            <h3 className="text-3xl font-semibold sm:text-4xl">AI-Powered Automation</h3>
                             <p className="mt-3">
-                                Transform your workflows with cutting-edge AI technology. Optimize processes, enhance productivity, and reduce costs with our tailored solutions.
+                                Harness the power of AI to optimize your operations and scale effectively. Our customized solutions ensure that your business can adapt and thrive in today’s fast-paced market.
                             </p>
-                            <a href="javascript:void(0)" className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium">
-                                Discover More
+                            <a href="/contact" className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium">
+                                Get Started
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                     <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
                                 </svg>
                             </a>
                         </div>
                         <div className="flex-1 sm:hidden lg:block">
-                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="md:max-w-lg sm:rounded-lg" alt="AI Technology" />
+                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="md:max-w-lg sm:rounded-lg" alt="AI Solutions" />
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Section 3 - Join Us */}
-            <section className="py-28 relative bg-blue-600">
-                <div className="relative z-10 max-w-screen-xl mx-auto px-4 md:text-center md:px-8">
-                    <div className="max-w-xl md:mx-auto">
-                        <p className="text-white text-3xl font-semibold sm:text-4xl">Innovate with AI</p>
-                        <p className="text-blue-100 mt-3">
-                            Partner with us to build intelligent solutions that transform the way you do business. Unlock the potential of AI-driven automation.
-                        </p>
-                    </div>
-                    <div className="mt-4">
-                        <a href="javascript:void(0)" className="inline-block py-2 px-4 text-gray-800 font-medium bg-white duration-150 hover:bg-gray-100 active:bg-gray-200 rounded-full">
-                            Get Started
-                        </a>
-                    </div>
+            {/* Section 5 - Join Us */}
+            <section className="py-14">
+                <div className="max-w-screen-xl mx-auto px-4 text-center md:px-8">
+                    <h3 className="text-3xl font-semibold text-white">Join Us</h3>
+                    <p className="mt-3 text-white">
+                        Let’s innovate together! Partner with us to redefine what’s possible with AI. Reach out today to discover how we can work together.
+                    </p>
+                    <a href="/contact" className="inline-flex mt-8 items-center justify-center px-5 py-3 text-lg font-medium text-white bg-[#2663EB] hover:bg-[#1E50B5] duration-150 rounded-md shadow-md">
+                        Contact Us
+                    </a>
                 </div>
-                <div className="absolute top-0 w-full h-full" style={{ background: "linear-gradient(268.24deg, rgba(59, 130, 246, 0.76) 50%, rgba(59, 130, 246, 0.545528) 80.61%, rgba(55, 48, 163, 0) 117.35%)" }}></div>
             </section>
         </>
     );
