@@ -2,31 +2,38 @@
 
 const posts = [
   {
-      title: "What is SaaS? Software as a Service Explained",
-      desc: "Going into this journey, I had a standard therapy regimen, based on looking at the research literature. After I saw the movie, I started to ask other people.",
-      img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      date: "Jan 4 2022",
+      title: "Understanding AI: What It Is and How It Works",
+      desc: "Artificial Intelligence (AI) refers to the simulation of human intelligence in machines. Learn how AI algorithms work and their applications in various fields.",
+      img: "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxBSXxlbnwwfHx8fDE2OTAxMDMxMjI&ixlib=rb-4.0.3&q=80&w=870",
+      date: "Jan 4 2024",
       href: "javascript:void(0)"
   },
   {
-      title: "A Quick Guide to dkl Hosting",
-      desc: "According to him, 'I'm still surprised that this has happened. But we are surprised because we are so surprised.' More revelations.",
-      img: "https://images.unsplash.com/photo-1620287341056-49a2f1ab2fdc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      date: "Jan 4 2022",
+      title: "The Future of AI: Trends to Watch",
+      desc: "As technology evolves, so does the landscape of AI. This article explores emerging trends in AI, including advancements in machine learning and automation.",
+      img: "https://images.unsplash.com/photo-1573497019415-188f0f066c1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDl8fEFJfGVufDB8fHx8fDE2OTAxMDMxMjI&ixlib=rb-4.0.3&q=80&w=870",
+      date: "Jan 15 2024",
       href: "javascript:void(0)"
   },
   {
-      title: "7 Promising VS Code Extensions Introduced in 2022",
-      desc: "I hope I remembered all the stuff that they needed to know. They're like, 'okay,' and write it in their little reading notebooks.",
-      img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      date: "Jan 4 2022",
+      title: "AI in Healthcare: Revolutionizing Patient Care",
+      desc: "Explore how AI is transforming healthcare by improving diagnostics, personalizing treatment plans, and enhancing patient care through data analysis.",
+      img: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxAUIUyMEluJTIwSGVhbHRoY2FyfGVufDB8fHx8fDE2OTAxMDMxMjI&ixlib=rb-4.0.3&q=80&w=870",
+      date: "Jan 22 2024",
       href: "javascript:void(0)"
   },
   {
-      title: "How to Use sd C++ Interpreter Shell to Write C++ Programs",
-      desc: "The powerful gravity waves resulting from the impact of the planets' moons — four in total — were finally resolved in 2015 when gravitational.",
-      img: "https://images.unsplash.com/photo-1617529497471-9218633199c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-      date: "Jan 4 2022",
+      title: "The Role of AI in Digital Marketing",
+      desc: "Discover how businesses are leveraging AI technologies to enhance their digital marketing strategies, from personalized content to predictive analytics.",
+      img: "https://images.unsplash.com/photo-1602871679796-67658f3c8b3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxBSXxlbnwwfHx8fDE2OTAxMDMxMjI&ixlib=rb-4.0.3&q=80&w=870",
+      date: "Feb 1 2024",
+      href: "javascript:void(0)"
+  },
+  {
+      title: "Ethics in AI: Navigating Challenges and Responsibilities",
+      desc: "As AI technology advances, ethical considerations become increasingly important. This article addresses the ethical challenges and responsibilities of AI developers.",
+      img: "https://images.unsplash.com/photo-1585877373788-f02e29883d9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDV8fEFJfGVufDB8fHx8fDE2OTAxMDMxMjI&ixlib=rb-4.0.3&q=80&w=870",
+      date: "Feb 15 2024",
       href: "javascript:void(0)"
   }
 ];
@@ -36,8 +43,8 @@ const BlogPosts = () => {
     <section className="py-32 bg-[#09090B]"> {/* Set background color */}
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="space-y-5 sm:text-center sm:max-w-md sm:mx-auto">
-          <h1 className="text-white text-3xl font-extrabold sm:text-4xl">Latest blog posts</h1> {/* Set text color to white */}
-          <p className="text-gray-400">Blogs that are loved by the community. Updated every hour.</p> {/* Adjusted text color */}
+          <h1 className="text-white text-3xl font-extrabold sm:text-4xl">Latest blog posts on AI</h1> {/* Set text color to white */}
+          <p className="text-gray-400">Explore our curated collection of blogs that delve into the world of Artificial Intelligence.</p> {/* Adjusted text color */}
           <form onSubmit={(e) => e.preventDefault()} className="items-center justify-center gap-3 sm:flex">
             <div className="relative">
               <svg className="w-6 h-6 text-gray-400 absolute left-3 inset-y-0 my-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -55,7 +62,7 @@ const BlogPosts = () => {
           </form>
         </div>
         <ul className="grid gap-x-8 gap-y-10 mt-16 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map((item, key) => (sdafsafa
+          {posts.map((item, key) => (
             <li className="w-full mx-auto group sm:max-w-sm" key={key}>
               <a href={item.href}>
                 <img src={item.img} loading="lazy" alt={item.title} className="w-full rounded-lg" />
