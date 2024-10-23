@@ -27,7 +27,30 @@ const NavLink = ({ ...props }) => {
     );
 };
 
+// Title component
+const Title = ({ children }) => (
+    <h3 className='pb-3 px-4 font-medium text-gray-200 md:px-8'> {/* Textkleur aangepast naar lichter voor beter contrast */}
+        {children}
+    </h3>
+);
 
+// Sections List
+const SectionsList = ({ items }) => (
+    <div className='text-gray-300 px-4 md:px-8'> {/* Textkleur aangepast naar lichter voor beter contrast */}
+        <ul>
+            {items?.map((item, idx) => (
+                <li key={idx}>
+                    <NavLink
+                        href={item?.href}
+                        active='text-gray-900 border-indigo-600'
+                        className='block w-full py-2 px-4 border-l hover:border-indigo-600 hover:text-gray-900 duration-150'>
+                        {item?.name}
+                    </NavLink>
+                </li>
+            ))}
+        </ul>
+    </div>
+);
 
 // Search Box component
 const SearchBox = ({ ...props }) => (
@@ -84,7 +107,16 @@ const Sidebar = () => {
                     <SearchBox placeholder='Search...' />
                 </div>
             </div>
-
+            <div className='text-[0.9rem] space-y-6'>
+                <div>
+                    <Title>Rust Basics</Title>
+                    <SectionsList items={lessons.rustLessons} />
+                </div>
+                <div>
+                    <Title>Cargo Basics</Title>
+                    <SectionsList items={lessons.cargoLessons} />
+                </div>
+            </div>
         </nav>
     );
 };
