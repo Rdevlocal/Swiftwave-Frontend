@@ -7,7 +7,6 @@ import React, {
   useState,
 } from "react";
 import { createPortal } from "react-dom";
-import template from "../template/index";
 
 interface Props {
   children: React.ReactNode;
@@ -15,7 +14,7 @@ interface Props {
   srcDoc?: string;
 }
 
-const Viewport = ({ children, dir, srcDoc = template, ...props }: Props) => {
+const Viewport = ({ children, dir, srcDoc = , ...props }: Props) => {
   const [loaded, setLoaded] = useState<boolean>(false);
   const [compContent, setCompContent] = useState<any>(null);
   const [pressure, setPressure] = useState<boolean>(false);
@@ -124,7 +123,6 @@ const Viewport = ({ children, dir, srcDoc = template, ...props }: Props) => {
         className="relative max-w-full min-w-full h-auto sm:min-w-[400px] sm:flex"
       >
         <iframe
-          srcDoc={template}
           ref={iframe}
           className="w-full bg-white appearance-none mr-4 min-h-[300px] iframes"
           id="iframe"

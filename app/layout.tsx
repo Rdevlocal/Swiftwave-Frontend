@@ -7,7 +7,7 @@ import Footer from "components/ui/Footer";
 import UsermavenSetup from "components/UsermavenSetup";
 import metatag from "metatag";
 
-const { title, desc, ogImage } = metatag;
+const { title, desc,  } = metatag;
 
 export const metadata = {
   metadataBase: new URL("https://Swiftwave.io"),
@@ -16,13 +16,11 @@ export const metadata = {
   openGraph: {
     title,
     description: desc,
-    images: ogImage,
     url: "https://Swiftwave.io",
   },
   twitter: {
     title,
     description: desc,
-    images: [ogImage],
   },
 };
 

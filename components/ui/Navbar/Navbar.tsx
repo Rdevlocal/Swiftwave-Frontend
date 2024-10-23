@@ -24,7 +24,6 @@ export default () => {
 
   // Resources dropdown items
   const resources = [
-    { title: "About", path: "/about" },
     { title: "Partners", path: "/partners" },
     { title: "Advantages", path: "/advantages" },
     { title: "Blog", path: "/blog" },
@@ -43,7 +42,6 @@ export default () => {
 
   const openDropdown = () => {
     setDropdownOpen(true);
-    clearTimeout(dropdownTimeout); // Clear any existing timeout
   };
 
   const closeDropdown = () => {
@@ -53,7 +51,6 @@ export default () => {
       setDropdownTimeout(null); // Clear the timeout reference
     }, 1000); // Keep dropdown open for 1 second
 
-    setDropdownTimeout(timeoutId);
   };
 
   return (
@@ -125,9 +122,6 @@ export default () => {
                         key={idx}
                         className="font-medium text-sm text-zinc-400 hover:text-zinc-200 duration-200"
                       >
-                        <Link {...item.props} href={item.path} className="block">
-                          {item.title}
-                        </Link>
                       </li>
                     );
                   }

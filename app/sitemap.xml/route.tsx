@@ -1,5 +1,3 @@
-import sections from "sections/sections.json";
-import { fetchDocs } from "../../firebase/config";
 const BASE_URL = "https://Swiftwave.io";
 
 type SitemapItem = { slug: string; lastmod: string };
@@ -30,9 +28,7 @@ function toSitemapRecord(loc: string, updatedAt: string) {
 }
 
 async function generateSiteMap() {
-  const querySnapshot = await fetchDocs("templates");
   const blogSiteMap = await getBlogSiteMap();
-  const templates = await querySnapshot.docs;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -52,26 +48,8 @@ async function generateSiteMap() {
     ${blogSiteMap.articles.map((i: SitemapItem) =>
       toSitemapRecord(`/blog/${i.slug}`, i.lastmod)
     )}
-     ${sections
-       .map(({ slug }) => {
-         return `
-       <url>
-           <loc>${`${BASE_URL}/components${slug}`}</loc>
-       </url>
-     `;
-       })
-       .join("")}
-       ${templates
-         .map((item) => {
-           const { slug } = item.data();
 
-           return `
-            <url>
-              <loc>${`${BASE_URL}/templates/${slug}`}</loc>
-            </url>
-            `;
-         })
-         .join("")}
+
    </urlset>
  `;
 }

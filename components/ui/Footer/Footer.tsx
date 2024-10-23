@@ -9,13 +9,9 @@ const navigation = {
   Products: [
     { name: "Homepage", href: "/" },
     { name: "Advantages", href: "/advantages" },
+    { name: "Products", href: "/products" },
     { name: "Integrations", href: "/integrations" },
     { name: "Pricing", href: "/pricing" },
-  ],
-  Help: [
-    { name: "Help Center", href: "/helpcenter", checked: true },
-    { name: "Contact", href: "/contact" },
-    { name: "Bug Bounty", href: "/bugbounty" },
   ],
   Resources: [
     { name: "Blog", href: "/blog" },
@@ -26,11 +22,14 @@ const navigation = {
   Company: [
     { name: "About", href: "/about" },
     { name: "Partners", href: "/partners" },
+    { name: "Help Center", href: "/helpcenter", checked: true },
+    { name: "Contact", href: "/contact" },
   ],
   Legal: [
     { name: "License", href: "/license", checked: true },
     { name: "Privacy Policy", href: "/privacy-policy", checked: true },
     { name: "Security", href: "/security", checked: true },
+    { name: "Bug Bounty", href: "/bugbounty" },
   ],
 };
 

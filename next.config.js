@@ -3,7 +3,6 @@
 const nextConfig = {
   env: {
     DB_URI: process.env.DB_URI,
-    URL: process.env.URL,
     SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
 
     API_KEY: process.env.API_KEY,
