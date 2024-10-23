@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-const title = "Modern UI Components | Float UI";
+const title = "Swiftwave.io a plug and play data company";
 
 export const metadata = {
   metadataBase: new URL("https://Swiftwave.io"),
