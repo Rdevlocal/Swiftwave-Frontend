@@ -66,23 +66,7 @@ const integrations = [
 ];
 
 // Function to render integration cards
-const renderIntegrationCard = (integration) => {
-  return (
-    <div
-      className="relative p-6 text-center bg-[#09090B] rounded-lg shadow-lg text-white transition-transform transform hover:scale-105 hover:shadow-2xl duration-300"
-      key={integration.title}
-    >
-      <div className="relative z-10">
-        {integration.icon}
-        <h3 className="text-xl font-bold mb-2">{integration.title}</h3>
-        <p className="mb-4">{integration.desc}</p>
-        <button className="px-6 py-2 font-semibold text-lg bg-[#2663EB] text-white rounded-full shadow-md transition duration-300 transform hover:bg-blue-600 hover:shadow-lg hover:scale-105">
-          Automate Now!
-        </button>
-      </div>
-    </div>
-  );
-};
+
 
 // Main component
 const IntegrationList = () => {
