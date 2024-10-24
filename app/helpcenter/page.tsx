@@ -3,14 +3,12 @@
 import { useEffect, useState } from "react";
 
 // NavLink component
-const NavLink = ({ ...props }) => {
-    const {
-        children,
-        href = "",
-        className = "",
-        active = "",
-    } = props;
+interface NavLinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+    href: string;
+    active?: string;
+}
 
+const NavLink: React.FC<NavLinkProps> = ({ children, href, className = "", active = "", ...props }) => {
     const [pathname, setPathname] = useState("/");
 
     const isActive = pathname === href;
@@ -18,7 +16,7 @@ const NavLink = ({ ...props }) => {
 
     useEffect(() => {
         setPathname(window.location.pathname);
-    }, [props]);
+    }, []);
 
     return (
         <a href={href} {...props} className={`${activeClass} ${className}`}>
@@ -28,23 +26,23 @@ const NavLink = ({ ...props }) => {
 };
 
 // Title component
-const Title = ({ children }) => (
-    <h3 className='pb-3 px-4 font-medium text-gray-200 md:px-8'> {/* Textkleur aangepast naar lichter voor beter contrast */}
+const Title: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+    <h3 className='pb-3 px-4 font-medium text-gray-200 md:px-8'>
         {children}
     </h3>
 );
 
 // Sections List
-const SectionsList = ({ items }) => (
-    <div className='text-gray-300 px-4 md:px-8'> {/* Textkleur aangepast naar lichter voor beter contrast */}
+const SectionsList: React.FC<{ items: { name: string; href: string; }[] }> = ({ items }) => (
+    <div className='text-gray-300 px-4 md:px-8'>
         <ul>
             {items?.map((item, idx) => (
                 <li key={idx}>
                     <NavLink
-                        href={item?.href}
+                        href={item.href}
                         active='text-gray-900 border-indigo-600'
                         className='block w-full py-2 px-4 border-l hover:border-indigo-600 hover:text-gray-900 duration-150'>
-                        {item?.name}
+                        {item.name}
                     </NavLink>
                 </li>
             ))}
@@ -53,7 +51,7 @@ const SectionsList = ({ items }) => (
 );
 
 // Search Box component
-const SearchBox = ({ ...props }) => (
+const SearchBox: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({ ...props }) => (
     <div className='relative w-full'>
         <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -69,13 +67,13 @@ const SearchBox = ({ ...props }) => (
 
         <input
             {...props}
-            type='text' // Type gewijzigd naar 'text' voor zoekfunctie
+            type='text'
             className='w-full pl-12 pr-3 py-2 bg-transparent text-sm text-gray-500 outline-none border ring-blue-600 focus:ring-2 shadow-sm rounded-lg duration-200'
         />
     </div>
 );
 
-const Sidebar = () => {
+const Sidebar: React.FC = () => {
     const lessons = {
         rustLessons: [
             { name: "Introduction to Rust", href: "javascript:void(0)" },
@@ -101,9 +99,8 @@ const Sidebar = () => {
 
     return (
         <nav className="w-80 bg-[#0A0707] p-4 h-full">
-            <div className="sticky top-0 space-y-8 bg-[#0A0707]"> {/* Achtergrondkleur veranderd naar #0A0707 */}
-
-                <div className=''>
+            <div className="sticky top-0 space-y-8 bg-[#0A0707]">
+                <div>
                     <SearchBox placeholder='Search...' />
                 </div>
             </div>
@@ -121,16 +118,16 @@ const Sidebar = () => {
     );
 };
 
-// Hoofdpagina component
-const Page = () => {
+// Main Page component
+const Page: React.FC = () => {
     return (
-        <div className="flex h-screen"> {/* Flexbox voor volledige hoogte */}
+        <div className="flex h-screen">
             <Sidebar />
-            <main className="flex-grow bg-gray-100 p-4"> {/* Hoofdinformatie met padding */}
-                {/* Hier kun je de inhoud van je hoofdpagina plaatsen */}
+            <main className="flex-grow bg-gray-100 p-4">
+                {/* Here you can place the content of your main page */}
             </main>
-            <footer className="bg-[#0A0707] text-white p-4"> {/* Footer met achtergrondkleur */}
-                {/* Hier kun je eventuele footer-informatie toevoegen of laten zoals het is */}
+            <footer className="bg-[#0A0707] text-white p-4">
+                {/* Here you can add any footer information or leave it as is */}
             </footer>
         </div>
     );

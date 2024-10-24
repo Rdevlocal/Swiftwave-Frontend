@@ -3,8 +3,8 @@
 import React from 'react';
 
 // ContactForm Component
-const ContactForm = () => {
-  const handleSubmit = (e) => {
+const ContactForm: React.FC = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission logic here
     console.log("Form submitted");
@@ -76,7 +76,7 @@ const ContactForm = () => {
 };
 
 // Main Component
-const ContactPage = () => {
+const ContactPage: React.FC = () => {
   return (
     <ContactForm />
   );

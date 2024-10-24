@@ -1,7 +1,16 @@
-# Block all crawlers for /accounts
+# User agents
 User-agent: *
-Disallow: /accounts
 
-# Allow all crawlers
-User-agent: *
+# Allowed pages
 Allow: /
+
+# Block specific directories
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /admin/
+
+# Block specific files
+Disallow: /secret-file.html
+
+# Sitemap location
+Sitemap: https://www.yourwebsite.com/sitemap.xml

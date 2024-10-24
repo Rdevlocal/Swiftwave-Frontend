@@ -1,7 +1,6 @@
 "use client";
 
 import { ReactNode, useRef } from "react";
-import featureCover from "public/feature-cover.svg";
 import Image from "next/image";
 
 export default ({
@@ -45,13 +44,6 @@ export default ({
         </div>
         <h3 className="text-zinc-100 font-semibold">{title}</h3>
         <p className="text-zinc-300">{desc}</p>
-        <div>
-          <Image
-            src={featureCover}
-            alt="Float UI"
-            className="absolute inset-0 -z-10"
-          />
-        </div>
       </div>
       <div
         ref={shadowRef}

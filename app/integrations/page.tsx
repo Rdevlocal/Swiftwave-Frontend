@@ -1,7 +1,14 @@
 import React from 'react';
 
+// Define a type for the integrations
+interface Integration {
+  title: string;
+  desc: string;
+  icon: JSX.Element; // Use JSX.Element for the icon
+}
+
 // List of integrations
-const integrations = [
+const integrations: Integration[] = [
   {
     title: "Shopify",
     desc: "Connect your Shopify store and automate inventory updates.",
@@ -66,7 +73,7 @@ const integrations = [
 ];
 
 // Function to render integration cards
-const renderIntegrationCard = (integration) => {
+const renderIntegrationCard = (integration: Integration) => { // Explicitly typing integration
   return (
     <div
       className="relative p-6 text-center bg-[#09090B] rounded-lg shadow-lg text-white transition-transform transform hover:scale-105 hover:shadow-2xl duration-300"
@@ -85,7 +92,7 @@ const renderIntegrationCard = (integration) => {
 };
 
 // Main component
-const IntegrationList = () => {
+const IntegrationList: React.FC = () => {
   return (
     <div className="flex justify-center p-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-screen-xl w-full">

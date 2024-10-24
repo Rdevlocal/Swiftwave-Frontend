@@ -15,73 +15,74 @@ type Feature = {
 const FeaturesAndTeam = () => {
   const features: Feature[] = [
     {
-      title: "AI-Powered Efficiency",
-      desc: "Utilize advanced AI technologies to enhance productivity and optimize business processes.",
+      title: "Automated Workflow Management",
+      desc: "Streamline your processes with intelligent automation, reducing manual tasks and enhancing productivity.",
       icon: <IconPennibLine />,
     },
     {
-      title: "Dynamic System Compatibility",
-      desc: "Easily integrate AI solutions into your current infrastructure, adapting as your business evolves.",
+      title: "Seamless Integration",
+      desc: "Effortlessly connect our automation tools with your existing systems for a smooth transition and maximum efficiency.",
       icon: <IconArrowsexpandLeft />,
     },
     {
-      title: "Custom AI Applications",
-      desc: "Our AI offerings are tailored to fit the specific requirements of your enterprise, ensuring optimal performance.",
+      title: "Tailored Automation Solutions",
+      desc: "Customize our AI solutions to meet the specific needs of your organization, ensuring seamless performance across all operations.",
       icon: <IconBxCustomize />,
     },
   ];
 
-  // Updated softwareProducts array with imaginary products
+  // Updated softwareProducts array with new product descriptions focused on workflow automation
   const softwareProducts = [
     {
-      avatar: "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
-      name: "Predictive Insights",
-      desc: "A robust analytics platform that leverages machine learning to forecast trends and drive strategic decisions.",
+      avatar: "https://images.unsplash.com/photo-1521737604893-1b0069b2f09e?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      name: "FlowGenie",
+      desc: "An AI-powered platform that designs and automates custom workflows tailored to your team's needs.",
     },
     {
-      avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
-      name: "AI Chatbot Pro",
-      desc: "An intelligent chatbot that enhances customer engagement by providing real-time assistance and support.",
+      avatar: "https://images.unsplash.com/photo-1534080561715-2c11365869a8?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      name: "AutoPilot",
+      desc: "A smart assistant that automates repetitive tasks, allowing teams to focus on strategic initiatives.",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/women/79.jpg",
-      name: "Smart Document Automation",
-      desc: "Automate document processing and management using advanced NLP technologies for better efficiency.",
+      avatar: "https://images.unsplash.com/photo-1573164574572-57e1512009d7?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      name: "TaskMaster AI",
+      desc: "Effortlessly manage projects with automated task assignments and real-time progress tracking.",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/women/63.jpg",
-      name: "Image Recognition Suite",
-      desc: "A powerful tool that utilizes deep learning for accurate image recognition and classification.",
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      name: "DataSync Pro",
+      desc: "Integrate and synchronize data workflows with powerful AI, ensuring accuracy and reducing bottlenecks.",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-      name: "Voice Command Assistant",
-      desc: "A voice-activated AI assistant designed to streamline tasks and improve workflow through voice recognition.",
+      avatar: "https://images.unsplash.com/photo-1543269865-4e9b308a0b6c?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      name: "InsightIQ",
+      desc: "Generate insightful reports automatically from your data, empowering quick and informed decision-making.",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/men/46.jpg",
-      name: "Fraud Detection System",
-      desc: "An AI-driven solution for real-time detection and prevention of fraudulent activities across platforms.",
+      avatar: "https://images.unsplash.com/photo-1529676407715-44c0636e3ac2?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      name: "EngageBot",
+      desc: "An AI chatbot that enhances customer interaction by automating responses and gathering real-time feedback.",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/men/29.jpg",
-      name: "Customer Sentiment Analyzer",
-      desc: "Analyze customer feedback and sentiment through AI to enhance user experience and satisfaction.",
+      avatar: "https://images.unsplash.com/photo-1523052003464-4cdd9c9a2501?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      name: "ResourceMaster",
+      desc: "Optimize resource allocation across projects using AI to ensure deadlines are met efficiently.",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/women/44.jpg",
-      name: "Personalized Marketing Engine",
-      desc: "Create tailored marketing campaigns using AI algorithms that analyze consumer behavior and preferences.",
+      avatar: "https://images.unsplash.com/photo-1528102250526-63f2de75b041?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      name: "Workflow Insights Pro",
+      desc: "Utilize AI analytics to gain insights into your workflows, identifying automation opportunities and boosting efficiency.",
     },
   ];
+  
 
   return (
     <>
       <section className="custom-screen mt-32">
         <div className="max-w-xl mx-auto space-y-4 text-center">
-          <h2 className="text-4xl heading text-white">AI-Powered Automation for Enhanced Performance</h2>
+          <h2 className="text-4xl heading text-white">AI Automation for Streamlined Workflows</h2>
           <p className="text-white">
-            Elevate your operations with AI solutions designed to maximize efficiency, improve workflows, and drive innovation.
+            Transform your business with cutting-edge automation solutions designed to enhance efficiency and drive innovation.
           </p>
         </div>
         <ul className="space-y-6 gap-6 mt-8 max-w-7xl mx-auto grid-cols-2 sm:grid lg:grid-cols-3 sm:space-y-0">
@@ -96,10 +97,10 @@ const FeaturesAndTeam = () => {
         <div className="max-w-screen-xl mx-auto px-4 text-center md:px-8">
           <div className="max-w-xl mx-auto">
             <h3 className="text-white text-3xl font-semibold sm:text-4xl">
-              Our AI Software Products
+              Our AI Automation Solutions
             </h3>
             <p className="text-white mt-3">
-              Explore our innovative AI solutions designed to transform your business processes.
+              Discover innovative tools designed to revolutionize your workflow and automate repetitive tasks.
             </p>
           </div>
           <div className="mt-12">

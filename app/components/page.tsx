@@ -1,12 +1,7 @@
-import fs from "fs";
-import path from "path";
-import matter from "gray-matter";
-import { serialize } from "next-mdx-remote/serialize";
-import MDXRemoteClient from "components/MDXRemoteClient";
 
-const title = "Float UI - Introduction";
+const title = "Swiftwave.io";
 const description =
-  "Beautiful and responsive UI components and templates for React and Vue with Tailwind CSS.";
+  "Build the Future, Today";
 
 export const metadata = {
   metadataBase: new URL("https://Swiftwave.io"),

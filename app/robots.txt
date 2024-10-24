@@ -1,4 +1,22 @@
-User-Agent: *
-Allow: /
+# Allow all search engines to crawl the entire site
+User-agent: *
+Disallow:
+
+# Block specific directories (example)
 Disallow: /private/
-Sitemap: https://Swiftwave.io/sitemap.xml
+Disallow: /temp/
+Disallow: /admin/
+
+# Block specific file types (example)
+Disallow: /*.pdf$
+Disallow: /*.doc$
+
+# Allow specific bots to access everything
+User-agent: Googlebot
+Disallow:
+
+User-agent: Bingbot
+Disallow:
+
+# Sitemap location
+Sitemap: https://www.yourwebsite.com/sitemap.xml

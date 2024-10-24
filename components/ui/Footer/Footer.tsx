@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import BorderGradient from "./BorderGradient";
 import BgGradient from "./BgGradient";
 
@@ -34,36 +33,15 @@ const navigation = {
 
 const Footer = () => {
   return (
-    <footer className="relative mt-40 pt-24 overflow-hidden">
-      <div>
+    <footer className="relative w-full mt-20 pt-12 overflow-hidden"> {/* Reduced top margin and padding */}
+      <div className="text-center"> {/* Center all text content */}
         <BorderGradient className="absolute inset-x-0 top-0 mx-auto" />
         <BgGradient className="absolute inset-x-0 top-0 mx-auto" />
         
-        <div className="custom-screen-lg pb-6 gap-x-8 items-start justify-between flex-wrap relative sm:flex">
-          {/* Brand and Social Links */}
-          <div className="max-w-xs space-y-3">
-            <p className="text-sm text-zinc-300">
-            Build the Future, Today
-            </p>
-            <div className="flex items-center gap-3">
-              <a
-                aria-label="Twitter account"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://twitter.com/float_ui?s=09"
-              >
-                <Image
-                  src="/images/tw-icon.svg"
-                  width={40}
-                  height={40}
-                  alt="Twitter icon"
-                />
-              </a>
-            </div>
-          </div>
+        <div className="custom-screen-lg pb-6 gap-x-8 items-center justify-center flex-wrap relative sm:flex"> {/* Centered alignment */}
 
           {/* Navigation Links */}
-          <div className="flex-1 mt-4 pb-8 flex flex-wrap gap-4 font-medium sm:justify-end sm:mt-0">
+          <div className="flex-1 mt-4 pb-8 flex flex-wrap gap-6 font-medium sm:justify-center"> {/* Increased gap between links for better spreading */}
             {Object.entries(navigation).map(([category, items]) => (
               <div key={category} className="flex-grow max-w-[15rem] space-y-2">
                 <div className="text-zinc-100 font-medium">{category}</div>

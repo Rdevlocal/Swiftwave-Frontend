@@ -2,8 +2,15 @@
 
 import React, { useState } from 'react';
 
+// Define a type for the products
+interface Product {
+  title: string;
+  desc: string;
+  icon: JSX.Element; // Use JSX.Element for the icon
+}
+
 // List of imaginary AI products
-const products = [
+const products: Product[] = [
   {
     title: "AI Chatbot",
     desc: "Enhance customer service with our AI Chatbot.",
@@ -83,7 +90,7 @@ const products = [
 ];
 
 // Main component
-const ProductList = () => {
+const ProductList: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   // Filter products based on the search term
@@ -92,7 +99,7 @@ const ProductList = () => {
   );
 
   // Function to render product cards
-  const renderProductCard = (product) => {
+  const renderProductCard = (product: Product) => { // Explicitly typing product
     return (
       <div
         className="relative p-6 text-center bg-[#09090B] rounded-lg shadow-lg text-white transition-transform transform hover:scale-105 hover:shadow-2xl duration-300"
