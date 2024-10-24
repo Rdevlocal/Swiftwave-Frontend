@@ -14,14 +14,14 @@ export default () => {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <LinkItem
-            href="/solutions"
+            href="/products"
             variant="shiny"
             className="inline-block w-full hover:bg-zinc-700 sm:w-auto"
           >
             Get started today
           </LinkItem>
           <LinkItem
-            href=""
+            href="/advantages"
             variant="shiny"
             className="inline-flex w-full justify-center items-center gap-x-2 border border-zinc-800 hover:border-zinc-600 bg-zinc-950 hover:text-zinc-100 duration-200 sm:w-auto"
             target="_blank"

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import Brand from "components/ui/Brand";
 import BorderGradient from "./BorderGradient";
 import BgGradient from "./BgGradient";
 
@@ -43,7 +42,6 @@ const Footer = () => {
         <div className="custom-screen-lg pb-6 gap-x-8 items-start justify-between flex-wrap relative sm:flex">
           {/* Brand and Social Links */}
           <div className="max-w-xs space-y-3">
-            <Brand />
             <p className="text-sm text-zinc-300">
             Build the Future, Today
             </p>
