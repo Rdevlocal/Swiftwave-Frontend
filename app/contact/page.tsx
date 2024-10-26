@@ -7,7 +7,7 @@ const ContactForm = () => {
     <main className="flex overflow-hidden">
       <div className="flex-1 hidden lg:block">
         <img
-        src="/images/aboutpage/background.jpg"
+        src="/public"
         className="w-full h-screen object-cover"
         alt="Background"
       /> 
