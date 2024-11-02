@@ -9,8 +9,7 @@ export default () => {
         Build the Future, Today
         </h1>
         <p className="text-zinc-400">
-          Accelerate innovation with cutting-edge AI-powered automation solutions.
-          Seamlessly integrate and scale your processes 24/7 with intelligent automation.
+        Transform your business with advanced AI-driven automation solutions. Effortlessly integrate and scale your operations around the clock, harnessing the power of intelligent automation.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
           <LinkItem
