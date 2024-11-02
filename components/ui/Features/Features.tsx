@@ -5,7 +5,7 @@ import {
   IconBxCustomize,
   IconPennibLine,
 } from "components/icons";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import Card from "./Card";
 
 type Feature = {
@@ -82,7 +82,25 @@ const FeaturesAndTeam = () => {
       desc: "Utilize AI analytics to gain insights into your workflows, identifying automation opportunities and boosting efficiency.",
       animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-indigo-500 hover:text-white",
     },
+    {
+      avatar: "https://images.unsplash.com/photo-1528102250526-63f2de75b041?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
+      name: "ReportGenie",
+      desc: "Generate automatic reports based on real-time data to help businesses make informed decisions.",
+      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-orange-500 hover:text-white",
+    },
   ];
+
+  const itemsPerSlide = 3;
+  const totalSlides = Math.ceil(softwareProducts.length / itemsPerSlide);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  };
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
 
   return (
     <>
@@ -111,23 +129,38 @@ const FeaturesAndTeam = () => {
               Discover innovative tools designed to revolutionize your workflow and automate repetitive tasks.
             </p>
           </div>
-          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {softwareProducts.map((item, idx) => (
-              <div key={idx} className={`bg-[#09090B] rounded-lg shadow-lg p-6 ${item.animationClass} transition duration-300`}>
-                <div className="w-24 h-24 mx-auto mb-4">
-                  <img
-                    src={item.avatar}
-                    className="w-full h-full rounded-full border-4 border-blue-300 transition-all duration-200"
-                    alt={item.name}
-                  />
+          <div className="mt-12 relative overflow-hidden">
+            <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+              {Array.from({ length: totalSlides }, (_, slideIndex) => (
+                <div key={slideIndex} className="flex space-x-4 w-full min-w-full">
+                  {softwareProducts
+                    .slice(slideIndex * itemsPerSlide, slideIndex * itemsPerSlide + itemsPerSlide)
+                    .map((item, idx) => (
+                      <div key={idx} className={`bg-[#09090B] rounded-lg shadow-lg p-6 ${item.animationClass} transition duration-300 w-full min-w-[300px]`}>
+                        <div className="w-24 h-24 mx-auto mb-4">
+                          <img
+                            src={item.avatar}
+                            className="w-full h-full rounded-full border-4 border-blue-300 transition-all duration-200"
+                            alt={item.name}
+                          />
+                        </div>
+                        <div>
+                          <h4 className="text-white font-semibold text-lg">{item.name}</h4>
+                          <p className="text-gray-300 text-sm md:text-base">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
                 </div>
-                <div>
-                  <h4 className="text-white font-semibold text-lg">{item.name}</h4>
-                  <p className="text-gray-300 text-sm md:text-base">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+</div>
+<button onClick={handlePrev} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-l">
+  &lt;
+</button>
+<button onClick={handleNext} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-r">
+  &gt;
+</button>
+</div>
+
         </div>
       </section>
     </>
