@@ -5,7 +5,7 @@ import {
   IconBxCustomize,
   IconPennibLine,
 } from "components/icons";
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, useEffect } from "react";
 import Card from "./Card";
 
 type Feature = {
@@ -90,9 +90,31 @@ const FeaturesAndTeam = () => {
     },
   ];
 
-  const itemsPerSlide = 3;
+  const [itemsPerSlide, setItemsPerSlide] = useState(3);
   const totalSlides = Math.ceil(softwareProducts.length / itemsPerSlide);
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Update items per slide based on screen size
+  const updateItemsPerSlide = () => {
+    if (window.innerWidth < 640) {
+      setItemsPerSlide(1); // Mobile
+    } else {
+      setItemsPerSlide(3); // Desktop and larger devices
+    }
+  };
+
+  useEffect(() => {
+    // Set initial items per slide
+    updateItemsPerSlide();
+
+    // Set up event listener for window resize
+    window.addEventListener("resize", updateItemsPerSlide);
+    
+    // Clean up event listener on unmount
+    return () => {
+      window.removeEventListener("resize", updateItemsPerSlide);
+    };
+  }, []);
 
   const handleNext = () => {
     setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -100,6 +122,12 @@ const FeaturesAndTeam = () => {
 
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
+
+  const handleSeeAll = () => {
+    // Define the action for "See All" button here
+    // For example, navigate to another page or scroll to a section
+    console.log('See All products clicked'); // Replace this with your navigation logic
   };
 
   return (
@@ -130,37 +158,40 @@ const FeaturesAndTeam = () => {
             </p>
           </div>
           <div className="mt-12 relative overflow-hidden">
-            <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+            <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${currentSlide * (100 / itemsPerSlide)}%)` }}>
               {Array.from({ length: totalSlides }, (_, slideIndex) => (
-                <div key={slideIndex} className="flex space-x-4 w-full min-w-full">
+                <div key={slideIndex} className="flex justify-center items-center space-x-4 w-full min-w-full">
                   {softwareProducts
                     .slice(slideIndex * itemsPerSlide, slideIndex * itemsPerSlide + itemsPerSlide)
                     .map((item, idx) => (
-                      <div key={idx} className={`bg-[#09090B] rounded-lg shadow-lg p-6 ${item.animationClass} transition duration-300 w-full min-w-[300px]`}>
-                        <div className="w-24 h-24 mx-auto mb-4">
+                      <div key={idx} className={`bg-[#09090B] rounded-lg shadow-lg p-6 ${item.animationClass} transition duration-300 w-full min-w-[300px] flex flex-col items-center`}>
+                        <div className="w-24 h-24 flex items-center justify-center mb-4">
                           <img
                             src={item.avatar}
                             className="w-full h-full rounded-full border-4 border-blue-300 transition-all duration-200"
                             alt={item.name}
                           />
                         </div>
-                        <div>
+                        <div className="text-center">
                           <h4 className="text-white font-semibold text-lg">{item.name}</h4>
                           <p className="text-gray-300 text-sm md:text-base">{item.desc}</p>
                         </div>
                       </div>
-                    ))}
+                    ))} 
                 </div>
               ))}
-</div>
-<button onClick={handlePrev} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-l">
-  &lt;
-</button>
-<button onClick={handleNext} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-r">
-  &gt;
-</button>
-</div>
-
+            </div>
+            <button onClick={handlePrev} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-l"></button>
+            <button onClick={handleNext} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-r">></button>
+          </div>
+          <div className="mt-8">
+            <button
+              onClick={handleSeeAll}
+              className="bg-blue-500 text-white px-4 py-2 rounded shadow hover:bg-blue-600 transition duration-300"
+            >
+              See All
+            </button>
+          </div>
         </div>
       </section>
     </>
