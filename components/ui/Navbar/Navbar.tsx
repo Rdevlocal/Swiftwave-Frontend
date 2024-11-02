@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import LinkItem from "../LinkItem";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
@@ -8,7 +6,7 @@ import Link from "next/link";
 const Navigation = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const [dropdownTimer, setDropdownTimer] = useState(null); // Timer state for dropdown
+  const [dropdownTimer, setDropdownTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
 
   // Main navigation items
   const navigationItems = [
@@ -29,8 +27,8 @@ const Navigation = () => {
 
   // Close dropdown on document click
   useEffect(() => {
-    const handleDocumentClick = (e) => {
-      const target = e.target;
+    const handleDocumentClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
       if (!target.closest(".relative")) {
         closeDropdown();
       }
@@ -39,7 +37,9 @@ const Navigation = () => {
     document.addEventListener("click", handleDocumentClick);
     return () => {
       document.removeEventListener("click", handleDocumentClick);
-      clearTimeout(dropdownTimer); // Clear timer on cleanup
+      if (dropdownTimer) {
+        clearTimeout(dropdownTimer); // Clear timer on cleanup
+      }
     };
   }, [dropdownTimer]);
 
@@ -48,14 +48,14 @@ const Navigation = () => {
   };
 
   const closeMobileMenu = () => {
-    setMobileMenuOpen(false); // New function to close the mobile menu
+    setMobileMenuOpen(false);
   };
 
-  const openDropdown = (e) => {
-    e.preventDefault(); // Prevent the default action
-    setDropdownOpen((prev) => !prev); // Toggle dropdown
+  const openDropdown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setDropdownOpen(true); // Open the dropdown immediately
     if (dropdownTimer) {
-      clearTimeout(dropdownTimer);
+      clearTimeout(dropdownTimer); // Clear existing timer
     }
   };
 
@@ -67,12 +67,11 @@ const Navigation = () => {
   };
 
   const handleMouseLeave = () => {
-    // Set a timer to close the dropdown after 3 seconds
+    // Set a timer to close the dropdown after 1,5 seconds
     const timer = setTimeout(() => {
       setDropdownOpen(false);
-    }, 3000);
-    
-    setDropdownTimer(timer);
+    }, 1500);
+    setDropdownTimer(timer); // Store the timer ID
   };
 
   return (
@@ -105,9 +104,7 @@ const Navigation = () => {
             <div className="hidden md:block">
               <Link href="/" className="text-2xl font-bold text-zinc-200">Swiftwave</Link>
             </div>
-            <div
-              className={`flex-1 items-center mt-8 md:mt-0 md:flex ${isMobileMenuOpen ? "block" : "hidden"}`}
-            >
+            <div className={`flex-1 items-center mt-8 md:mt-0 md:flex ${isMobileMenuOpen ? "block" : "hidden"}`}>
               <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
                 {navigationItems.map((item, idx) => (
                   <li
@@ -118,10 +115,19 @@ const Navigation = () => {
                   >
                     {item.title === "Resources" ? (
                       <button
-                        className="block w-full text-left"
+                        className="flex items-center justify-between block w-full text-left"
                         onClick={openDropdown}
                       >
-                        {item.title}
+                        <span>{item.title}</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? "transform rotate-180" : ""}`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
                       </button>
                     ) : (
                       <Link href={item.path} className="block" onClick={closeMobileMenu}>
@@ -145,7 +151,7 @@ const Navigation = () => {
                   variant="shiny"
                   href="/components"
                   className="w-full block bg-zinc-800 hover:bg-zinc-700 md:bg-shiny"
-                  onClick={closeMobileMenu} // Close menu when this item is clicked
+                  onClick={closeMobileMenu}
                 >
                   Get started
                 </LinkItem>
