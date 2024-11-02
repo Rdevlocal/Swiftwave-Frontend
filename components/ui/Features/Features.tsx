@@ -1,3 +1,5 @@
+"use client"; // Declare this file as a client component
+
 import {
   IconArrowsexpandLeft,
   IconBxCustomize,
@@ -31,50 +33,56 @@ const FeaturesAndTeam = () => {
     },
   ];
 
-  // Updated softwareProducts array with new product descriptions focused on workflow automation
   const softwareProducts = [
     {
-      avatar: "https://images.unsplash.com/photo-1521737604893-1b0069b2f09e?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      avatar: "https://images.unsplash.com/photo-1521737604893-1b0069b2f09e?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "FlowGenie",
       desc: "An AI-powered platform that designs and automates custom workflows tailored to your team's needs.",
+      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-blue-500 hover:text-white",
     },
     {
-      avatar: "https://images.unsplash.com/photo-1534080561715-2c11365869a8?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      avatar: "https://images.unsplash.com/photo-1534080561715-2c11365869a8?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "AutoPilot",
       desc: "A smart assistant that automates repetitive tasks, allowing teams to focus on strategic initiatives.",
+      animationClass: "transition-all transform hover:scale-110 hover:shadow-2xl hover:bg-green-500 hover:text-white",
     },
     {
-      avatar: "https://images.unsplash.com/photo-1573164574572-57e1512009d7?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      avatar: "https://images.unsplash.com/photo-1573164574572-57e1512009d7?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "TaskMaster AI",
       desc: "Effortlessly manage projects with automated task assignments and real-time progress tracking.",
+      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-red-500 hover:text-white",
     },
     {
-      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "DataSync Pro",
       desc: "Integrate and synchronize data workflows with powerful AI, ensuring accuracy and reducing bottlenecks.",
+      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-yellow-500 hover:text-white",
     },
     {
-      avatar: "https://images.unsplash.com/photo-1543269865-4e9b308a0b6c?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      avatar: "https://images.unsplash.com/photo-1543269865-4e9b308a0b6c?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "InsightIQ",
       desc: "Generate insightful reports automatically from your data, empowering quick and informed decision-making.",
+      animationClass: "transition-all transform hover:scale-110 hover:shadow-2xl hover:bg-purple-500 hover:text-white",
     },
     {
-      avatar: "https://images.unsplash.com/photo-1529676407715-44c0636e3ac2?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      avatar: "https://images.unsplash.com/photo-1529676407715-44c0636e3ac2?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "EngageBot",
       desc: "An AI chatbot that enhances customer interaction by automating responses and gathering real-time feedback.",
+      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-pink-500 hover:text-white",
     },
     {
-      avatar: "https://images.unsplash.com/photo-1523052003464-4cdd9c9a2501?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      avatar: "https://images.unsplash.com/photo-1523052003464-4cdd9c9a2501?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "ResourceMaster",
       desc: "Optimize resource allocation across projects using AI to ensure deadlines are met efficiently.",
+      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-teal-500 hover:text-white",
     },
     {
-      avatar: "https://images.unsplash.com/photo-1528102250526-63f2de75b041?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ", // Colored image
+      avatar: "https://images.unsplash.com/photo-1528102250526-63f2de75b041?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "Workflow Insights Pro",
       desc: "Utilize AI analytics to gain insights into your workflows, identifying automation opportunities and boosting efficiency.",
+      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-indigo-500 hover:text-white",
     },
   ];
-  
 
   return (
     <>
@@ -93,7 +101,7 @@ const FeaturesAndTeam = () => {
       </section>
 
       {/* New Section for AI Software Products */}
-      <section className="py-14">
+      <section className="py-14" style={{ backgroundColor: '#09090B' }}>
         <div className="max-w-screen-xl mx-auto px-4 text-center md:px-8">
           <div className="max-w-xl mx-auto">
             <h3 className="text-white text-3xl font-semibold sm:text-4xl">
@@ -103,24 +111,22 @@ const FeaturesAndTeam = () => {
               Discover innovative tools designed to revolutionize your workflow and automate repetitive tasks.
             </p>
           </div>
-          <div className="mt-12">
-            <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {softwareProducts.map((item, idx) => (
-                <li key={idx}>
-                  <div className="w-20 h-20 mx-auto">
-                    <img
-                      src={item.avatar}
-                      className="w-full h-full rounded-full"
-                      alt={item.name}
-                    />
-                  </div>
-                  <div className="mt-2">
-                    <h4 className="text-white font-semibold sm:text-lg">{item.name}</h4>
-                    <p className="text-white">{item.desc}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
+          <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {softwareProducts.map((item, idx) => (
+              <div key={idx} className={`bg-[#09090B] rounded-lg shadow-lg p-6 ${item.animationClass} transition duration-300`}>
+                <div className="w-24 h-24 mx-auto mb-4">
+                  <img
+                    src={item.avatar}
+                    className="w-full h-full rounded-full border-4 border-blue-300 transition-all duration-200"
+                    alt={item.name}
+                  />
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold text-lg">{item.name}</h4>
+                  <p className="text-gray-300 text-sm md:text-base">{item.desc}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
