@@ -126,7 +126,6 @@ const FeaturesAndTeam = () => {
 
   const handleSeeAll = () => {
     // Define the action for "See All" button here
-    // For example, navigate to another page or scroll to a section
     console.log('See All products clicked'); // Replace this with your navigation logic
   };
 
@@ -158,7 +157,7 @@ const FeaturesAndTeam = () => {
             </p>
           </div>
           <div className="mt-12 relative overflow-hidden">
-            <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${currentSlide * (100 / itemsPerSlide)}%)` }}>
+            <div className="flex transition-transform duration-300" style={{ transform: `translateX(-${currentSlide * (100 / totalSlides)}%)` }}>
               {Array.from({ length: totalSlides }, (_, slideIndex) => (
                 <div key={slideIndex} className="flex justify-center items-center space-x-4 w-full min-w-full">
                   {softwareProducts
@@ -181,8 +180,12 @@ const FeaturesAndTeam = () => {
                 </div>
               ))}
             </div>
-            <button onClick={handlePrev} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-l"></button>
-            <button onClick={handleNext} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-r">></button>
+            <button onClick={handlePrev} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-l">
+              <IconArrowsexpandLeft />
+            </button>
+            <button onClick={handleNext} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-r">
+              <IconArrowsexpandLeft />
+            </button>
           </div>
           <div className="mt-8">
             <button
