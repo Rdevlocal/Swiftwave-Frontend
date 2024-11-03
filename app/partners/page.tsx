@@ -1,4 +1,85 @@
-export default () => {
+"use client"; // Mark this component as a client component
+
+import { useRef, useState } from "react";
+
+const FaqsCard = ({ faqsList, idx }) => {
+    const answerElRef = useRef();
+    const [isOpen, setIsOpen] = useState(false);
+    const [answerHeight, setAnswerHeight] = useState('0px');
+
+    const handleOpenAnswer = () => {
+        const answerElHeight = answerElRef.current.childNodes[0].offsetHeight;
+        setIsOpen(!isOpen);
+        setAnswerHeight(isOpen ? '0px' : `${answerElHeight + 20}px`);
+    };
+
+    return (
+        <div className="space-y-3 mt-5 overflow-hidden border-b" key={idx} onClick={handleOpenAnswer}>
+            <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-white font-medium">
+                {faqsList.q}
+                {
+                    isOpen ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-300 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 12H4" />
+                        </svg>
+                    ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-300 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v16m8-8H4" />
+                        </svg>
+                    )
+                }
+            </h4>
+            <div ref={answerElRef} className="duration-300" style={{ height: answerHeight }}>
+                <div>
+                    <p className="text-gray-300">{faqsList.a}</p>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const FAQSection = () => {
+    const faqsList = [
+        {
+            q: "What are some random questions to ask?",
+            a: "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question."
+        },
+        {
+            q: "Do you include common questions?",
+            a: "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator."
+        },
+        {
+            q: "Can I use this for 21 questions?",
+            a: "Yes! There are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated."
+        },
+        {
+            q: "Are these questions for girls or for boys?",
+            a: "The questions in this generator are gender neutral and can be used to ask either male or females (or any other gender the person identifies with)."
+        },
+        {
+            q: "What do you wish you had more talent doing?",
+            a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires."
+        }
+    ];
+
+    return (
+        <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8">
+            <div className="space-y-3 text-center">
+                <h1 className="text-3xl text-white font-semibold">Frequently Asked Questions</h1>
+                <p className="text-gray-300 max-w-lg mx-auto text-lg">
+                    Answered all frequently asked questions, Still confused? feel free to contact us.
+                </p>
+            </div>
+            <div className="mt-14 max-w-2xl mx-auto">
+                {faqsList.map((item, idx) => (
+                    <FaqsCard key={idx} idx={idx} faqsList={item} />
+                ))}
+            </div>
+        </section>
+    );
+};
+
+const PartnershipSections = () => {
     return (
         <>
             {/* Section 1 - Our Partners */}
@@ -6,16 +87,14 @@ export default () => {
                 <div className="max-w-screen-xl mx-auto md:px-8">
                     <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
                         <div className="flex-1 sm:hidden lg:block">
-                            <img 
-                                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
-                                className="md:max-w-lg sm:rounded-lg" 
-                                alt="Partnership Opportunities" 
+                            <img
+                                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                                className="md:max-w-lg sm:rounded-lg"
+                                alt="Partnership Opportunities"
                             />
                         </div>
                         <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl text-white">
-                            <p className="text-3xl font-semibold sm:text-4xl">
-                                Our Partners
-                            </p>
+                            <p className="text-3xl font-semibold sm:text-4xl">Our Partners</p>
                             <p className="mt-3">
                                 We collaborate with a diverse range of partners, including affiliates, marketplaces, and agencies. Together, we create innovative solutions that empower businesses to leverage the power of AI. Our partnerships are built on shared goals and a commitment to excellence.
                             </p>
@@ -29,14 +108,12 @@ export default () => {
                 <div className="max-w-screen-xl mx-auto md:px-8">
                     <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
                         <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl text-white">
-                            <p className="text-3xl font-semibold sm:text-4xl">
-                                Why Partner With Us
-                            </p>
+                            <p className="text-3xl font-semibold sm:text-4xl">Why Partner With Us</p>
                             <p className="mt-3">
                                 By partnering with us, you gain access to cutting-edge AI solutions tailored to your needs. Our expertise in data analysis, automation, and operational efficiency allows us to help you drive growth and achieve your goals effectively. Let's collaborate to transform the future.
                             </p>
-                            <a 
-                                href="javascript:void(0)" 
+                            <a
+                                href="javascript:void(0)"
                                 className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium"
                             >
                                 Learn More
@@ -46,10 +123,10 @@ export default () => {
                             </a>
                         </div>
                         <div className="flex-1 sm:hidden lg:block">
-                            <img 
-                                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
-                                className="md:max-w-lg sm:rounded-lg" 
-                                alt="Collaborative Partnerships" 
+                            <img
+                                src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                                className="md:max-w-lg sm:rounded-lg"
+                                alt="Collaborative Partnerships"
                             />
                         </div>
                     </div>
@@ -70,65 +147,64 @@ export default () => {
                             {[
                                 {
                                     icon: (
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12 text-indigo-600">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                                         </svg>
                                     ),
-                                    title: "Rapid Deployment",
-                                    desc: "Utilize AI to quickly launch and iterate on your products."
+                                    title: "Data Solutions",
+                                    description: "Enhance your data management and analysis capabilities."
                                 },
                                 {
                                     icon: (
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM15.375 12c0-1.147.926-2.063 2.063-2.063h2.25C21.074 9.937 22 10.853 22 12s-.926 2.063-2.063 2.063h-2.25C16.301 14.063 15.375 13.147 15.375 12z" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12 text-indigo-600">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v8m4-4H8" />
                                         </svg>
                                     ),
-                                    title: "Global Collaboration",
-                                    desc: "Easily connect and collaborate with partners worldwide."
+                                    title: "Automated Workflows",
+                                    description: "Streamline your processes with tailored automation."
                                 },
                                 {
                                     icon: (
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v3m0 0v3m0-3h3m15 12v3m0 0v3m0-3h-3M3 21v-3m0 0v-3m0 3h3M21 3v3m0 0v3m0-3h-3" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-12 h-12 text-indigo-600">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 15l-3.5 3.5M12 15l3.5 3.5M12 15v-6" />
                                         </svg>
                                     ),
-                                    title: "Integrated Solutions",
-                                    desc: "Seamlessly implement automation across various platforms."
-                                },
-                            ].map((item, idx) => (
-                                <li key={idx} className="bg-black space-y-3 p-4 border rounded-lg duration-300 hover:shadow-lg text-white">
-                                    <div className="text-white">
-                                        {item.icon}
+                                    title: "Consultation Services",
+                                    description: "Receive expert guidance to navigate your business challenges."
+                                }
+                            ].map((offering, index) => (
+                                <li key={index} className="relative flex flex-col justify-between p-5 border border-gray-700 rounded-lg bg-gray-900 hover:bg-gray-800 transition duration-300 ease-in-out">
+                                    <div>
+                                        {offering.icon}
+                                        <h3 className="mt-4 text-lg font-semibold text-white">{offering.title}</h3>
+                                        <p className="mt-1 text-gray-300">{offering.description}</p>
                                     </div>
-                                    <h4 className="text-lg font-semibold">{item.title}</h4>
-                                    <p>{item.desc}</p>
+                                    <a
+                                        href="javascript:void(0)"
+                                        className="mt-4 inline-flex items-center gap-x-1 text-indigo-600 hover:text-indigo-400"
+                                    >
+                                        Read more
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+                                            <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
+                                        </svg>
+                                    </a>
                                 </li>
                             ))}
                         </ul>
                     </div>
                 </div>
             </section>
-
-            {/* Section 4 - Join Us */}
-            <section className="py-28 relative bg-blue-600">
-                <div className="relative z-10 max-w-screen-xl mx-auto px-4 md:text-center md:px-8">
-                    <div className="max-w-xl md:mx-auto">
-                        <p className="text-white text-3xl font-semibold sm:text-4xl">Partner with Us</p>
-                        <p className="text-blue-100 mt-3">
-                            Join us in transforming industries and driving innovation. Become part of our partner ecosystem today!
-                        </p>
-                    </div>
-                    <div className="mt-8">
-                        <a 
-                            href="javascript:void(0)" 
-                            className="inline-block px-6 py-3 text-center text-white bg-gray-800 hover:bg-gray-700 rounded-lg shadow-md duration-150"
-                        >
-                            Get Started
-                        </a>
-                    </div>
-                </div>
-                <div className="absolute inset-0 w-full h-full opacity-40 bg-blue-500"></div>
-            </section>
         </>
-    )
-}
+    );
+};
+
+const App = () => {
+    return (
+        <div className="App">
+            <PartnershipSections />
+            <FAQSection />
+        </div>
+    );
+};
+
+export default App;
