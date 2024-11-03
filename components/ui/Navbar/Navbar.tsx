@@ -149,7 +149,7 @@ const Navigation = () => {
               <div className="mt-6 md:mt-0">
                 <LinkItem
                   variant="shiny"
-                  href="/components"
+                  href="/login"
                   className="w-full block bg-zinc-800 hover:bg-zinc-700 md:bg-shiny"
                   onClick={closeMobileMenu}
                 >

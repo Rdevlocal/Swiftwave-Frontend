@@ -6,9 +6,9 @@ import BgGradient from "./BgGradient";
 const navigation = {
   "Why Swiftwave": [
     { name: "For Developers", href: "/dev" },
-    { name: "For Affilates", href: "/affiliates" },
-    { name: "For agencies", href: "/agencies" },
-    { name: "For ecosystems", href: "/ecosystems" },
+    { name: "For Affiliates", href: "/affiliates" },
+    { name: "For Agencies", href: "/agencies" },
+    { name: "For Ecosystems", href: "/ecosystems" },
   ],
   Platform: [
     { name: "Products", href: "/products" },
@@ -24,16 +24,15 @@ const navigation = {
     { name: "Helpcenter", href: "/helpcenter" },
   ],
   Company: [
-    { name: "About us", href: "/about" },
+    { name: "About Us", href: "/about" },
     { name: "Advantages", href: "/advantages" },
-    { name: "Jobs", href: "/jobs" },
-  //  { name: "Status Products", href: "/status" },
+    // { name: "Status Products", href: "/status" },
   ],
   Legal: [
-    { name: "Terms and conditions", href: "/terms" },
-    { name: "Privacy policy", href: "/privacy-policy" },
-    { name: "Data security", href: "/security" },
-    { name: "Bug bounty", href: "/bugbounty" },
+    { name: "Terms and Conditions", href: "/terms" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Data Security", href: "/security" },
+    { name: "Bug Bounty", href: "/bugbounty" },
   ],
 };
 
@@ -49,10 +48,10 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row mt-4 pb-8 font-medium gap-6 sm:gap-8">
             {Object.entries(navigation).map(([category, items]) => (
               <div key={category} className="flex flex-col max-w-[15rem] space-y-2">
-                <div className="text-zinc-100 font-medium">{category}</div>
+                <div className="text-zinc-100 font-semibold text-lg">{category}</div> {/* Category name made larger */}
                 <div className="space-y-2">
                   {items.map((item, idx) => (
-                    <div key={idx} className="text-sm text-zinc-400 hover:text-zinc-100 duration-200">
+                    <div key={idx} className="text-base text-zinc-400 hover:text-zinc-100 duration-200"> {/* Links made larger */}
                       <Link href={item.href} className="block">
                         {item.name}
                       </Link>
@@ -65,7 +64,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom Section */}
-        <div className="text-sm custom-screen text-center border-t border-zinc-800">
+        <div className="text-base custom-screen text-center border-t border-zinc-800"> {/* Bottom text size increased */}
           <div className="text-zinc-300 py-8">
             &copy; 2024 Swiftwave.io All rights reserved.
           </div>
