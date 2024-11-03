@@ -181,8 +181,18 @@ const FeaturesAndTeam = () => {
                 </div>
               ))}
             </div>
-            <button onClick={handlePrev} className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-l"></button>
-            <button onClick={handleNext} className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-r">></button>
+            <button 
+  onClick={handlePrev} 
+  className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-l"
+>
+  &larr; {/* This is the left arrow */}
+</button>
+<button 
+  onClick={handleNext} 
+  className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-r"
+>
+  &rarr; {/* This is the right arrow */}
+</button>
           </div>
           <div className="mt-8">
             <button
