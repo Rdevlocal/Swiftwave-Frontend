@@ -1,3 +1,4 @@
+//robots
 # robots.txt for example.com
 
 # Allow all user-agents (search engines) to access the site
