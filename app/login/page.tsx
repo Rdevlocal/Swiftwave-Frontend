@@ -1,85 +1,93 @@
-const title = "Swiftwave - Privacy Policy";
+"use client"; // This line indicates that this is a Client Component
 
-export const metadata = {
-  metadataBase: new URL("https://Swiftwave.io"),
-  title,
-  openGraph: {
-    title,
-    url: "https://Swiftwave.io/privacy",
-  },
-  twitter: {
-    title,
-  },
-};
+import React, { useState } from 'react';
 
-export default () => {
+const LoginPage: React.FC = () => {
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [rememberMe, setRememberMe] = useState<boolean>(false);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    // Here you can add your login logic (e.g., API call)
+    console.log('Logging in with:', { email, password, rememberMe });
+    // Reset form or handle after login actions
+  };
+
   return (
-    <>
-      <section className="mt-20">
-        <div className="text-center mx-4">
-          <h1 className="text-3xl heading font-extrabold tracking-tight mb-4 sm:text-4.5xl">
-            Bug bounty
-          </h1>
-          <p className="text-zinc-400 mt-3">
-            Your data is protected and respected.
-          </p>
+    <main className="w-full h-screen flex flex-col items-center justify-center px-4" style={{ backgroundColor: '#09090B' }}> {/* Set background color here */}
+      <div className="max-w-sm w-full text-white space-y-5"> {/* Changed text color to white */}
+        <div className="text-center pb-8">
+          <div className="mt-5">
+            <h3 className="text-white text-2xl font-bold sm:text-3xl">Log in to your account</h3> {/* Changed text color to white */}
+          </div>
         </div>
-        <div className="prose prose-invert mt-12 mx-4 sm:mx-auto">
-          <h2>Collection of Non-Personal Information</h2>
-          <p>
-            When you visit our website, our servers automatically record
-            information that your browser sends. This data may include
-            information such as your device's IP address, browser type and
-            version, operating system type and version, language preferences,
-            the webpage you were visiting before you came to our website, pages
-            of our website that you visit, the time spent on those pages,
-            information you search for on our website, access times and dates,
-            and other statistics.
-          </p>
-          <h2>Information Transfer and Storage</h2>
-          <p>
-            Depending on your location, data transfers may involve transferring
-            and storing your information in a country other than your own. You
-            are entitled to learn about the legal basis of information transfers
-            to a country outside the European Union or to any international
-            organization governed by public international law or set up by two
-            or more countries, such as the UN, and about the security measures
-            taken by us to safeguard your information. If any such transfer
-            takes place, you can find out more by checking the relevant sections
-            of this document or inquire with us using the information provided
-            in the Contact section.
-          </p>
-          <h2>Newsletters</h2>
-          <p>
-            We offer electronic newsletters which you may voluntarily subscribe
-            to. You may choose to stop receiving our newsletter or marketing
-            emails by following the unsubscribe instructions included in these
-            emails or by contacting us. However, you will continue to receive
-            essential transactional emails.
-          </p>
-          <h2>Cookies</h2>
-          <p>
-            Our website uses "cookies" to help personalize your online
-            experience. A cookie is a text file that is placed on your hard disk
-            by a web page server. Cookies cannot be used to run programs or
-            deliver viruses to your computer. Cookies are uniquely assigned to
-            you and can only be read by a web server in the domain that issued
-            the cookie to you. We may use cookies to collect, store, and track
-            information for statistical purposes to operate our website. You
-            have the ability to accept or decline cookies. Most web browsers
-            automatically accept cookies, but you can usually modify your
-            browser settings to decline cookies if you prefer.
-          </p>
-          <p>
-            In addition to using cookies and related technologies as described
-            above, we may also permit certain third-party companies to help us
-            tailor advertising that we think may be of interest to users and to
-            collect and use other data about user activities on our website.
-            These companies may deliver ads that might also place cookies and
-            otherwise track user behavior.
-          </p>
-        </div>
-      </section>
-    </>
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div>
+            <label className="font-medium text-white">Email</label> {/* Changed text color to white */}
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+            />
+          </div>
+          <div>
+            <label className="font-medium text-white">Password</label> {/* Changed text color to white */}
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+            />
+          </div>
+          <div className="flex items-center justify-between text-sm">
+            <div className="flex items-center gap-x-3">
+              <input
+                type="checkbox"
+                id="remember-me-checkbox"
+                checked={rememberMe}
+                onChange={() => setRememberMe(!rememberMe)}
+                className="checkbox-item peer hidden"
+              />
+              <label
+                htmlFor="remember-me-checkbox"
+                className="relative flex w-5 h-5 bg-white peer-checked:bg-indigo-600 rounded-md border ring-offset-2 ring-indigo-600 duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-white after:rotate-45"
+              >
+              </label>
+              <span className="text-white">Remember me</span> {/* Changed text color to white */}
+            </div>
+            <a href="#" className="text-white hover:text-indigo-500">Forgot password?</a> {/* Changed text color to white */}
+          </div>
+          <button
+            type="submit"
+            className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+          >
+            Sign in
+          </button>
+        </form>
+        <button className="w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
+          <svg className="w-5 h-5" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clipPath="url(#clip0_17_40)">
+              <path d="M47.532 24.5528C47.532 22.9214 47.3997 21.2811 47.1175 19.6761H24.48V28.9181H37.4434C36.9055 31.8988 35.177 34.5356 32.6461 36.2111V42.2078H40.3801C44.9217 38.0278 47.532 31.8547 47.532 24.5528Z" fill="#4285F4" />
+              <path d="M24.48 48.0016C30.9529 48.0016 36.4116 45.8764 40.3888 42.2078L32.6549 36.2111C30.5031 37.675 27.7252 38.5039 24.4888 38.5039C18.2275 38.5039 12.9187 34.2798 11.0139 28.6006H3.03296V34.7825C7.10718 42.8868 15.4056 48.0016 24.48 48.0016Z" fill="#34A853" />
+              <path d="M11.0051 28.6006C9.99973 25.6199 9.99973 22.3922 11.0051 19.4115V13.2296H3.03298C-0.371021 20.0112 -0.371021 28.0009 3.03298 34.7825L11.0051 28.6006Z" fill="#FBBC04" />
+              <path d="M24.48 9.49932C27.9016 9.44641 31.2086 10.7339 33.6866 13.0973L40.5387 6.24523C36.2 2.17101 30.4414 -0.068932 24.48 0.00161733C15.4055 0.00161733 7.10718 5.11644 3.03296 13.2296L11.005 19.4115C12.901 13.7235 18.2187 9.49932 24.48 9.49932Z" fill="#EA4335" />
+            </g>
+            <defs>
+              <clipPath id="clip0_17_40">
+                <rect width="48" height="48" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          Continue with Google
+        </button>
+        <p className="text-center text-white">Don't have an account? <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">Sign up</a></p> {/* Changed text color to white */}
+      </div>
+    </main>
   );
 };
+
+export default LoginPage;

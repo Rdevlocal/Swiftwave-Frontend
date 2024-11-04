@@ -1,85 +1,128 @@
-const title = "Swiftwave - Privacy Policy";
+"use client"; // This line allows the use of React hooks in this component
 
-export const metadata = {
-  metadataBase: new URL("https://Swiftwave.io"),
-  title,
-  openGraph: {
-    title,
-    url: "https://Swiftwave.io/privacy",
-  },
-  twitter: {
-    title,
-  },
+import React, { useState } from 'react';
+
+const SignUpForm: React.FC = () => {
+    // State management for form inputs
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        password: '',
+        businessName: '',
+        businessType: '',
+        businessWebsite: ''
+    });
+
+    // Handle input changes
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    // Handle form submission
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        // Here you can handle the form submission logic (e.g., send data to an API)
+        console.log('Form submitted:', formData);
+    };
+
+    return (
+        <main className="flex items-center justify-center min-h-screen bg-[#09090B]">
+            <div className="relative w-full max-w-md space-y-8 p-4 bg-transparent text-white">
+                <div className="text-center">
+                    <div className="mt-5 space-y-2">
+                        <h3 className="text-3xl font-bold">Start growing your business quickly</h3>
+                        <p className="text-gray-300">
+                            Create an account and get access to all features for 30 days, no credit card required.
+                        </p>
+                        <div className="flex items-center justify-center -space-x-2 overflow-hidden mt-3">
+                            <img src="https://randomuser.me/api/portraits/women/79.jpg" className="w-10 h-10 rounded-full border-2 border-white" alt="User 1" />
+                            <img src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg" className="w-10 h-10 rounded-full border-2 border-white" alt="User 2" />
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=faces&fit=crop&h=200&w=200" className="w-10 h-10 rounded-full border-2 border-white" alt="User 3" />
+                            <img src="https://randomuser.me/api/portraits/men/86.jpg" className="w-10 h-10 rounded-full border-2 border-white" alt="User 4" />
+                            <img src="https://images.unsplash.com/photo-1510227272981-87123e259b17?crop=faces&fit=crop&h=200&w=200" className="w-10 h-10 rounded-full border-2 border-white" alt="User 5" />
+                            <p className="text-sm text-gray-400 font-medium translate-x-5">
+                                Join 5,000+ users
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <form onSubmit={handleSubmit} className="space-y-5">
+                    <div>
+                        <label className="font-medium">Name</label>
+                        <input
+                            type="text"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-900 bg-white outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                        />
+                    </div>
+                    <div>
+                        <label className="font-medium">Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-900 bg-white outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                        />
+                    </div>
+                    <div>
+                        <label className="font-medium">Password</label>
+                        <input
+                            type="password"
+                            name="password"
+                            value={formData.password}
+                            onChange={handleChange}
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-900 bg-white outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                        />
+                    </div>
+                    <div>
+                        <label className="font-medium">Business Name</label>
+                        <input
+                            type="text"
+                            name="businessName"
+                            value={formData.businessName}
+                            onChange={handleChange}
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-900 bg-white outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                        />
+                    </div>
+                    <div>
+                        <label className="font-medium">Business Type</label>
+                        <input
+                            type="text"
+                            name="businessType"
+                            value={formData.businessType}
+                            onChange={handleChange}
+                            required
+                            className="w-full mt-2 px-3 py-2 text-gray-900 bg-white outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                        />
+                    </div>
+                    <div>
+                        <label className="font-medium">Business Website (optional)</label>
+                        <input
+                            type="url"
+                            name="businessWebsite"
+                            value={formData.businessWebsite}
+                            onChange={handleChange}
+                            className="w-full mt-2 px-3 py-2 text-gray-900 bg-white outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+                    >
+                        Create account
+                    </button>
+                </form>
+            </div>
+        </main>
+    );
 };
 
-export default () => {
-  return (
-    <>
-      <section className="mt-20">
-        <div className="text-center mx-4">
-          <h1 className="text-3xl heading font-extrabold tracking-tight mb-4 sm:text-4.5xl">
-            Bug bounty
-          </h1>
-          <p className="text-zinc-400 mt-3">
-            Your data is protected and respected.
-          </p>
-        </div>
-        <div className="prose prose-invert mt-12 mx-4 sm:mx-auto">
-          <h2>Collection of Non-Personal Information</h2>
-          <p>
-            When you visit our website, our servers automatically record
-            information that your browser sends. This data may include
-            information such as your device's IP address, browser type and
-            version, operating system type and version, language preferences,
-            the webpage you were visiting before you came to our website, pages
-            of our website that you visit, the time spent on those pages,
-            information you search for on our website, access times and dates,
-            and other statistics.
-          </p>
-          <h2>Information Transfer and Storage</h2>
-          <p>
-            Depending on your location, data transfers may involve transferring
-            and storing your information in a country other than your own. You
-            are entitled to learn about the legal basis of information transfers
-            to a country outside the European Union or to any international
-            organization governed by public international law or set up by two
-            or more countries, such as the UN, and about the security measures
-            taken by us to safeguard your information. If any such transfer
-            takes place, you can find out more by checking the relevant sections
-            of this document or inquire with us using the information provided
-            in the Contact section.
-          </p>
-          <h2>Newsletters</h2>
-          <p>
-            We offer electronic newsletters which you may voluntarily subscribe
-            to. You may choose to stop receiving our newsletter or marketing
-            emails by following the unsubscribe instructions included in these
-            emails or by contacting us. However, you will continue to receive
-            essential transactional emails.
-          </p>
-          <h2>Cookies</h2>
-          <p>
-            Our website uses "cookies" to help personalize your online
-            experience. A cookie is a text file that is placed on your hard disk
-            by a web page server. Cookies cannot be used to run programs or
-            deliver viruses to your computer. Cookies are uniquely assigned to
-            you and can only be read by a web server in the domain that issued
-            the cookie to you. We may use cookies to collect, store, and track
-            information for statistical purposes to operate our website. You
-            have the ability to accept or decline cookies. Most web browsers
-            automatically accept cookies, but you can usually modify your
-            browser settings to decline cookies if you prefer.
-          </p>
-          <p>
-            In addition to using cookies and related technologies as described
-            above, we may also permit certain third-party companies to help us
-            tailor advertising that we think may be of interest to users and to
-            collect and use other data about user activities on our website.
-            These companies may deliver ads that might also place cookies and
-            otherwise track user behavior.
-          </p>
-        </div>
-      </section>
-    </>
-  );
-};
+export default SignUpForm;

@@ -67,7 +67,7 @@ const Navigation = () => {
   };
 
   const handleMouseLeave = () => {
-    // Set a timer to close the dropdown after 1,5 seconds
+    // Set a timer to close the dropdown after 1.5 seconds
     const timer = setTimeout(() => {
       setDropdownOpen(false);
     }, 1500);
@@ -98,11 +98,11 @@ const Navigation = () => {
                 )}
               </button>
               <div className="flex-1 text-center">
-                <Link href="/" className="text-2xl font-bold text-zinc-200">Swiftwave</Link>
+                <Link href="/" className="text-2xl font-bold text-zinc-200 font-inter">swiftwave.io</Link>
               </div>
             </div>
             <div className="hidden md:block">
-              <Link href="/" className="text-2xl font-bold text-zinc-200">Swiftwave</Link>
+              <Link href="/" className="text-2xl font-bold text-zinc-200 font-inter">swiftwave.io</Link>
             </div>
             <div className={`flex-1 items-center mt-8 md:mt-0 md:flex ${isMobileMenuOpen ? "block" : "hidden"}`}>
               <ul className="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">

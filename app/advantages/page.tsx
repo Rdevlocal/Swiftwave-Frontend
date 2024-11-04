@@ -4,12 +4,16 @@ export default () => {
             <div style={{ backgroundColor: '#09090B' }}>
                 {/* Section 1 - AI Automation at Swiftwave */}
                 <section className="py-14">
-                    <div className="max-w-screen-xl mx-auto md:px-8">
-                        <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
-                            <div className="flex-1 sm:hidden lg:block">
-                                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="md:max-w-lg sm:rounded-lg" alt="AI Automation Technology" />
+                    <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+                        <div className="flex flex-col-reverse items-center gap-y-6 lg:flex-row lg:gap-x-12">
+                            <div className="flex-1">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
+                                    className="w-full rounded-lg md:max-w-lg" 
+                                    alt="AI Automation Technology" 
+                                />
                             </div>
-                            <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl text-white">
+                            <div className="max-w-xl text-white text-center lg:text-left">
                                 <h3 className="text-3xl font-semibold sm:text-4xl">AI Automation at Swiftwave</h3>
                                 <p className="mt-3">
                                     Swiftwave is transforming industries by integrating cutting-edge AI automation into everyday business operations. With our advanced AI technology, we streamline workflows, increase efficiency, and help organizations achieve unparalleled results.
@@ -21,22 +25,29 @@ export default () => {
 
                 {/* Section 2 - Our AI Automation Solutions */}
                 <section className="py-14">
-                    <div className="max-w-screen-xl mx-auto md:px-8">
-                        <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
-                            <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl text-white">
+                    <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+                        <div className="flex flex-col-reverse items-center gap-y-6 lg:flex-row lg:gap-x-12">
+                            <div className="max-w-xl text-white text-center lg:text-left">
                                 <h3 className="text-3xl font-semibold sm:text-4xl">Our AI Automation Solutions</h3>
                                 <p className="mt-3">
                                     At Swiftwave, we leverage AI to automate repetitive tasks, optimize decision-making, and streamline processes. From AI-powered data analysis to end-to-end automation, our tailored solutions ensure your business stays competitive and agile.
                                 </p>
-                                <a href="/services" className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium">
+                                <a 
+                                    href="/services" 
+                                    className="inline-flex items-center justify-center mt-4 text-indigo-600 hover:text-indigo-500 duration-150 font-medium"
+                                >
                                     Discover More
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 ml-1">
                                         <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
                                     </svg>
                                 </a>
                             </div>
-                            <div className="flex-1 sm:hidden lg:block">
-                                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="md:max-w-lg sm:rounded-lg" alt="AI Automation Solutions" />
+                            <div className="flex-1">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" 
+                                    className="w-full rounded-lg md:max-w-lg" 
+                                    alt="AI Automation Solutions" 
+                                />
                             </div>
                         </div>
                     </div>
@@ -45,14 +56,12 @@ export default () => {
                 {/* Section 3 - Accelerate Product Launch with AI */}
                 <section className="py-14">
                     <div className="max-w-screen-xl mx-auto px-4 text-center text-gray-600 md:px-8">
-                        <div className="max-w-2xl mx-auto">
-                            <h3 className="text-white text-3xl font-semibold sm:text-4xl">Accelerate Product Launch with AI</h3>
-                            <p className="mt-3 text-white">
-                                Swiftwave’s AI automation reduces product development time by automating key stages like prototyping, testing, and deployment. Launch faster, with greater accuracy and fewer errors, using our powerful AI-driven automation.
-                            </p>
-                        </div>
+                        <h3 className="text-white text-3xl font-semibold sm:text-4xl">Accelerate Product Launch with AI</h3>
+                        <p className="mt-3 text-white">
+                            Swiftwave’s AI automation reduces product development time by automating key stages like prototyping, testing, and deployment. Launch faster, with greater accuracy and fewer errors, using our powerful AI-driven automation.
+                        </p>
                         <div className="mt-12">
-                            <ul className="grid gap-y-8 gap-x-12 sm:grid-cols-2 lg:grid-cols-3">
+                            <ul className="grid gap-y-8 gap-x-6 sm:grid-cols-2 lg:grid-cols-3">
                                 {[
                                     {
                                         icon: (
@@ -107,11 +116,15 @@ export default () => {
                             At Swiftwave, we are dedicated to using the latest technology to deliver unparalleled AI solutions. Our team continuously explores new tools and techniques to ensure that your business benefits from the best resources available.
                         </p>
                         <div className="mt-12 flex justify-center">
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="Innovative Technology" className="rounded-lg w-full md:w-3/4" />
+                            <img 
+                                src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
+                                alt="Innovative Technology" 
+                                className="rounded-lg w-full md:w-3/4" 
+                            />
                         </div>
 
                         {/* Buttons for Affiliates, Agencies, and Ecosystems */}
-                        <div className="mt-12 flex justify-center space-x-4">
+                        <div className="mt-12 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
                             <a href="/affiliates" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition duration-150">Affiliates</a>
                             <a href="/agencies" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition duration-150">Agencies</a>
                             <a href="/ecosystems" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition duration-150">Ecosystems</a>

@@ -38,55 +38,55 @@ const FeaturesAndTeam = () => {
       avatar: "https://images.unsplash.com/photo-1521737604893-1b0069b2f09e?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "FlowGenie",
       desc: "An AI-powered platform that designs and automates custom workflows tailored to your team's needs.",
-      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-blue-500 hover:text-white",
+      animationClass: "transition-shadow duration-200 transform hover:scale-105 hover:shadow-lg",
     },
     {
       avatar: "https://images.unsplash.com/photo-1534080561715-2c11365869a8?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "AutoPilot",
       desc: "A smart assistant that automates repetitive tasks, allowing teams to focus on strategic initiatives.",
-      animationClass: "transition-all transform hover:scale-110 hover:shadow-2xl hover:bg-green-500 hover:text-white",
+      animationClass: "transition-shadow duration-200 transform hover:scale-105 hover:shadow-lg",
     },
     {
       avatar: "https://images.unsplash.com/photo-1573164574572-57e1512009d7?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "TaskMaster AI",
       desc: "Effortlessly manage projects with automated task assignments and real-time progress tracking.",
-      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-red-500 hover:text-white",
+      animationClass: "transition-shadow duration-200 transform hover:scale-105 hover:shadow-lg",
     },
     {
       avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "DataSync Pro",
       desc: "Integrate and synchronize data workflows with powerful AI, ensuring accuracy and reducing bottlenecks.",
-      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-yellow-500 hover:text-white",
+      animationClass: "transition-shadow duration-200 transform hover:scale-105 hover:shadow-lg",
     },
     {
       avatar: "https://images.unsplash.com/photo-1543269865-4e9b308a0b6c?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "InsightIQ",
       desc: "Generate insightful reports automatically from your data, empowering quick and informed decision-making.",
-      animationClass: "transition-all transform hover:scale-110 hover:shadow-2xl hover:bg-purple-500 hover:text-white",
+      animationClass: "transition-shadow duration-200 transform hover:scale-105 hover:shadow-lg",
     },
     {
       avatar: "https://images.unsplash.com/photo-1529676407715-44c0636e3ac2?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "EngageBot",
       desc: "An AI chatbot that enhances customer interaction by automating responses and gathering real-time feedback.",
-      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-pink-500 hover:text-white",
+      animationClass: "transition-shadow duration-200 transform hover:scale-105 hover:shadow-lg",
     },
     {
       avatar: "https://images.unsplash.com/photo-1523052003464-4cdd9c9a2501?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "ResourceMaster",
       desc: "Optimize resource allocation across projects using AI to ensure deadlines are met efficiently.",
-      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-teal-500 hover:text-white",
+      animationClass: "transition-shadow duration-200 transform hover:scale-105 hover:shadow-lg",
     },
     {
       avatar: "https://images.unsplash.com/photo-1528102250526-63f2de75b041?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "Workflow Insights Pro",
       desc: "Utilize AI analytics to gain insights into your workflows, identifying automation opportunities and boosting efficiency.",
-      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-indigo-500 hover:text-white",
+      animationClass: "transition-shadow duration-200 transform hover:scale-105 hover:shadow-lg",
     },
     {
       avatar: "https://images.unsplash.com/photo-1528102250526-63f2de75b041?crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
       name: "ReportGenie",
       desc: "Generate automatic reports based on real-time data to help businesses make informed decisions.",
-      animationClass: "transition-all transform hover:scale-105 hover:shadow-2xl hover:bg-orange-500 hover:text-white",
+      animationClass: "transition-shadow duration-200 transform hover:scale-105 hover:shadow-lg",
     },
   ];
 
@@ -168,7 +168,7 @@ const FeaturesAndTeam = () => {
                         <div className="w-24 h-24 flex items-center justify-center mb-4">
                           <img
                             src={item.avatar}
-                            className="w-full h-full rounded-full border-4 border-blue-300 transition-all duration-200"
+                            className="w-full h-full rounded-full border-4 border-gray-300 transition-all duration-200"
                             alt={item.name}
                           />
                         </div>
@@ -179,20 +179,20 @@ const FeaturesAndTeam = () => {
                       </div>
                     ))} 
                 </div>
-              ))}
+              ))} 
             </div>
             <button 
-  onClick={handlePrev} 
-  className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-l"
->
-  &larr; {/* This is the left arrow */}
-</button>
-<button 
-  onClick={handleNext} 
-  className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-r"
->
-  &rarr; {/* This is the right arrow */}
-</button>
+              onClick={handlePrev} 
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-l"
+            >
+              &larr; {/* This is the left arrow */}
+            </button>
+            <button 
+              onClick={handleNext} 
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 text-white bg-gray-700 rounded-r"
+            >
+              &rarr; {/* This is the right arrow */}
+            </button>
           </div>
           <div className="mt-8">
             <button
