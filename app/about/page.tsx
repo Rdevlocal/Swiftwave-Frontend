@@ -31,7 +31,7 @@ const AboutPage: React.FC = () => {
                                 href="javascript:void(0)"
                                 className="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-900 font-medium bg-white duration-150 hover:bg-gray-100 active:bg-gray-200 rounded-lg md:inline-flex"
                             >
-                                Join us today
+                                Join us Today
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
                                     <path
                                         fillRule="evenodd"
