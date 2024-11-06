@@ -19,13 +19,11 @@ const navigation = {
     { name: "Contact", href: "/contact" },
     { name: "Press", href: "/press" },
     { name: "Blog", href: "/blog" },
-    { name: "Newsletter", href: "/newsletter" },
-    { name: "Academy", href: "/academy" },
     { name: "Helpcenter", href: "/helpcenter" },
   ],
   Company: [
     { name: "About Us", href: "/about" },
-    { name: "Advantages", href: "/advantages" },
+    { name: "Partners", href: "/partners" },
     // { name: "Status Products", href: "/status" },
   ],
   Legal: [

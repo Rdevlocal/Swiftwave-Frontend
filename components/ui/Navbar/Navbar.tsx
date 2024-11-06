@@ -20,7 +20,6 @@ const Navigation = () => {
   // Resources dropdown items
   const resources = [
     { title: "Partners", path: "/partners" },
-    { title: "Advantages", path: "/advantages" },
     { title: "Blog", path: "/blog" },
     { title: "Help Center", path: "/helpcenter" },
   ];
