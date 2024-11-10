@@ -1,89 +1,125 @@
 "use client"; // Mark this component as a Client Component
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 
-const ContactForm = () => {
-  const servicesItems = ["Mobile development", "UI/UX Design", "Web development", "SEO"];
+export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    message: ''
+  });
+
+  // Handle input change
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  // Handle form submission
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Send email using EmailJS
+    emailjs.sendForm(
+      'service_lwt1yof',  // Replace with your service ID from EmailJS
+      'template_cjkskvg', // Replace with your template ID from EmailJS
+      e.target as HTMLFormElement, // form element
+      'user_yourUserID'          // Replace with your user ID from EmailJS
+    )
+    .then(
+      (result) => {
+        console.log(result.text);
+        alert("Thank you for contacting us! We'll get back to you soon.");
+      },
+      (error) => {
+        console.log(error.text);
+        alert("Something went wrong. Please try again later.");
+      }
+    );
+  };
 
   return (
-    <main className="flex overflow-hidden">
-      <div className="flex-1 hidden lg:block">
-        <img
-        src="/public"
-        className="w-full h-screen object-cover"
-        alt="Background"
-      /> 
-      </div>
-      <div className="py-12 flex-1 lg:flex lg:justify-center lg:h-screen lg:overflow-auto">
-        <div className="max-w-lg flex-1 mx-auto px-4 text-white">
-          <div>
-            <h3 className="text-white text-3xl font-semibold sm:text-4xl">Get in touch</h3>
-            <p className="mt-3">We’d love to hear from you! Please fill out the form below.</p>
-          </div>
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-5 mt-12 lg:pb-12">
-            <div>
-              <label className="font-medium">Full name</label>
-              <input
-                type="text"
-                required
-                className="w-full mt-2 px-3 py-2 text-white bg-transparent outline-none border focus:border-white shadow-sm rounded-lg"
-              />
+    <main className="py-14">
+      <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+        <div className="max-w-lg mx-auto space-y-3 sm:text-center">
+          <h3 className="text-indigo-600 font-semibold">Contact</h3>
+          <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">Get in touch</p>
+          <p>We’d love to hear from you! Please fill out the form below.</p>
+        </div>
+        <div className="mt-12 max-w-lg mx-auto">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
+              <div>
+                <label className="font-medium">First name</label>
+                <input
+                  type="text"
+                  name="firstName"
+                  required
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                />
+              </div>
+              <div>
+                <label className="font-medium">Last name</label>
+                <input
+                  type="text"
+                  name="lastName"
+                  required
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+                />
+              </div>
             </div>
             <div>
               <label className="font-medium">Email</label>
               <input
                 type="email"
+                name="email"
                 required
-                className="w-full mt-2 px-3 py-2 text-white bg-transparent outline-none border focus:border-white shadow-sm rounded-lg"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
               />
             </div>
             <div>
               <label className="font-medium">Phone number</label>
               <div className="relative mt-2">
                 <div className="absolute inset-y-0 left-3 my-auto h-6 flex items-center border-r pr-2">
-                  <select className="text-sm bg-transparent outline-none rounded-lg h-full text-white">
+                  <select className="text-sm bg-transparent outline-none rounded-lg h-full">
                     <option>US</option>
                     <option>ES</option>
                     <option>MR</option>
                   </select>
                 </div>
                 <input
-                  type="tel"
+                  type="text"
+                  name="phone"
                   placeholder="+1 (555) 000-000"
                   required
-                  className="w-full pl-[4.5rem] pr-3 py-2 appearance-none text-white bg-transparent outline-none border focus:border-white shadow-sm rounded-lg"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full pl-[4.5rem] pr-3 py-2 appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                 />
               </div>
             </div>
             <div>
-              <label className="font-medium">Services</label>
-              <ul className="grid gap-y-2 gap-x-6 flex-wrap grid-cols-2 mt-3">
-                {servicesItems.map((item, idx) => (
-                  <li key={idx} className="flex gap-x-3 text-sm">
-                    <div>
-                      <input
-                        id={`service-${idx}`}
-                        type="checkbox"
-                        className="checkbox-item peer hidden"
-                      />
-                      <label
-                        htmlFor={`service-${idx}`}
-                        className="relative flex w-5 h-5 bg-white peer-checked:bg-indigo-600 rounded-md border ring-offset-2 ring-indigo-600 duration-150 peer-active:ring cursor-pointer after:absolute after:inset-x-0 after:top-[3px] after:m-auto after:w-1.5 after:h-2.5 after:border-r-2 after:border-b-2 after:border-white after:rotate-45"
-                      />
-                    </div>
-                    <label htmlFor={`service-${idx}`} className="cursor-pointer text-white">
-                      {item}
-                    </label>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
               <label className="font-medium">Message</label>
               <textarea
+                name="message"
                 required
-                className="w-full mt-2 h-36 px-3 py-2 resize-none text-white bg-transparent outline-none border focus:border-white shadow-sm rounded-lg"
-              />
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              ></textarea>
             </div>
-            <button className="w-full px-4 py-2 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-lg duration-150" type="submit">
+            <button
+              type="submit"
+              className="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+            >
               Submit
             </button>
           </form>
@@ -91,6 +127,4 @@ const ContactForm = () => {
       </div>
     </main>
   );
-};
-
-export default ContactForm;
+}

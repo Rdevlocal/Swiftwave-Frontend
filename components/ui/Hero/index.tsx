@@ -20,7 +20,7 @@ export default () => {
             Get started today
           </LinkItem>
           <LinkItem
-            href="/advantages"
+            href="/about"
             variant="shiny"
             className="inline-flex w-full justify-center items-center gap-x-2 border border-zinc-800 hover:border-zinc-600 bg-zinc-950 hover:text-zinc-100 duration-200 sm:w-auto"
             target="_blank"
