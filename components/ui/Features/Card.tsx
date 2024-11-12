@@ -30,7 +30,7 @@ export default ({
         ).style = `--cursor-x: ${x}px; --cursor-y: ${y}px`;
       }
     }
-  };
+  };//add iamgeas
 
   return (
     <li
