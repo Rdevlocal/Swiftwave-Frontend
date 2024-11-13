@@ -40,11 +40,11 @@ const posts = [
 
 const BlogPosts = () => {
   return (
-    <section className="py-32 bg-[#09090B]"> {/* Set background color */}
+    <section className="py-32 bg-[#09090B]"> {/* Set background color to dark */}
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="space-y-5 sm:text-center sm:max-w-md sm:mx-auto">
-          <h1 className="text-white text-3xl font-extrabold sm:text-4xl">Latest blog posts on AI</h1> {/* Set text color to white */}
-          <p className="text-gray-400">Explore our curated collection of blogs that delve into the world of Artificial Intelligence.</p> {/* Adjusted text color */}
+          <h1 className="text-white text-3xl font-extrabold sm:text-4xl">Latest Blog Posts on AI</h1> {/* White header text */}
+          <p className="text-gray-400">Explore our curated collection of blogs that delve into the world of Artificial Intelligence.</p> {/* Light gray text */}
           <form onSubmit={(e) => e.preventDefault()} className="items-center justify-center gap-3 sm:flex">
             <div className="relative">
               <svg className="w-6 h-6 text-gray-400 absolute left-3 inset-y-0 my-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -53,7 +53,7 @@ const BlogPosts = () => {
               <input
                 type="text"
                 placeholder="Enter your email"
-                className="w-full pl-12 pr-3 py-2 text-gray-300 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg sm:max-w-xs" // Changed text color to light gray
+                className="w-full pl-12 pr-3 py-2 text-gray-300 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg sm:max-w-xs" // Light gray placeholder text
               />
             </div>
             <button className="block w-full mt-3 py-3 px-4 font-medium text-sm text-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow sm:mt-0 sm:w-auto">
@@ -68,10 +68,10 @@ const BlogPosts = () => {
                 <img src={item.img} loading="lazy" alt={item.title} className="w-full rounded-lg" />
                 <div className="mt-3 space-y-2">
                   <span className="block text-indigo-600 text-sm">{item.date}</span>
-                  <h3 className="text-lg text-white duration-150 group-hover:text-indigo-600 font-semibold"> {/* Set title text color to white */}
+                  <h3 className="text-lg text-white duration-150 group-hover:text-indigo-600 font-semibold"> {/* Title in white */}
                     {item.title}
                   </h3>
-                  <p className="text-gray-400 text-sm duration-150 group-hover:text-gray-300">{item.desc}</p> {/* Adjusted description text color */}
+                  <p className="text-gray-400 text-sm duration-150 group-hover:text-gray-300">{item.desc}</p> {/* Light gray description */}
                 </div>
               </a>
             </li>

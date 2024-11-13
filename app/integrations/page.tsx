@@ -1,105 +1,55 @@
-import React from 'react';
-
-// Define a type for the integrations
-interface Integration {
-  title: string;
-  desc: string;
-  icon: JSX.Element; // Use JSX.Element for the icon
-}
-
-// List of integrations
-const integrations: Integration[] = [
+const integrations = [ 
   {
-    title: "Shopify",
-    desc: "Connect your Shopify store and automate inventory updates.",
-    icon: (
-      <svg
-        className="w-10 h-10 mx-auto mb-4"
-        viewBox="0 0 50 50"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M25 0C11.2 0 0 11.2 0 25c0 13.8 11.2 25 25 25s25-11.2 25-25C50 11.2 38.8 0 25 0z" fill="#96C93D" />
-        <path d="M25 8l8 14h-16l8-14z" fill="#fff" />
+      title: "Shopify",
+      desc: "Seamlessly connect your online store.",
+      icon: <svg className="w-10 h-10" viewBox="0 0 43 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* SVG content for Shopify logo */}
       </svg>
-    ),
-  },
+  }, 
   {
-    title: "Amazon",
-    desc: "Integrate with Amazon to automate order fulfillment.",
-    icon: (
-      <svg
-        className="w-10 h-10 mx-auto mb-4"
-        viewBox="0 0 50 50"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M25 0C11.2 0 0 11.2 0 25c0 13.8 11.2 25 25 25s25-11.2 25-25C50 11.2 38.8 0 25 0z" fill="#FF9900" />
-        <path d="M25 8l8 14h-16l8-14z" fill="#fff" />
+      title: "WooCommerce",
+      desc: "Integrate with WordPress and WooCommerce.",
+      icon: <svg className="w-10 h-10" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* SVG content for WooCommerce logo */}
       </svg>
-    ),
-  },
+  }, 
   {
-    title: "WooCommerce",
-    desc: "Automate sales tracking and inventory management with WooCommerce.",
-    icon: (
-      <svg
-        className="w-10 h-10 mx-auto mb-4"
-        viewBox="0 0 50 50"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M25 0C11.2 0 0 11.2 0 25c0 13.8 11.2 25 25 25s25-11.2 25-25C50 11.2 38.8 0 25 0z" fill="#96588A" />
-        <path d="M25 8l8 14h-16l8-14z" fill="#fff" />
+      title: "BigCommerce",
+      desc: "Expand your store's capabilities.",
+      icon: <svg className="w-10 h-10" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* SVG content for BigCommerce logo */}
       </svg>
-    ),
   },
-  {
-    title: "Magento",
-    desc: "Leverage Magento for automated marketing campaigns.",
-    icon: (
-      <svg
-        className="w-10 h-10 mx-auto mb-4"
-        viewBox="0 0 50 50"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M25 0C11.2 0 0 11.2 0 25c0 13.8 11.2 25 25 25s25-11.2 25-25C50 11.2 38.8 0 25 0z" fill="#007CBA" />
-        <path d="M25 8l8 14h-16l8-14z" fill="#fff" />
-      </svg>
-    ),
-  },
-  // Add other integrations here...
 ];
 
-// Function to render integration cards
-const renderIntegrationCard = (integration: Integration) => { // Explicitly typing integration
-  return (
-    <div
-      className="relative p-6 text-center bg-[#09090B] rounded-lg shadow-lg text-white transition-transform transform hover:scale-105 hover:shadow-2xl duration-300"
-      key={integration.title}
-    >
-      <div className="relative z-10">
-        {integration.icon}
-        <h3 className="text-xl font-bold mb-2">{integration.title}</h3>
-        <p className="mb-4">{integration.desc}</p>
-        <button className="px-6 py-2 font-semibold text-lg bg-[#2663EB] text-white rounded-full shadow-md transition duration-300 transform hover:bg-blue-600 hover:shadow-lg hover:scale-105">
-          Automate Now!
-        </button>
+export default () => (
+  <section className="py-16">
+      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
+          <div className="max-w-md">
+              <h1 className="text-white text-xl font-extrabold sm:text-2xl">Integrations</h1>
+              <p className="text-white mt-2">Extend and automate your workflow by using integrations for your favorite webshop builders.</p>
+          </div>
+          <ul className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {
+                  integrations.map((item, idx) => (
+                      <li className="border rounded-lg">
+                          <div className="flex items-start justify-between p-4">
+                              <div className="space-y-2">
+                                  {item.icon}
+                                  <h4 className="text-white font-semibold">{item.title}</h4>
+                                  <p className="text-white text-sm">{item.desc}</p>
+                              </div>
+                              <button className="text-white text-sm border rounded-lg px-3 py-2 duration-150 hover:bg-gray-100">Connect</button>
+                          </div>
+                          <div className="py-5 px-4 border-t text-right">
+                              <a href="javascript:void(0)" className="text-white hover:text-gray-300 text-sm font-medium">
+                                  View integration
+                              </a>
+                          </div>
+                      </li>
+                  ))
+              }
+          </ul>
       </div>
-    </div>
-  );
-};
-
-// Main component
-const IntegrationList: React.FC = () => {
-  return (
-    <div className="flex justify-center p-6">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-screen-xl w-full">
-        {integrations.map(renderIntegrationCard)}
-      </div>
-    </div>
-  );
-};
-
-export default IntegrationList;
+  </section>
+)
