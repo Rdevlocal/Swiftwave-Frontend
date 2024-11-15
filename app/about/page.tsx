@@ -150,7 +150,7 @@ const AboutPage: React.FC = () => {
                             </a>
                         </div>
                         <div className="flex-1 sm:hidden lg:block">
-                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="md:max-w-lg sm:rounded-lg" alt="" />
+                            <img src="https://imagizer.imageshack.com/img924/3868/MyF0yG.jpg" className="md:max-w-lg sm:rounded-lg" alt="" />
                         </div>
                     </div>
                 </div>
