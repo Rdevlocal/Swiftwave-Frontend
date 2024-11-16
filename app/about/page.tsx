@@ -110,7 +110,7 @@ const AboutPage: React.FC = () => {
                 <div className="max-w-screen-xl mx-auto md:px-8">
                     <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
                         <div className="flex-1 sm:hidden lg:block">
-                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="md:max-w-lg sm:rounded-lg" alt="" />
+                            <img src="https://imagizer.imageshack.com/img922/7901/262K15.jpg" className="md:max-w-lg sm:rounded-lg" alt="" />
                         </div>
                         <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl text-white">
                             <p className="text-3xl font-semibold sm:text-4xl">
@@ -150,7 +150,7 @@ const AboutPage: React.FC = () => {
                             </a>
                         </div>
                         <div className="flex-1 sm:hidden lg:block">
-                            <img src="https://imagizer.imageshack.com/img924/3868/MyF0yG.jpg" className="md:max-w-lg sm:rounded-lg" alt="" />
+                            <img src="https://imagizer.imageshack.com/img924/3868/MyF0yG.jpg " className="md:max-w-lg sm:rounded-lg" alt="" />
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@ const AboutPage: React.FC = () => {
                 <div className="max-w-screen-xl mx-auto md:px-8">
                     <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
                         <div className="flex-1 sm:hidden lg:block">
-                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="md:max-w-lg sm:rounded-lg" alt="" />
+                            <img src="https://imagizer.imageshack.com/img922/7356/yTeaZD.jpg" className="md:max-w-lg sm:rounded-lg" alt="" />
                         </div>
                         <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl text-white">
                             <h3 className="text-indigo-600 font-semibold">Vision</h3>
@@ -201,7 +201,7 @@ const AboutPage: React.FC = () => {
                             </a>
                         </div>
                         <div className="flex-1 sm:hidden lg:block">
-                        <img src="app/images/swiftwave.io.png" className="md:max-w-lg sm:rounded-lg" alt="Your local description here" />
+                            <img src="https://imagizer.imageshack.com/img922/5537/w66xr5.jpg" className="md:max-w-lg sm:rounded-lg" alt="" />
                         </div>
                     </div>
                 </div>
