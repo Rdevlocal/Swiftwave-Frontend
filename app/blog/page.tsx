@@ -4,35 +4,35 @@ const posts = [
   {
       title: "Understanding AI: What It Is and How It Works",
       desc: "Artificial Intelligence (AI) refers to the simulation of human intelligence in machines. Learn how AI algorithms work and their applications in various fields.",
-      img: "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxBSXxlbnwwfHx8fDE2OTAxMDMxMjI&ixlib=rb-4.0.3&q=80&w=870",
+      img: "https://imagizer.imageshack.com/img924/2285/74lDoq.jpg",
       date: "Jan 4 2024",
       href: "javascript:void(0)"
   },
   {
       title: "The Future of AI: Trends to Watch",
       desc: "As technology evolves, so does the landscape of AI. This article explores emerging trends in AI, including advancements in machine learning and automation.",
-      img: "https://images.unsplash.com/photo-1573497019415-188f0f066c1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDl8fEFJfGVufDB8fHx8fDE2OTAxMDMxMjI&ixlib=rb-4.0.3&q=80&w=870",
+      img: "https://imagizer.imageshack.com/img924/60/Ry2ljw.jpg",
       date: "Jan 15 2024",
       href: "javascript:void(0)"
   },
   {
       title: "AI in Healthcare: Revolutionizing Patient Care",
       desc: "Explore how AI is transforming healthcare by improving diagnostics, personalizing treatment plans, and enhancing patient care through data analysis.",
-      img: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxAUIUyMEluJTIwSGVhbHRoY2FyfGVufDB8fHx8fDE2OTAxMDMxMjI&ixlib=rb-4.0.3&q=80&w=870",
+      img: "https://imagizer.imageshack.com/img924/1743/4kz6uY.jpg",
       date: "Jan 22 2024",
       href: "javascript:void(0)"
   },
   {
       title: "The Role of AI in Digital Marketing",
       desc: "Discover how businesses are leveraging AI technologies to enhance their digital marketing strategies, from personalized content to predictive analytics.",
-      img: "https://images.unsplash.com/photo-1602871679796-67658f3c8b3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxBSXxlbnwwfHx8fDE2OTAxMDMxMjI&ixlib=rb-4.0.3&q=80&w=870",
+      img: "https://imagizer.imageshack.com/img924/1641/WScBxl.jpg",
       date: "Feb 1 2024",
       href: "javascript:void(0)"
   },
   {
       title: "Ethics in AI: Navigating Challenges and Responsibilities",
       desc: "As AI technology advances, ethical considerations become increasingly important. This article addresses the ethical challenges and responsibilities of AI developers.",
-      img: "https://images.unsplash.com/photo-1585877373788-f02e29883d9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDV8fEFJfGVufDB8fHx8fDE2OTAxMDMxMjI&ixlib=rb-4.0.3&q=80&w=870",
+      img: "https://imagizer.imageshack.com/img924/4817/zPRY1M.jpg",
       date: "Feb 15 2024",
       href: "javascript:void(0)"
   }
