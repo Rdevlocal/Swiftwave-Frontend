@@ -72,7 +72,7 @@ export default function ContactForm() {
                   onChange={handleChange}
                   className="w-full mt-2 px-3 py-2 text-gray-200 bg-transparent outline-none border border-gray-300 focus:border-indigo-600 shadow-sm rounded-lg"
                 />
-              </div> brev
+              </div>
             </div>
             <div>
               <label className="text-white font-medium">Email</label> {/* Set to white */}
