@@ -188,7 +188,7 @@ const AboutPage: React.FC = () => {
                         <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl text-white">
                             <h3 className="text-indigo-600 font-semibold">Be a part of something bigger</h3>
                             <p className="text-3xl font-semibold sm:text-4xl">
-                            Join Us
+                            Join Us today!
 
                             </p>
                             <p className="mt-3">
