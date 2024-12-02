@@ -103,7 +103,6 @@ const AboutPage: React.FC = () => {
                     </div>
                 </div>
             </section>
-frithub
 
                         {/* Section 1 */}
                         <section className="py-14">
