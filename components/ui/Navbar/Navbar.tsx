@@ -10,19 +10,12 @@ const Navigation = () => {
 
   // Main navigation items
   const navigationItems = [
-    { title: "Integrations", path: "/integrations" },
     { title: "Products", path: "/products" },
+    { title: "Integrations", path: "/integrations" },
     { title: "Pricing", path: "/pricing" },
-    { title: "Resources", path: "#" }, // Use '#' to prevent navigation
-    { title: "Contact", path: "/contact" },
-  ];
-
-  // Resources dropdown items
-  const resources = [
-    { title: "Partners", path: "/partners" },
-    { title: "Blog", path: "/blog" },
     { title: "About us", path: "/about" },
     { title: "Help Center", path: "/helpcenter" },
+    { title: "Contact", path: "/contact" },
   ];
 
   // Close dropdown on document click
