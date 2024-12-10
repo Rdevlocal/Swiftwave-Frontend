@@ -17,7 +17,6 @@ const navigation = {
   ],
   Resources: [
     { name: "Contact", href: "/contact" },
-    { name: "Press", href: "/press" },
     { name: "Blog", href: "/blog" },
     { name: "Helpcenter", href: "/helpcenter" },
   ],
