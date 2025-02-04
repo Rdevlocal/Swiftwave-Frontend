@@ -1,114 +1,81 @@
-# Project Name
+<img src="https://github.com/user-attachments/assets/e1e0fe16-21f4-44c8-a22d-39b4494433a1" alt="Link Management Logo" width="50" height="50">
 
-## Overview
+# 🔗 Linkify - The Link Management Platform for Businesses(Landing Page)
 
-This project is a TypeScript (TSX) application built using `pnpm` for fast, efficient package management. It is designed to [briefly describe what the project does], offering [key functionality or solution].
-
-
-
-## Prerequisites
-
-Ensure you have the following installed:
-
-- **Node.js**: v[22] or higher (https://nodejs.org/)
-- **pnpm**: v[9.12.2] or higher (https://pnpm.io/)
-
-To install `pnpm`, use:
-
-```bash
-npm install -g pnpm
-Installation
-Clone the repository:
-
-bash
-Code kopiëren
-git clone https://github.com/Rdevlocal/Swiftwave-Frontend.git
-cd repository-name
-Install dependencies using pnpm:
-
-bash
-Code kopiëren
-pnpm install
-Configuration
-Copy the .env.example file to .env:
-
-bash
-Code kopiëren
-cp .env.example .env
-Update the .env file with the necessary environment variables (e.g., API keys, database URLs).
-
-Scripts
-Development: Run the project in development mode:
-
-bash
-Code kopiëren
-pnpm dev
-This will start the development server at http://localhost:3000.
-
-Build: Build the project for production:
-
-bash
-Code kopiëren
-pnpm build
-Start: Start the project in production mode:
-
-bash
-Code kopiëren
-pnpm start
-Lint: Check for linting errors:
-
-bash
-Code kopiëren
-pnpm lint
-Test: Run tests:
-
-bash
-Code kopiëren
-pnpm test
-Folder Structure
-php
-Code kopiëren
-├── src
-│   ├── components    # Reusable components
-│   ├── pages         # Application pages
-│   ├── styles        # Global and component-specific styles
-│   └── App.tsx       # Main application file
-├── public            # Static assets
-├── .env.example      # Example environment configuration
-├── package.json      # Project metadata and scripts
-├── pnpm-lock.yaml    # pnpm lockfile
-└── tsconfig.json     # TypeScript configuration
-Testing
-Run tests using the following command:
-
-bash
-Code kopiëren
-pnpm test
-To run tests in watch mode:
-
-bash
-Code kopiëren
-pnpm test:watch
-Contributing
-Contributions are welcome! Please follow these steps:
-
-Fork the repository.
-Create a new branch (git checkout -b feature/your-feature).
-Make your changes and commit them (git commit -m "Add feature").
-Push to the branch (git push origin feature/your-feature).
-Open a pull request.
+<!-- <img src="https://github.com/user-attachments/assets/deab03fd-4234-44c3-a6ad-484c4a1a02a1" alt="Linkify Thubmnail"> -->
+<img src="https://github.com/user-attachments/assets/ee867e8e-7871-4289-bd56-3eef40adb9b2" alt="Linkify Thumbnail" style="border-radius: 50px;" width="1280">
 
 
-Contact
-For any questions or feedback, feel free to reach out:
+## 🌟 Introduction
+Linkify is an innovative link management software designed to help you shorten, track, and optimize your links effortlessly. Built with React, Node.js, and MongoDB, Linkify provides powerful analytics and user-friendly features to enhance your link-sharing experience.
 
-Name: [Karel]
-Email: [ledlightnight.com@gmail.com]
-css
-Code kopiëren
+## 🚀 Features
 
+- **Link Shortening:** Easily create short links for better sharing.
+- **Analytics Dashboard:** Track clicks, user engagement, and performance metrics.
+- **Customizable Links:** Create branded links that reflect your identity.
+- **AI-Powered Suggestions:** Get smart recommendations for link optimization.
 
+## 🔗 Live Preview
 
+Check out the live demo of Linkify here: [Live Preview](http://Linkify-demo.vercel.app)
 
+## 🎥 Watch Demo on YouTube
 
+Check out the tutorial to see how this link management system was built: [Watch the Tutorial](https://youtu.be/3_sZPAfVR_U) 💻 
 
+## 💻 Tech Stack
+
+* Next.js
+* Tailwind CSS
+* Shadcn UI
+* Magic UI
+* Aceternity UI
+* Prisma
+* MongoDB
+* Clerk
+* React Hook Form
+
+## 🛠️ Installation
+To run Linkify locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Shreyas-29/linkify.git
+    ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+3. Set up environment variables in a `.env` file:
+    ```
+   # app
+    NEXT_PUBLIC_APP_DOMAIN=
+    NEXT_PUBLIC_APP_NAME=
+
+    # clerk
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+    CLERK_SECRET_KEY=
+
+    # database
+    DATABASE_URL=
+    ```
+
+4. Run the development server:
+    ```bash
+    npm run dev
+    ```
+
+## ☕ Buy Me a Coffee
+If you enjoy using Linkify, consider supporting my work!  
+[Buy Me a Coffee ☕](https://buymeacoffee.com/shreyas29)
+
+## 📜 License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 💬 Contact
+If you have any questions or feedback, feel free to reach out via [GitHub Issues](https://github.com/Shreyas-29/linkify/issues).
+
+---
+
+Built with ❤️ by [Shreyas](https://shreyas-sihasane.vercel.app/)
