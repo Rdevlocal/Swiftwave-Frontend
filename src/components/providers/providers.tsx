@@ -1,23 +1,18 @@
 "use client";
 
-import React from 'react'
-import { ClerkProvider } from '@clerk/nextjs'
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import React from 'react';
+import { dark } from "@clerk/themes";
+import { ClerkProvider } from '@clerk/nextjs';
 
 interface Props {
     children: React.ReactNode;
 }
 
 const Providers = ({ children }: Props) => {
-
-    const client = new QueryClient();
-
     return (
-        <QueryClientProvider client={client}>
-            <ClerkProvider>
-                {children}
-            </ClerkProvider>
-        </QueryClientProvider>
+        <ClerkProvider appearance={{ baseTheme: dark }}>
+            {children}
+        </ClerkProvider>
     )
 };
 

@@ -1,9 +1,14 @@
-import { Providers } from "@/components";
-import { Toaster } from "@/components/ui/sonner";
+import { Footer, Navbar } from "@/components";
+import { SITE_CONFIG } from "@/config";
+import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
-import { aeonik, cn, generateMetadata, inter } from "@/utils";
+import { ClerkProvider } from '@clerk/nextjs';
+import { dark } from '@clerk/themes';
+import { Inter } from "next/font/google";
 
-export const metadata = generateMetadata();
+const font = Inter({ subsets: ["latin"] });
+
+export const metadata = SITE_CONFIG;
 
 export default function RootLayout({
     children,
@@ -11,31 +16,17 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" className="scrollbar">
+        <html lang="en" suppressHydrationWarning>
             <body
                 className={cn(
-                    "min-h-screen bg-background text-foreground antialiased !font-default overflow-x-hidden",
-                    aeonik.variable,
-                    inter.variable,
+                    "min-h-screen bg-background text-foreground antialiased max-w-full overflow-x-hidden",
+                    font.className
                 )}
             >
-                <Providers>
-                    <Toaster richColors theme="dark" position="top-right" />
+                <ClerkProvider appearance={{ baseTheme: dark }}>
                     {children}
-                </Providers>
+                </ClerkProvider>
             </body>
         </html>
     );
 };
-
-{/* <div className="absolute top-0 z-[-2] h-screen w-screen bg-background bg-[radial-gradient(100%_50%_at_50%_0%,rgba(168,85,247,0.13)_0,rgba(168,85,247,0)_50%,rgba(168,85,247,0)_100%)]"></div> */ }
-{/* <AnimatedBackground
-                    numSquares={6}
-                    maxOpacity={0.2}
-                    duration={10}
-                    repeatDelay={10}
-                    className={cn(
-                        "[mask-image:radial-gradient(800px_circle_at_center,black,transparent)]",
-                        "inset-0 w-full h-[100%] inset-y-[-30%] hidden md:block",
-                    )}
-                /> */}

@@ -1,45 +1,19 @@
-// auth
-import SignInForm from "./auth/signin-form";
-import SignUpForm from "./auth/signup-form";
-
-// global
-import { Icons } from "./global/icons";
-import MaxWidthWrapper from "./global/max-width-wrapper";
-import AnimationContainer from "./global/animation-container";
-// navigation
-import Navbar from "./navigation/navbar";
-import Footer from "./navigation/footer";
-
-// providers
 import Providers from "./providers/providers";
+import ThemeProvider from "./providers/theme-provider";
 
-// dashboard
-import Sidebar from "./dashboard/sidebar";
-import DashboardNavbar from "./dashboard/dashboard-navbar";
+import Navbar from "./home/navigation/navbar";
+import Footer from "./home/navigation/footer";
 
-// pricing
-import PricingCards from "./pricing-cards";
-
-// blog
-import Blogs from "./blog/blogs";
-
+import Icons from "./global/icons";
+import Wrapper from "./global/wrapper";
+import Container from "./global/container";
 
 export {
-    SignInForm,
-    SignUpForm,
-
-    Icons,
-    MaxWidthWrapper,
-    AnimationContainer,
-    Navbar,
-    Footer,
-
     Providers,
-
-    Sidebar,
-    DashboardNavbar,
-
-    PricingCards,
-
-    Blogs,
-};
+    ThemeProvider,
+    Navbar,
+    Icons,
+    Wrapper,
+    Footer,
+    Container,
+}

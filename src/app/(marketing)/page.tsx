@@ -1,322 +1,342 @@
-import { AnimationContainer, MaxWidthWrapper, PricingCards } from "@/components";
-import { BentoCard, BentoGrid, CARDS } from "@/components/ui/bento-grid";
+import { Container, Icons, Wrapper } from "@/components";
 import { BorderBeam } from "@/components/ui/border-beam";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { LampContainer } from "@/components/ui/lamp";
-import MagicBadge from "@/components/ui/magic-badge";
-import MagicCard from "@/components/ui/magic-card";
-import { COMPANIES, PROCESS } from "@/utils";
-import { REVIEWS } from "@/utils/constants/misc";
-import { currentUser } from "@clerk/nextjs/server";
-import { ArrowRightIcon, CreditCardIcon, StarIcon } from "lucide-react";
+import Marquee from "@/components/ui/marquee";
+import SectionBadge from "@/components/ui/section-badge";
+import { features, perks, pricingCards, reviews } from "@/constants";
+import { cn } from "@/lib/utils";
+import { ArrowRight, ChevronRight, UserIcon, Zap } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const HomePage = async () => {
+const HomePage = () => {
 
-    const user = await currentUser();
+    const firstRow = reviews.slice(0, reviews.length / 2);
+    const secondRow = reviews.slice(reviews.length / 2);
 
     return (
-        <div className="overflow-x-hidden scrollbar-hide size-full">
-            {/* Hero Section */}
-            <MaxWidthWrapper>
-                <div className="flex flex-col items-center justify-center w-full text-center bg-gradient-to-t from-background">
-                    <AnimationContainer className="flex flex-col items-center justify-center w-full text-center">
+        <section className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8">
+
+
+            {/* hero */}
+            <Wrapper>
+                <div className="absolute inset-0 dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10 h-[150vh]" />
+
+                <Container>
+                    <div className="flex flex-col items-center justify-center py-20 h-full">
                         <button className="group relative grid overflow-hidden rounded-full px-4 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200">
                             <span>
                                 <span className="spark mask-gradient absolute inset-0 h-[100%] w-[100%] animate-flip overflow-hidden rounded-full [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:animate-rotate before:bg-[conic-gradient(from_0deg,transparent_0_340deg,white_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]" />
                             </span>
                             <span className="backdrop absolute inset-[1px] rounded-full bg-neutral-950 transition-colors duration-200 group-hover:bg-neutral-900" />
-                            <span className="h-full w-full blur-md absolute bottom-0 inset-x-0 bg-gradient-to-tr from-primary/20"></span>
-                            <span className="z-10 py-0.5 text-sm text-neutral-100 flex items-center justify-center gap-1">
-                                ✨ Manage links smarter
-                                <ArrowRightIcon className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+                            <span className="h-full w-full blur-md absolute bottom-0 inset-x-0 bg-gradient-to-tr from-primary/40"></span>
+                            <span className="z-10 py-0.5 text-sm text-neutral-100 flex items-center justify-center gap-1.5">
+                                <Image src="/icons/sparkles-dark.svg" alt="✨" width={24} height={24} className="w-4 h-4" />
+                                Introducing Astra AI
+                                <ChevronRight className="w-4 h-4" />
                             </span>
                         </button>
-                        <h1 className="text-foreground text-center py-6 text-5xl font-medium tracking-normal text-balance sm:text-6xl md:text-7xl lg:text-8xl !leading-[1.15] w-full font-heading">
-                            Smart Links with <span className="text-transparent bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text inline-bloc">
-                                Precision
-                            </span>
-                        </h1>
-                        <p className="mb-12 text-lg tracking-tight text-muted-foreground md:text-xl text-balance">
-                            Effortlessly streamline your link management with Linkify.
-                            <br className="hidden md:block" />
-                            <span className="hidden md:block">Shorten, track, and organize all your links in one place.</span>
+
+                        <div className="flex flex-col items-center mt-8 max-w-3xl w-11/12 md:w-full">
+                            <h1 className="text-4xl md:text-6xl lg:textxl md:!leading-snug font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">
+                                Build your next idea and ship your dream site
+                            </h1>
+                            <p className="text-base md:text-lg text-foreground/80 mt-6 text-center">
+                                Zero code, maximum speed. Make professional sites easy, fast and fun while delivering best-in-class SEO, performance.
+                            </p>
+                            <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
+                                <Link href="#" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none">
+                                    <p className="text-foreground text-sm text-center md:text-base font-medium pl-4 pr-4 lg:pr-0">
+                                        ✨ {"  "} Start building your dream website now!
+                                    </p>
+                                    <Button size="sm" className="rounded-full hidden lg:flex border border-foreground/20">
+                                        Get Started
+                                        <ArrowRight className="w-4 h-4 ml-1" />
+                                    </Button>
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="relative flex items-center py-10 md:py-20 w-full">
+                            <div className="absolute top-1/2 left-1/2 -z-10 gradient w-3/4 -translate-x-1/2 h-3/4 -translate-y-1/2 inset-0 blur-[10rem]"></div>
+                            <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
+                                <Image
+                                    src="/assets/dashboard.svg"
+                                    alt="banner image"
+                                    width={1200}
+                                    height={1200}
+                                    quality={100}
+                                    className="rounded-md lg:rounded-xl bg-foreground/10 shadow-2xl ring-1 ring-border"
+                                />
+
+                                <BorderBeam size={250} duration={12} delay={9} />
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </Wrapper>
+
+            {/* how it works */}
+            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+                <Container>
+                    <div className="max-w-md mx-auto text-start md:text-center">
+                        <SectionBadge title="The Process" />
+                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                            Three steps to build your dream website
+                        </h2>
+                        <p className="text-muted-foreground mt-6">
+                            Turn your vision into reality in just 3 simple steps
                         </p>
-                        <div className="flex items-center justify-center whitespace-nowrap gap-4 z-50">
-                            <Button asChild>
-                                <Link href={user ? "/dashboard" : "/auth/sign-in"} className="flex items-center">
-                                    Start creating for free
-                                    <ArrowRightIcon className="w-4 h-4 ml-2" />
+                    </div>
+                </Container>
+                <Container>
+                    <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full divide-x-0 md:divide-x divide-y md:divide-y-0 divide-gray-900 first:border-l-2 lg:first:border-none first:border-gray-900">
+                            {perks.map((perk) => (
+                                <div key={perk.title} className="flex flex-col items-start px-4 md:px-6 lg:px-8 lg:py-6 py-4">
+                                    <div className="flex items-center justify-center">
+                                        <perk.icon className="w-8 h-8" />
+                                    </div>
+                                    <h3 className="text-lg font-medium mt-4">
+                                        {perk.title}
+                                    </h3>
+                                    <p className="text-muted-foreground mt-2 text-start lg:text-start">
+                                        {perk.info}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </Container>
+            </Wrapper>
+
+            {/* features */}
+            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+                <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-primary rounded-full blur-[10rem] -z-10"></div>
+                <div className="hidden md:block absolute bottom-0 -left-1/3 w-72 h-72 bg-indigo-600 rounded-full blur-[10rem] -z-10"></div>
+                <Container>
+                    <div className="max-w-md mx-auto text-start md:text-center">
+                        <SectionBadge title="Features" />
+                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                            Discover our powerful features
+                        </h2>
+                        <p className="text-muted-foreground mt-6">
+                            Astra offers a range of features to help you build a stunning website in no time
+                        </p>
+                    </div>
+                </Container>
+                <Container>
+                    <div className="flex items-center justify-center mx-auto mt-8">
+                        <Icons.feature className="w-auto h-80" />
+                    </div>
+                </Container>
+                <Container>
+                    <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
+                            {features.map((feature) => (
+                                <div key={feature.title} className="flex flex-col items-start lg:items-start px-0 md:px-0">
+                                    <div className="flex items-center justify-center">
+                                        <feature.icon className="w-8 h-8" />
+                                    </div>
+                                    <h3 className="text-lg font-medium mt-4">
+                                        {feature.title}
+                                    </h3>
+                                    <p className="text-muted-foreground mt-2 text-start lg:text-start">
+                                        {feature.info}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </Container>
+            </Wrapper>
+
+            {/* pricing */}
+            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+                <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
+                <Container>
+                    <div className="max-w-md mx-auto text-start md:text-center">
+                        <SectionBadge title="Pricing" />
+                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                            Unlock the right plan for your business
+                        </h2>
+                        <p className="text-muted-foreground mt-6">
+                            Choose the best plan for your business and start building your dream website today
+                        </p>
+                    </div>
+                </Container>
+                <Container className="flex items-center justify-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full md:gap-8 py-10 md:py-20 flex-wrap max-w-4xl">
+                        {pricingCards.map((card) => (
+                            <Card
+                                key={card.title}
+                                className={cn("flex flex-col w-full border-neutral-700",
+                                    card.title === "Unlimited Saas" && "border-2 border-primary"
+                                )}
+                            >
+                                <CardHeader className="border-b border-border">
+                                    <span>
+                                        {card.title}
+                                    </span>
+                                    <CardTitle className={cn(card.title !== "Unlimited Saas" && "text-muted-foreground")}>
+                                        {card.price}
+                                    </CardTitle>
+                                    <CardDescription>
+                                        {card.description}
+                                    </CardDescription>
+                                </CardHeader>
+                                <CardContent className="pt-6 space-y-3">
+                                    {card.features.map((feature) => (
+                                        <div key={feature} className="flex items-center gap-2">
+                                            <Zap className="w-4 h-4 fill-primary text-primary" />
+                                            <p>{feature}</p>
+                                        </div>
+                                    ))}
+                                </CardContent>
+                                <CardFooter className="mt-auto">
+                                    <Link
+                                        href="#"
+                                        className={cn(
+                                            "w-full text-center text-primary-foreground bg-primary p-2 rounded-md text-sm font-medium",
+                                            card.title !== "Unlimited Saas" && "!bg-foreground !text-background"
+                                        )}
+                                    >
+                                        {card.buttonText}
+                                    </Link>
+                                </CardFooter>
+                            </Card>
+                        ))}
+                    </div>
+                </Container>
+            </Wrapper>
+
+            {/* testimonials */}
+            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+                <div className="hidden md:block absolute -top-1/4 -left-1/3 w-72 h-72 bg-indigo-500 rounded-full blur-[10rem] -z-10"></div>
+                <Container>
+                    <div className="max-w-md mx-auto text-start md:text-center">
+                        <SectionBadge title="Our Customers" />
+                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                            What people are saying
+                        </h2>
+                        <p className="text-muted-foreground mt-6">
+                            See how Astra empowers businesses of all sizes. Here&apos;s what real people are saying on Twitter
+                        </p>
+                    </div>
+                </Container>
+                <Container>
+                    <div className="py-10 md:py-20 w-full">
+                        <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden py-10">
+                            <Marquee pauseOnHover className="[--duration:20s] select-none">
+                                {firstRow.map((review) => (
+                                    <figure
+                                        key={review.name}
+                                        className={cn(
+                                            "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+                                            "border-zinc-50/[.1] bg-background over:bg-zinc-50/[.15]",
+                                        )}
+                                    >
+                                        <div className="flex flex-row items-center gap-2">
+                                            <UserIcon className="w-6 h-6" />
+                                            <div className="flex flex-col">
+                                                <figcaption className="text-sm font-medium">
+                                                    {review.name}
+                                                </figcaption>
+                                                <p className="text-xs font-medium text-muted-foreground">{review.username}</p>
+                                            </div>
+                                        </div>
+                                        <blockquote className="mt-2 text-sm">{review.body}</blockquote>
+                                    </figure>
+                                ))}
+                            </Marquee>
+                            <Marquee reverse pauseOnHover className="[--duration:20s] select-none">
+                                {secondRow.map((review) => (
+                                    <figure
+                                        key={review.name}
+                                        className={cn(
+                                            "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+                                            "border-zinc-50/[.1] bg-background over:bg-zinc-50/[.15]",
+                                        )}
+                                    >
+                                        <div className="flex flex-row items-center gap-2">
+                                            <UserIcon className="w-6 h-6" />
+                                            <div className="flex flex-col">
+                                                <figcaption className="text-sm font-medium">
+                                                    {review.name}
+                                                </figcaption>
+                                                <p className="text-xs font-medium text-muted-foreground">{review.username}</p>
+                                            </div>
+                                        </div>
+                                        <blockquote className="mt-2 text-sm">{review.body}</blockquote>
+                                    </figure>
+                                ))}
+                            </Marquee>
+                            <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-background"></div>
+                            <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-background"></div>
+                        </div>
+                    </div>
+                </Container>
+            </Wrapper>
+
+            {/* newsletter */}
+            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+                <Container>
+                    <LampContainer>
+                        <div className="flex flex-col items-center justify-center relative w-full text-center">
+                            <h2 className="text-4xl lg:text-5xl xl:text-6xl lg:!leading-snug font-semibold mt-8">
+                                From Idea to Launch <br /> Faster Than Ever
+                            </h2>
+                            <p className="text-muted-foreground mt-6 max-w-md mx-auto">
+                                Build stunning websites with Astra&apos;s intuitive drag-and-drop builder and powerful AI assistant
+                            </p>
+                            <Button variant="white" className="mt-6" asChild>
+                                <Link href="/sign-in">
+                                    Get started for free
+                                    <ArrowRight className="w-4 h-4 ml-2" />
                                 </Link>
                             </Button>
                         </div>
-                    </AnimationContainer>
-
-                    <AnimationContainer delay={0.2} className="relative pt-20 pb-20 md:py-32 px-2 bg-transparent w-full">
-                        <div className="absolute md:top-[10%] left-1/2 gradient w-3/4 -translate-x-1/2 h-1/4 md:h-1/3 inset-0 blur-[5rem] animate-image-glow"></div>
-                        <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
-                            <BorderBeam
-                                size={250}
-                                duration={12}
-                                delay={9}
-                            />
-                            <Image
-                                src="/assets/dashboard-dark.svg"
-                                alt="Dashboard"
-                                width={1200}
-                                height={1200}
-                                quality={100}
-                                className="rounded-md lg:rounded-xl bg-foreground/10 ring-1 ring-border"
-                            />
-                            <div className="absolute -bottom-4 inset-x-0 w-full h-1/2 bg-gradient-to-t from-background z-40"></div>
-                            <div className="absolute bottom-0 md:-bottom-8 inset-x-0 w-full h-1/4 bg-gradient-to-t from-background z-50"></div>
-                        </div>
-                    </AnimationContainer>
-                </div>
-            </MaxWidthWrapper >
-
-            {/* Companies Section */}
-            <MaxWidthWrapper>
-                <AnimationContainer delay={0.4}>
-                    <div className="py-14">
-                        <div className="mx-auto px-4 md:px-8">
-                            <h2 className="text-center text-sm font-medium font-heading text-neutral-400 uppercase">
-                                Trusted by the best in the industry
-                            </h2>
-                            <div className="mt-8">
-                                <ul className="flex flex-wrap items-center gap-x-6 gap-y-6 md:gap-x-16 justify-center">
-                                    {COMPANIES.map((company) => (
-                                        <li key={company.name}>
-                                            <Image
-                                                src={company.logo}
-                                                alt={company.name}
-                                                width={80}
-                                                height={80}
-                                                quality={100}
-                                                className="w-28 h-auto"
-                                            />
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </AnimationContainer>
-            </MaxWidthWrapper>
-
-            {/* Features Section */}
-            <MaxWidthWrapper className="pt-10">
-                <AnimationContainer delay={0.1}>
-                    <div className="flex flex-col w-full items-center lg:items-center justify-center py-8">
-                        <MagicBadge title="Features" />
-                        <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-                            Manage Links Like a Pro
-                        </h2>
-                        <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                            Linkify is a powerful link management tool that helps you shorten, track, and organize all your links in one place.
-                        </p>
-                    </div>
-                </AnimationContainer>
-                <AnimationContainer delay={0.2}>
-                    <BentoGrid className="py-8">
-                        {CARDS.map((feature, idx) => (
-                            <BentoCard key={idx} {...feature} />
-                        ))}
-                    </BentoGrid>
-                </AnimationContainer>
-            </MaxWidthWrapper>
-
-            {/* Process Section */}
-            <MaxWidthWrapper className="py-10">
-                <AnimationContainer delay={0.1}>
-                    <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">
-                        <MagicBadge title="The Process" />
-                        <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-                            Effortless link management in 3 steps
-                        </h2>
-                        <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                            Follow these simple steps to optimize, organize, and share your links with ease.
-                        </p>
-                    </div>
-                </AnimationContainer>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full py-8 gap-4 md:gap-8">
-                    {PROCESS.map((process, id) => (
-                        <AnimationContainer delay={0.2 * id} key={id}>
-                            <MagicCard className="group md:py-8">
-                                <div className="flex flex-col items-start justify-center w-full">
-                                    <process.icon strokeWidth={1.5} className="w-10 h-10 text-foreground" />
-                                    <div className="flex flex-col relative items-start">
-                                        <span className="absolute -top-6 right-0 border-2 border-border text-foreground font-medium text-2xl rounded-full w-12 h-12 flex items-center justify-center pt-0.5">
-                                            {id + 1}
-                                        </span>
-                                        <h3 className="text-base mt-6 font-medium text-foreground">
-                                            {process.title}
-                                        </h3>
-                                        <p className="mt-2 text-sm text-muted-foreground">
-                                            {process.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            </MagicCard>
-                        </AnimationContainer>
-                    ))}
-                </div>
-            </MaxWidthWrapper>
-
-            {/* Pricing Section */}
-            <MaxWidthWrapper className="py-10">
-                <AnimationContainer delay={0.1}>
-                    <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">
-                        <MagicBadge title="Simple Pricing" />
-                        <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-                            Choose a plan that works for you
-                        </h2>
-                        <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                            Get started with Linkify today and enjoy more features with our pro plans.
-                        </p>
-                    </div>
-                </AnimationContainer>
-                <AnimationContainer delay={0.2}>
-                    <PricingCards />
-                </AnimationContainer>
-                <AnimationContainer delay={0.3}>
-                    <div className="flex flex-wrap items-start md:items-center justify-center lg:justify-evenly gap-6 mt-12 max-w-5xl mx-auto w-full">
-                        <div className="flex items-center gap-2">
-                            <CreditCardIcon className="w-5 h-5 text-foreground" />
-                            <span className="text-muted-foreground">
-                                No credit card required
-                            </span>
-                        </div>
-                    </div>
-                </AnimationContainer>
-            </MaxWidthWrapper>
-
-            {/* Reviews Section */}
-            <MaxWidthWrapper className="py-10">
-                <AnimationContainer delay={0.1}>
-                    <div className="flex flex-col items-center lg:items-center justify-center w-full py-8 max-w-xl mx-auto">
-                        <MagicBadge title="Our Customers" />
-                        <h2 className="text-center lg:text-center text-3xl md:text-5xl !leading-[1.1] font-medium font-heading text-foreground mt-6">
-                            What our users are saying
-                        </h2>
-                        <p className="mt-4 text-center lg:text-center text-lg text-muted-foreground max-w-lg">
-                            Here&apos;s what some of our users have to say about Linkify.
-                        </p>
-                    </div>
-                </AnimationContainer>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-start gap-4 md:gap-8 py-10">
-                    <div className="flex flex-col items-start h-min gap-6">
-                        {REVIEWS.slice(0, 3).map((review, index) => (
-                            <AnimationContainer delay={0.2 * index} key={index}>
-                                <MagicCard key={index} className="md:p-0">
-                                    <Card className="flex flex-col w-full border-none h-min">
-                                        <CardHeader className="space-y-0">
-                                            <CardTitle className="text-lg font-medium text-muted-foreground">
-                                                {review.name}
-                                            </CardTitle>
-                                            <CardDescription>
-                                                {review.username}
-                                            </CardDescription>
-                                        </CardHeader>
-                                        <CardContent className="space-y-4 pb-4">
-                                            <p className="text-muted-foreground">
-                                                {review.review}
-                                            </p>
-                                        </CardContent>
-                                        <CardFooter className="w-full space-x-1 mt-auto">
-                                            {Array.from({ length: review.rating }, (_, i) => (
-                                                <StarIcon key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
-                                            ))}
-                                        </CardFooter>
-                                    </Card>
-                                </MagicCard>
-                            </AnimationContainer>
-                        ))}
-                    </div>
-                    <div className="flex flex-col items-start h-min gap-6">
-                        {REVIEWS.slice(3, 6).map((review, index) => (
-                            <AnimationContainer delay={0.2 * index} key={index}>
-                                <MagicCard key={index} className="md:p-0">
-                                    <Card className="flex flex-col w-full border-none h-min">
-                                        <CardHeader className="space-y-0">
-                                            <CardTitle className="text-lg font-medium text-muted-foreground">
-                                                {review.name}
-                                            </CardTitle>
-                                            <CardDescription>
-                                                {review.username}
-                                            </CardDescription>
-                                        </CardHeader>
-                                        <CardContent className="space-y-4 pb-4">
-                                            <p className="text-muted-foreground">
-                                                {review.review}
-                                            </p>
-                                        </CardContent>
-                                        <CardFooter className="w-full space-x-1 mt-auto">
-                                            {Array.from({ length: review.rating }, (_, i) => (
-                                                <StarIcon key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
-                                            ))}
-                                        </CardFooter>
-                                    </Card>
-                                </MagicCard>
-                            </AnimationContainer>
-                        ))}
-                    </div>
-                    <div className="flex flex-col items-start h-min gap-6">
-                        {REVIEWS.slice(6, 9).map((review, index) => (
-                            <AnimationContainer delay={0.2 * index} key={index}>
-                                <MagicCard key={index} className="md:p-0">
-                                    <Card className="flex flex-col w-full border-none h-min">
-                                        <CardHeader className="space-y-0">
-                                            <CardTitle className="text-lg font-medium text-muted-foreground">
-                                                {review.name}
-                                            </CardTitle>
-                                            <CardDescription>
-                                                {review.username}
-                                            </CardDescription>
-                                        </CardHeader>
-                                        <CardContent className="space-y-4 pb-4">
-                                            <p className="text-muted-foreground">
-                                                {review.review}
-                                            </p>
-                                        </CardContent>
-                                        <CardFooter className="w-full space-x-1 mt-auto">
-                                            {Array.from({ length: review.rating }, (_, i) => (
-                                                <StarIcon key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
-                                            ))}
-                                        </CardFooter>
-                                    </Card>
-                                </MagicCard>
-                            </AnimationContainer>
-                        ))}
-                    </div>
-                </div>
-            </MaxWidthWrapper>
-
-            {/* CTA Section */}
-            <MaxWidthWrapper className="mt-20 max-w-[100vw] overflow-x-hidden scrollbar-hide">
-                <AnimationContainer delay={0.1}>
-                    <LampContainer>
-                        <div className="flex flex-col items-center justify-center relative w-full text-center">
-                            <h2 className="bg-gradient-to-b from-neutral-200 to-neutral-400 py-4 bg-clip-text text-center text-4xl md:text-7xl !leading-[1.15] font-medium font-heading tracking-tight text-transparent mt-8">
-                                Step into the future of link management
-                            </h2>
-                            <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                Experience the cutting-edge solution that transforms how you handle your links. Elevate your online presence with our next-gen platform.
-                            </p>
-                            <div className="mt-6">
-                                <Button>
-                                    Get started for free
-                                    <ArrowRightIcon className="w-4 h-4 ml-2" />
-                                </Button>
-                            </div>
-                        </div>
                     </LampContainer>
-                </AnimationContainer>
-            </MaxWidthWrapper>
+                </Container>
+                <Container className="relative z-[999999]">
+                    <div className="flex items-center justify-center w-full -mt-40">
+                        <div className="flex flex-col md:flex-row items-start md:items-center justify-start md:justify-between w-full px-4 md:px-8 rounded-lg lg:rounded-2xl border border-border/80 py-4 md:py-8">
+                            <div className="flex flex-col items-start gap-4 w-full">
+                                <h4 className="text-xl md:text-2xl font-semibold">
+                                    Join our newsletter
+                                </h4>
+                                <p className="text-base text-muted-foreground">
+                                    Be up to date with everything about AI builder
+                                </p>
+                            </div>
+                            <div className="flex flex-col items-start gap-2 md:min-w-80 mt-5 md:mt-0 w-full md:w-max">
+                                <form action="#" className="flex flex-col md:flex-row items-center gap-2 w-full md:max-w-xs">
+                                    <Input
+                                        required
+                                        type="email"
+                                        placeholder="Enter your email"
+                                        className="focus-visible:ring-0 focus-visible:ring-transparent focus-visible:border-primary duration-300 w-full"
+                                    />
+                                    <Button type="submit" size="sm" variant="secondary" className="w-full md:w-max">
+                                        Subscribe
+                                    </Button>
+                                </form>
+                                <p className="text-xs text-muted-foreground">
+                                    By subscribing you agree with our{" "}
+                                    <Link href="#">
+                                        Privacy Policy
+                                    </Link>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </Container>
+            </Wrapper>
 
-        </div>
+        </section>
     )
 };
 
