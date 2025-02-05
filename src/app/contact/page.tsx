@@ -17,7 +17,7 @@ const ContactPage = () => {
                             Contact Us
                         </h1>
                         <p className="text-base md:text-lg text-foreground/80 mt-6 text-center max-w-3xl">
-                            We’re here to help! Fill out the form below, and our team will get back to you as soon as possible.
+                            Were here to help! Fill out the form below, and our team will get back to you as soon as possible.
                         </p>
                     </div>
                 </Container>
@@ -61,7 +61,7 @@ const ContactPage = () => {
                                 We’re excited to connect with you!
                             </h2>
                             <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                Whether you have a question or want to discuss a project, we're here to help. Reach out anytime!
+                                Whether you have a question or want to discuss a project, we’re here to help. Reach out anytime!
                             </p>
                         </div>
                     </LampContainer>
