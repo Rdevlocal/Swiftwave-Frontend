@@ -85,7 +85,7 @@ const HomePage = () => {
                     <div className="max-w-md mx-auto text-start md:text-center">
                         <SectionBadge title="The Process" />
                         <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                            Three steps to build your dream website
+                            Three steps to build your online dream team
                         </h2>
                         <p className="text-muted-foreground mt-6">
                             Turn your vision into reality in just 3 simple steps
@@ -124,7 +124,7 @@ const HomePage = () => {
                             Discover our powerful features
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            Astra offers a range of features to help you build a stunning website in no time
+                            Swiftwave offers a range of features to help you focus on the things that you do best
                         </p>
                     </div>
                 </Container>
@@ -161,7 +161,7 @@ const HomePage = () => {
                     <div className="max-w-md mx-auto text-start md:text-center">
                         <SectionBadge title="Pricing" />
                         <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                            Unlock the right plan for your business
+                            Chose a plan that scales with your business
                         </h2>
                         <p className="text-muted-foreground mt-6">
                             Choose the best plan for your business and start building your dream website today
@@ -223,7 +223,7 @@ const HomePage = () => {
                             What people are saying
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            See how Astra empowers businesses of all sizes. Here&apos;s what real people are saying on Twitter
+                            See how Swiftwave empowers businesses of all sizes. Here&apos;s what people are saying.
                         </p>
                     </div>
                 </Container>
@@ -290,7 +290,7 @@ const HomePage = () => {
                                 From Idea to Launch <br /> Faster Than Ever
                             </h2>
                             <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                Build stunning websites with Astra&apos;s intuitive drag-and-drop builder and powerful AI assistant
+                                Build stunning workflows with our powerful AI assistant
                             </p>
                             <Button variant="white" className="mt-6" asChild>
                                 <Link href="/sign-in">
@@ -309,7 +309,7 @@ const HomePage = () => {
                                     Join our newsletter
                                 </h4>
                                 <p className="text-base text-muted-foreground">
-                                    Be up to date with everything about AI builder
+                                    Be up to date with everything about Swiftwave
                                 </p>
                             </div>
                             <div className="flex flex-col items-start gap-2 md:min-w-80 mt-5 md:mt-0 w-full md:w-max">
