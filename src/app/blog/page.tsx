@@ -8,16 +8,25 @@ import Image from "next/image";
 import Link from "next/link";
 
 const BlogPage = () => {
+    const blogPosts = [
+        { title: "AI-Powered Automation: The Future of Work", link: "/blog/ai-automation" },
+        { title: "How AI is Revolutionizing Business Operations", link: "/blog/ai-business" },
+        { title: "Machine Learning and Workflow Optimization", link: "/blog/ml-workflow" },
+        { title: "The Role of AI in Enhancing Customer Experience", link: "/blog/ai-customer" },
+        { title: "Automating Repetitive Tasks with AI", link: "/blog/ai-repetitive" },
+        { title: "AI-Driven Decision Making: Opportunities and Challenges", link: "/blog/ai-decision" }
+    ];
+
     return (
         <section className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8">
             <Wrapper>
                 <Container>
-                    <div className="flex flex-col items-center justify-center py-20 h-full">
-                        <h1 className="text-4xl md:text-6xl lg:textxl font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">
+                    <div className="flex flex-col items-center justify-center py-20 h-full text-center">
+                        <h1 className="text-5xl md:text-7xl font-bold bg-clip-text bg-gradient-to-b from-white to-gray-400 text-transparent">
                             Our Blog
                         </h1>
-                        <p className="text-base md:text-lg text-foreground/80 mt-6 text-center max-w-3xl">
-                            Welcome to our blog! Here, we share insights, innovations, and stories from the world of Swiftwave and beyond. Stay up-to-date with the latest trends and news.
+                        <p className="text-lg md:text-xl text-foreground/80 mt-6 max-w-3xl">
+                            Explore the latest advancements in AI and automation. Stay informed about how artificial intelligence is shaping the future.
                         </p>
                     </div>
                 </Container>
@@ -26,51 +35,21 @@ const BlogPage = () => {
             <Wrapper className="flex flex-col items-center justify-center py-12 relative">
                 <Container>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-                        <Card className="flex flex-col w-full border-neutral-700">
-                            <CardHeader>
-                                <CardTitle>Post 1: Streamlining Workflow with Swiftwave</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p>
-                                    Discover how Swiftwave is transforming businesses with innovative zero-code solutions that simplify complex workflows.
-                                </p>
-                                <Button variant="link" className="mt-4" asChild>
-                                    <Link href="/blog/post1">
-                                        Read More
-                                    </Link>
-                                </Button>
-                            </CardContent>
-                        </Card>
-                        <Card className="flex flex-col w-full border-neutral-700">
-                            <CardHeader>
-                                <CardTitle>Post 2: The Future of Automation</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p>
-                                    Learn about the future of automation and how businesses can harness the power of seamless integrations for enhanced productivity.
-                                </p>
-                                <Button variant="link" className="mt-4" asChild>
-                                    <Link href="/blog/post2">
-                                        Read More
-                                    </Link>
-                                </Button>
-                            </CardContent>
-                        </Card>
-                        <Card className="flex flex-col w-full border-neutral-700">
-                            <CardHeader>
-                                <CardTitle>Post 3: Our Journey to Innovation</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p>
-                                    Get to know the story behind Swiftwave and our mission to make complex systems simple, fast, and efficient.
-                                </p>
-                                <Button variant="link" className="mt-4" asChild>
-                                    <Link href="/blog/post3">
-                                        Read More
-                                    </Link>
-                                </Button>
-                            </CardContent>
-                        </Card>
+                        {blogPosts.map((post, index) => (
+                            <Card key={index} className="flex flex-col w-full border-neutral-700 hover:shadow-lg transition-all duration-300">
+                                <CardHeader>
+                                    <CardTitle className="text-xl font-semibold">{post.title}</CardTitle>
+                                </CardHeader>
+                                <CardContent>
+                                    <p className="text-gray-400">
+                                        Learn how AI and automation are transforming industries and improving efficiency.
+                                    </p>
+                                    <Button variant="link" className="mt-4" asChild>
+                                        <Link href={post.link}>Read More</Link>
+                                    </Button>
+                                </CardContent>
+                            </Card>
+                        ))}
                     </div>
                 </Container>
             </Wrapper>
@@ -78,18 +57,14 @@ const BlogPage = () => {
             <Wrapper className="flex flex-col items-center justify-center py-12 relative">
                 <Container>
                     <LampContainer>
-                        <div className="flex flex-col items-center justify-center relative w-full text-center">
-                            <h2 className="text-4xl lg:text-5xl xl:text-6xl lg:!leading-snug font-semibold mt-8">
-                                Ready to Dive Deeper?
+                        <div className="flex flex-col items-center justify-center w-full text-center">
+                            <h2 className="text-5xl font-bold mt-8">
+                                Want More Insights?
                             </h2>
-                            <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                Explore more articles and stay ahead of the curve in business automation and workflow innovation.
+                            <p className="text-muted-foreground mt-4 max-w-md">
+                                Subscribe to our newsletter for the latest updates and exclusive content straight to your inbox.
                             </p>
-                            <Button variant="white" className="mt-6" asChild>
-                                <Link href="/contact">
-                                    Contact Us for More Insights
-                                </Link>
-                            </Button>
+
                         </div>
                     </LampContainer>
                 </Container>

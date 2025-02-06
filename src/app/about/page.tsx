@@ -31,7 +31,7 @@ const AboutPage = () => {
                             Innovation at the Core
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            We strive to simplify complex workflows and enhance productivity through intelligent automation and seamless integration.
+                            We strive to simplify complex workflows and enhance productivity through intelligent automation and seamless integration. Our goal is to empower businesses and professionals with the tools they need to excel in their industries.
                         </p>
                     </div>
                 </Container>
@@ -45,7 +45,7 @@ const AboutPage = () => {
                                 <CardTitle>Our Vision</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p>We envision a world where businesses can operate smarter and faster without technical barriers.</p>
+                                <p>We envision a world where businesses can operate smarter and faster without technical barriers. By leveraging automation and AI-driven solutions, we aim to eliminate inefficiencies and unlock new opportunities for growth.</p>
                             </CardContent>
                         </Card>
                         <Card className="flex flex-col w-full border-neutral-700">
@@ -53,7 +53,7 @@ const AboutPage = () => {
                                 <CardTitle>Our Values</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p>Integrity, innovation, and excellence drive everything we do.</p>
+                                <p>Integrity, innovation, and excellence drive everything we do. We are committed to continuous improvement, ensuring that our solutions evolve to meet the changing demands of businesses worldwide.</p>
                             </CardContent>
                         </Card>
                         <Card className="flex flex-col w-full border-neutral-700">
@@ -61,7 +61,7 @@ const AboutPage = () => {
                                 <CardTitle>Join Us</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p>Be part of our journey to redefine the future of work.</p>
+                                <p>Be part of our journey to redefine the future of work. Whether you're a business looking for smarter solutions or an innovator eager to push boundaries, Swiftwave offers the platform and community to help you succeed.</p>
                             </CardContent>
                         </Card>
                     </div>
@@ -76,7 +76,7 @@ const AboutPage = () => {
                                 Ready to Transform Your Workflow?
                             </h2>
                             <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                Discover how Swiftwave can revolutionize your business.
+                                Discover how Swiftwave can revolutionize your business. Our tailored solutions are designed to optimize efficiency, reduce costs, and empower teams to focus on what truly matters.
                             </p>
                             <Button variant="white" className="mt-6" asChild>
                                 <Link href="/contact">
