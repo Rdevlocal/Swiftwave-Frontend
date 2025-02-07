@@ -1,101 +1,71 @@
 import { Container, Wrapper } from "@/components";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { pricingCards } from "@/constants";
+import SectionBadge from "@/components/ui/section-badge";
 
 const PricingPage = () => {
-  return (
-    <section className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8">
-      {/* Hero Section */}
-      <Wrapper>
-        <Container>
-          <div className="flex flex-col items-center justify-center py-20 h-full">
-            <h1 className="text-4xl md:text-6xl lg:text-xl md:!leading-snug font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">
-              Choose the Right Plan for Your Business
-            </h1>
-            <p className="text-base md:text-lg text-foreground/80 mt-6 text-center">
-              Select the pricing plan that best fits your enterprise's needs and start growing today.
-            </p>
-          </div>
-        </Container>
-      </Wrapper>
-
-      {/* Pricing Plans Section */}
-      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
-        <Container>
-          <div className="max-w-md mx-auto text-start md:text-center">
-            <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-              Our Pricing Plans
-            </h2>
-            <p className="text-muted-foreground mt-6">
-              Affordable plans to scale your business with the right tools and features.
-            </p>
-          </div>
-        </Container>
-
-        <Container>
-          <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
-              {/* Pricing Card 1 */}
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-lg border border-gray-200">
-                <h3 className="text-xl font-semibold">Basic Plan</h3>
-                <p className="text-2xl font-bold mt-4">$19.99/month</p>
-                <ul className="list-disc list-inside mt-4">
-                  <li className="text-muted-foreground">Feature 1</li>
-                  <li className="text-muted-foreground">Feature 2</li>
-                  <li className="text-muted-foreground">Feature 3</li>
-                </ul>
-                <Button size="sm" className="mt-6 rounded-full border border-foreground/20">
-                  Choose Plan
-                </Button>
-              </div>
-
-              {/* Pricing Card 2 */}
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-lg border border-gray-200">
-                <h3 className="text-xl font-semibold">Pro Plan</h3>
-                <p className="text-2xl font-bold mt-4">$49.99/month</p>
-                <ul className="list-disc list-inside mt-4">
-                  <li className="text-muted-foreground">Feature 1</li>
-                  <li className="text-muted-foreground">Feature 2</li>
-                  <li className="text-muted-foreground">Feature 3</li>
-                  <li className="text-muted-foreground">Feature 4</li>
-                </ul>
-                <Button size="sm" className="mt-6 rounded-full border border-foreground/20">
-                  Choose Plan
-                </Button>
-              </div>
-
-              {/* Pricing Card 3 */}
-              <div className="flex flex-col items-center p-6 bg-gray-50 rounded-lg shadow-lg border border-gray-200">
-                <h3 className="text-xl font-semibold">Enterprise Plan</h3>
-                <p className="text-2xl font-bold mt-4">$99.99/month</p>
-                <ul className="list-disc list-inside mt-4">
-                  <li className="text-muted-foreground">All Features</li>
-                  <li className="text-muted-foreground">24/7 Support</li>
-                  <li className="text-muted-foreground">Advanced Analytics</li>
-                </ul>
-                <Button size="sm" className="mt-6 rounded-full border border-foreground/20">
-                  Choose Plan
-                </Button>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </Wrapper>
-
-      {/* Call to Action Section */}
-      <Wrapper className="flex flex-col items-center justify-center py-12 relative">
-        <div className="w-full text-center">
-          <Link href="/contact">
-            <Button size="lg" className="rounded-full bg-gradient-to-r from-blue-500 to-teal-400 text-white">
-              Get Started Now
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-          </Link>
-        </div>
-      </Wrapper>
-    </section>
-  );
+    return (
+        <section className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8">
+            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+                <div className="hidden md:block absolute top-0 -right-1/3 w-72 h-72 bg-blue-500 rounded-full blur-[10rem] -z-10"></div>
+                <Container>
+                    <div className="max-w-md mx-auto text-start md:text-center">
+                        <SectionBadge title="Pricing" />
+                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
+                            Choose a plan that scales with your business
+                        </h2>
+                        <p className="text-muted-foreground mt-6">
+                            Select the best plan for your needs and start building your dream workflow today.
+                        </p>
+                    </div>
+                </Container>
+                <Container className="flex items-center justify-center">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full md:gap-8 py-10 md:py-20 flex-wrap max-w-4xl">
+                        {pricingCards.map((card) => (
+                            <Card
+                                key={card.title}
+                                className={cn("flex flex-col w-full border-neutral-700",
+                                    card.title === "Unlimited Saas" && "border-2 border-primary"
+                                )}
+                            >
+                                <CardHeader className="border-b border-border">
+                                    <span>{card.title}</span>
+                                    <CardTitle className={cn(card.title !== "Unlimited Saas" && "text-muted-foreground")}>
+                                        {card.price}
+                                    </CardTitle>
+                                    <CardDescription>
+                                        {card.description}
+                                    </CardDescription>
+                                </CardHeader>
+                                <CardContent className="pt-6 space-y-3">
+                                    {card.features.map((feature) => (
+                                        <div key={feature} className="flex items-center gap-2">
+                                            <span className="w-4 h-4 bg-primary text-white rounded-full flex items-center justify-center text-xs">✔</span>
+                                            <p>{feature}</p>
+                                        </div>
+                                    ))}
+                                </CardContent>
+                                <CardFooter className="mt-auto">
+                                    <Link
+                                        href="#"
+                                        className={cn(
+                                            "w-full text-center text-primary-foreground bg-primary p-2 rounded-md text-sm font-medium",
+                                            card.title !== "Unlimited Saas" && "!bg-foreground !text-background"
+                                        )}
+                                    >
+                                        {card.buttonText}
+                                    </Link>
+                                </CardFooter>
+                            </Card>
+                        ))}
+                    </div>
+                </Container>
+            </Wrapper>
+        </section>
+    );
 };
 
 export default PricingPage;
