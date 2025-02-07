@@ -61,7 +61,7 @@ const AboutPage = () => {
                                 <CardTitle>Join Us</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p>Be part of our journey to redefine the future of work. Whether you're a business looking for smarter solutions or an innovator eager to push boundaries, Swiftwave offers the platform and community to help you succeed.</p>
+                                <p>Be part of our journey to redefine the future of work. Whether you re a business looking for smarter solutions or an innovator eager to push boundaries, Swiftwave offers the platform and community to help you succeed.</p>
                             </CardContent>
                         </Card>
                     </div>

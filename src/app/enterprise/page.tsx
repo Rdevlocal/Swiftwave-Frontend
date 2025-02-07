@@ -42,7 +42,7 @@ const EnterprisePage = () => {
                                 Empower Your Business with Scalable Solutions
                             </h1>
                             <p className="text-base md:text-lg text-foreground/80 mt-6 text-center">
-                                Unlock your organization's full potential with our enterprise-grade platform designed to optimize productivity and performance.
+                                Unlock your organizations full potential with our enterprise-grade platform designed to optimize productivity and performance.
                             </p>
                             <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
                                 <Link href="#" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none">
