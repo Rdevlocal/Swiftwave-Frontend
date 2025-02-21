@@ -22,7 +22,7 @@ export const features = [
     {
         icon: Icons.bolt,
         title: "Fast Setup",
-        info: "Get your website up and running in minutes with our intuitive AI-powered builder.",
+        info: "Get your webshop up and running in minutes with our intuitive AI product tool.",
     },
     {
         icon: Icons.palette,
@@ -32,12 +32,12 @@ export const features = [
     {
         icon: Icons.seo,
         title: "SEO Optimized",
-        info: "Built-in SEO features ensure your website ranks well on search engines.",
+        info: "Built-in SEO features ensure your products rank well on search engines.",
     },
     {
         icon: Icons.monitor,
-        title: "Responsive Design",
-        info: "Your website will look great on any device, from desktops to mobile phones.",
+        title: "Easy integrations",
+        info: "Integrate easily for with your webshop.",
     },
     {
         icon: Icons.shop,
@@ -46,43 +46,45 @@ export const features = [
     },
     {
         icon: Icons.server,
-        title: "Secure Hosting",
-        info: "Enjoy peace of mind with secure and reliable hosting for your website.",
+        title: "Fast delivery",
+        info: "Enjoy peace of mind with getting notifications when your products are uploaded.",
     },
 ];
 
 export const pricingCards = [
     {
-        title: "Starter",
-        description: "Perfect for trying out plura",
-        price: "Free",
-        duration: "",
+        title: "Free",
+        description: "Perfect for getting started",
+        price: "€0,00",
+        duration: "monthly",
         highlight: "Key features",
         buttonText: "Start for free",
-        features: ["Limited projects", "1 Team member", "Basic features"],
+        features: ["1 Credit: €3,50", "1 Team member", "1 Integration", "Dashboard", "Max 20 products", "1 day speed"],
         priceId: "",
     },
     {
-        title: "Unlimited Saas",
-        description: "The ultimate agency kit",
-        price: "$199",
-        duration: "month",
+        title: "Lite",
+        description: "For small businesses or testing",
+        price: "€25,00/m",
+        duration: "monthly",
         highlight: "Key features",
-        buttonText: "Upgrade to Pro",
-        features: ["Unlimited projects", "5 Team members", "Advanced design tools", "Customizable domain"],
-        priceId: "price_1OYxkqFj9oKEERu1KfJGWxgN",
+        buttonText: "Upgrade to Lite",
+        features: ["1 Credit: €2,50", "1 Team member", "1 Integration", "Dashboard", "Max 250 products", "1 day speed"],
+        priceId: "",
     },
     {
-        title: "Enterprise",
-        description: "For serious agency owners",
-        price: "$399",
-        duration: "month",
-        highlight: "Everything in Starter, plus",
-        buttonText: "Upgrade to Enterprise",
-        features: ["Unlimited projects", "Unlimited Team members", "Custom branding", "Priority support (24/7)"],
-        priceId: "price_1OYxkqFj9oKEERu1NbKUxXxN",
+        title: "Growth",
+        description: "For scaling your business",
+        price: "€75,00/m",
+        duration: "monthly",
+        highlight: "Key features",
+        buttonText: "Upgrade to Growth",
+        features: ["1 Credit: €2,20", "3 Team members", "3 Integrations", "Dashboard", "Max 1000 products", "1 hour speed", ],
+        priceId: "",
     },
+
 ];
+
 
 export const bentoCards = [
     {
