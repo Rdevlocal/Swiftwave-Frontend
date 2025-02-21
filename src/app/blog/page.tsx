@@ -11,7 +11,7 @@ const BlogPage = () => {
     const blogPosts = [
         { title: "AI-Powered Automation: The Future of Work", link: "/blog/ai-automation" },
         { title: "How AI is Revolutionizing Business Operations", link: "/blog/ai-business" },
-        { title: "Machine Learning and Workflow Optimization", link: "/blog/ml-workflow" },
+        { title: "Machine Learning and productflow Optimization", link: "/blog/ml-productflow" },
         { title: "The Role of AI in Enhancing Customer Experience", link: "/blog/ai-customer" },
         { title: "Automating Repetitive Tasks with AI", link: "/blog/ai-repetitive" },
         { title: "AI-Driven Decision Making: Opportunities and Challenges", link: "/blog/ai-decision" }

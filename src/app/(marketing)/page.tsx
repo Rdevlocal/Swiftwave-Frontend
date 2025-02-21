@@ -35,7 +35,7 @@ const HomePage = () => {
                             <span className="h-full w-full blur-md absolute bottom-0 inset-x-0 bg-gradient-to-tr from-primary/40"></span>
                             <span className="z-10 py-0.5 text-sm text-neutral-100 flex items-center justify-center gap-1.5">
                                 <Image src="/icons/sparkles-dark.svg" alt="✨" width={24} height={24} className="w-4 h-4" />
-                                Experience the Future of Work
+                                Experience the Future Ecommerce
                                 <ChevronRight className="w-4 h-4" />
                             </span>
                         </button>
@@ -45,7 +45,7 @@ const HomePage = () => {
                             Replace inefficiency with intelligence.
                             </h1>
                             <p className="text-base md:text-lg text-foreground/80 mt-6 text-center">
-                                Zero code, maximum speed. Make professional workflows easy, fast and fun while delivering best-in-class performance.
+                                Zero code, maximum speed. Make professional productflows easy, fast and fun while delivering best-in-class performance.
                             </p>
                             <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
                                 <Link href="#" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none">
@@ -63,14 +63,7 @@ const HomePage = () => {
                         <div className="relative flex items-center py-10 md:py-20 w-full">
                             <div className="absolute top-1/2 left-1/2 -z-10 gradient w-3/4 -translate-x-1/2 h-3/4 -translate-y-1/2 inset-0 blur-[10rem]"></div>
                             <div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
-                                <Image
-                                    src="/assets/dashboard.svg"
-                                    alt="banner image"
-                                    width={1200}
-                                    height={1200}
-                                    quality={100}
-                                    className="rounded-md lg:rounded-xl bg-foreground/10 shadow-2xl ring-1 ring-border"
-                                />
+
 
                                 <BorderBeam size={250} duration={12} delay={9} />
                             </div>
@@ -85,7 +78,7 @@ const HomePage = () => {
                     <div className="max-w-md mx-auto text-start md:text-center">
                         <SectionBadge title="The Process" />
                         <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                            Three steps to build your online dream team
+                            Three steps to build your online dream 
                         </h2>
                         <p className="text-muted-foreground mt-6">
                             Turn your vision into reality in just 3 simple steps
@@ -124,7 +117,7 @@ const HomePage = () => {
                             Discover our powerful features
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            Swiftwave offers a range of features to help you focus on the things that you do best
+                            Productlinq offers a range of features to help you focus on the things that you do best
                         </p>
                     </div>
                 </Container>
@@ -223,7 +216,7 @@ const HomePage = () => {
                             What people are saying
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            See how Swiftwave empowers businesses of all sizes. Here&apos;s what people are saying.
+                            See how Productlinq empowers businesses of all sizes. Here&apos;s what people are saying.
                         </p>
                     </div>
                 </Container>
@@ -290,7 +283,7 @@ const HomePage = () => {
                                 From Idea to Launch <br /> Faster Than Ever
                             </h2>
                             <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                Build stunning workflows with our powerful AI assistant
+                                Build stunning productflows with our powerful AI assistant
                             </p>
                             <Button variant="white" className="mt-6" asChild>
                                 <Link href="/sign-in">
@@ -309,7 +302,7 @@ const HomePage = () => {
                                     Join our newsletter
                                 </h4>
                                 <p className="text-base text-muted-foreground">
-                                    Be up to date with everything about Swiftwave
+                                    Be up to date with everything about Productlinq
                                 </p>
                             </div>
                             <div className="flex flex-col items-start gap-2 md:min-w-80 mt-5 md:mt-0 w-full md:w-max">
