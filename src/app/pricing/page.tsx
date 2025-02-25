@@ -18,7 +18,7 @@ const PricingPage = () => {
                             Choose a plan that scales with your business
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            Select the best plan for your needs and start building your dream productflow today.
+                            Select the best plan for your needs and start building your dream Workflow today.
                         </p>
                     </div>
                 </Container>

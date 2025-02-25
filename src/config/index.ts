@@ -2,11 +2,11 @@ import { Metadata } from "next";
 
 export const SITE_CONFIG: Metadata = {
     title: {
-        // write a default title for Productlinq a a plug and play data company suggest something unique and catchy don't use the same words of a plug and play data company give a unique name
-        default: "Productlinq - a plug and play data company",
-        template: `%s | Productlinq`
+        // write a default title for Swiftwave a a plug and play data company suggest something unique and catchy don't use the same words of a plug and play data company give a unique name
+        default: "Swiftwave - a plug and play data company",
+        template: `%s | Swiftwave`
     },
-    description: "Productlinq is an a plug and play data company that helps you create a webshop in minutes. No coding skills required. Get started for free!",
+    description: "Swiftwave is an a plug and play data company that helps you create a webshop in minutes. No coding skills required. Get started for free!",
     icons: {
         icon: [
             {
@@ -16,8 +16,8 @@ export const SITE_CONFIG: Metadata = {
         ]
     },
     openGraph: {
-        title: "Productlinq - a plug and play data company",
-        description: "Productlinq is an a plug and play data company that helps you create a website in minutes. No coding skills required. Get started for free!",
+        title: "Swiftwave - a plug and play data company",
+        description: "Swiftwave is an a plug and play data company that helps you create a website in minutes. No coding skills required. Get started for free!",
         images: [
             {
                 url: "/assets/og-image.png",
@@ -27,13 +27,13 @@ export const SITE_CONFIG: Metadata = {
     twitter: {
         card: "summary_large_image",
         creator: "@shreyassihasane",
-        title: "Productlinq - a plug and play data company",
-        description: "Productlinq is an a plug and play data company that helps you create a website in minutes. No coding skills required. Get started for free!",
+        title: "Swiftwave - a plug and play data company",
+        description: "Swiftwave is an a plug and play data company that helps you create a website in minutes. No coding skills required. Get started for free!",
         images: [
             {
                 url: "/assets/og-image.png",
             }
         ]
     },
-    metadataBase: new URL("https://Productlinq-app.vercel.app"),
+    metadataBase: new URL("https://Swiftwave-app.vercel.app"),
 };

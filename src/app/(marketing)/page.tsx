@@ -45,7 +45,7 @@ const HomePage = () => {
                             Replace inefficiency with intelligence.
                             </h1>
                             <p className="text-base md:text-lg text-foreground/80 mt-6 text-center">
-                                Zero code, maximum speed. Make professional productflows easy, fast and fun while delivering best-in-class performance.
+                                Zero code, maximum speed. Make professional Workflows easy, fast and fun while delivering best-in-class performance.
                             </p>
                             <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
                                 <Link href="#" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none">
@@ -117,7 +117,7 @@ const HomePage = () => {
                             Discover our powerful features
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            Productlinq offers a range of features to help you focus on the things that you do best
+                            Swiftwave offers a range of features to help you focus on the things that you do best
                         </p>
                     </div>
                 </Container>
@@ -216,7 +216,7 @@ const HomePage = () => {
                             What people are saying
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            See how Productlinq empowers businesses of all sizes. Here&apos;s what people are saying.
+                            See how Swiftwave empowers businesses of all sizes. Here&apos;s what people are saying.
                         </p>
                     </div>
                 </Container>
@@ -283,7 +283,7 @@ const HomePage = () => {
                                 From Idea to Launch <br /> Faster Than Ever
                             </h2>
                             <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                Build stunning productflows with our powerful AI assistant
+                                Build stunning Workflows with our powerful AI assistant
                             </p>
                             <Button variant="white" className="mt-6" asChild>
                                 <Link href="/sign-in">
@@ -302,7 +302,7 @@ const HomePage = () => {
                                     Join our newsletter
                                 </h4>
                                 <p className="text-base text-muted-foreground">
-                                    Be up to date with everything about Productlinq
+                                    Be up to date with everything about Swiftwave
                                 </p>
                             </div>
                             <div className="flex flex-col items-start gap-2 md:min-w-80 mt-5 md:mt-0 w-full md:w-max">

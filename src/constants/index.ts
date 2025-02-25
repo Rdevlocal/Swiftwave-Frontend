@@ -4,7 +4,7 @@ export const perks = [
     {
         icon: Icons.auth,
         title: "Sign Up",
-        info: "Create your free account to get started with Productlinq.",
+        info: "Create your free account to get started with Swiftwave.",
     },
     {
         icon: Icons.customize,
@@ -14,7 +14,7 @@ export const perks = [
     {
         icon: Icons.launch,
         title: "Launch",
-        info: "Publish your productflow and share it with the world.",
+        info: "Publish your Workflow and share it with the world.",
     },
 ];
 

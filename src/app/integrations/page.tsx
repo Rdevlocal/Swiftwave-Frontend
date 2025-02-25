@@ -16,7 +16,7 @@ const IntegrationsPage = () => {
                             Our Integrations
                         </h1>
                         <p className="text-base md:text-lg text-foreground/80 mt-6 text-center max-w-3xl">
-                            Productlinq seamlessly integrates with a variety of popular tools to streamline your productflow. Connect your systems and accelerate productivity with our effortless integrations.
+                            Swiftwave seamlessly integrates with a variety of popular tools to streamline your Workflow. Connect your systems and accelerate productivity with our effortless integrations.
                         </p>
                     </div>
                 </Container>
@@ -30,7 +30,7 @@ const IntegrationsPage = () => {
                             Power Up Your Business with Seamless Connections
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            Easily connect the tools you already use with Productlinq. From eCommerce to marketing automation, we’ve got you covered.
+                            Easily connect the tools you already use with Swiftwave. From eCommerce to marketing automation, we’ve got you covered.
                         </p>
                     </div>
                 </Container>
@@ -48,7 +48,7 @@ const IntegrationsPage = () => {
                                 <div className="flex items-center justify-center mb-4">
                                     <Image src="/images/shopify-logo.png" alt="Shopify logo" width={50} height={50} />
                                 </div>
-                                <p>Integrate Productlinq with Shopify to automate order management, inventory updates, and more for your eCommerce store.</p>
+                                <p>Integrate Swiftwave with Shopify to automate order management, inventory updates, and more for your eCommerce store.</p>
                             </CardContent>
                         </Card>
 
@@ -74,7 +74,7 @@ const IntegrationsPage = () => {
                                 <div className="flex items-center justify-center mb-4">
                                     <Image src="/images/zapier-logo.png" alt="Zapier logo" width={50} height={50} />
                                 </div>
-                                <p>Automate productflows by connecting Productlinq with thousands of apps through Zapier. Save time with no-code automation.</p>
+                                <p>Automate Workflows by connecting Swiftwave with thousands of apps through Zapier. Save time with no-code automation.</p>
                             </CardContent>
                         </Card>
                     </div>
@@ -86,10 +86,10 @@ const IntegrationsPage = () => {
                     <LampContainer>
                         <div className="flex flex-col items-center justify-center relative w-full text-center">
                             <h2 className="text-4xl lg:text-5xl xl:text-6xl lg:!leading-snug font-semibold mt-8">
-                                Ready to Supercharge Your productflow?
+                                Ready to Supercharge Your Workflow?
                             </h2>
                             <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                Discover how our integrations can transform your business processes and productflows.
+                                Discover how our integrations can transform your business processes and Workflows.
                             </p>
                             <Button variant="white" className="mt-6" asChild>
                                 <Link href="/contact">
