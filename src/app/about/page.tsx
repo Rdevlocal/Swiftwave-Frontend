@@ -66,7 +66,7 @@ const AboutPage = () => {
                             </CardHeader>
                             <CardContent>
                                 <p>
-                                    Join us in shaping the future of work. Whether you're a business seeking smarter, more efficient solutions or an innovator looking for a platform to push boundaries, Swiftwave offers a collaborative environment where growth and opportunity meet. We invite passionate individuals and organizations to partner with us and experience the power of transformative technology.
+                                    Join us in shaping the future of work. Whether you´re a business seeking smarter, more efficient solutions or an innovator looking for a platform to push boundaries, Swiftwave offers a collaborative environment where growth and opportunity meet. We invite passionate individuals and organizations to partner with us and experience the power of transformative technology.
                                 </p>
                             </CardContent>
                         </Card>
