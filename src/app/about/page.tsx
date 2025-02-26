@@ -82,7 +82,7 @@ const AboutPage = () => {
                                 Ready to Transform Your Workflow?
                             </h2>
                             <p className="text-muted-foreground mt-8 text-xl max-w-2xl mx-auto">
-                                Discover how Swiftwave’s tailored solutions can revolutionize your business operations. We optimize efficiency, reduce costs, and empower teams to focus on what truly matters: driving innovation, delivering value, and achieving success. Experience the future of work, today.
+                                Discover how Swiftwave´s tailored solutions can revolutionize your business operations. We optimize efficiency, reduce costs, and empower teams to focus on what truly matters: driving innovation, delivering value, and achieving success. Experience the future of work, today.
                             </p>
                             <Button variant="white" className="mt-8 py-4 px-8 text-lg" asChild>
                                 <Link href="/contact">

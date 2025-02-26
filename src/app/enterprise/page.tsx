@@ -137,7 +137,7 @@ const EnterprisePage = () => {
                             Hear from Our Leading Enterprise Clients
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            Discover the transformative impact of our platform on some of the world's largest organizations.
+                            Discover the transformative impact of our platform on some of the world´s largest organizations.
                         </p>
                     </div>
                 </Container>
