@@ -9,43 +9,45 @@ import Link from "next/link";
 
 const AboutPage = () => {
     return (
-        <section className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8">
+        <section className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-16">
             <Wrapper>
                 <Container>
-                    <div className="flex flex-col items-center justify-center py-20 h-full">
-                        <h1 className="text-4xl md:text-6xl lg:textxl font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">
+                    <div className="flex flex-col items-center justify-center py-24 h-full">
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-center bg-clip-text bg-gradient-to-b from-gray-100 to-gray-600 text-transparent">
                             About Us
                         </h1>
-                        <p className="text-base md:text-lg text-foreground/80 mt-6 text-center max-w-3xl">
-                            At Swiftwave, we believe in transforming inefficiency into intelligence. Our mission is to provide zero-code, high-speed solutions that make professional Workflows seamless and fun, without compromising on performance.
+                        <p className="text-lg md:text-xl text-foreground/90 mt-8 text-center max-w-4xl">
+                            At Swiftwave, we are redefining the future of work by transforming inefficiency into intelligence. Our mission is to empower businesses with zero-code, high-speed solutions that enhance workflows and make work not just productive but enjoyable, without ever sacrificing performance. Through innovation and a relentless pursuit of excellence, we provide businesses the tools to stay ahead in a rapidly changing world.
                         </p>
                     </div>
                 </Container>
             </Wrapper>
 
-            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+            <Wrapper className="flex flex-col items-center justify-center py-16 relative">
                 <Container>
-                    <div className="max-w-md mx-auto text-start md:text-center">
+                    <div className="max-w-xl mx-auto text-start md:text-center">
                         <SectionBadge title="Our Mission" />
-                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                            Innovation at the Core
+                        <h2 className="text-4xl lg:text-5xl font-bold mt-8">
+                            Innovation at the Core of Everything We Do
                         </h2>
-                        <p className="text-muted-foreground mt-6">
-                            We strive to simplify complex Workflows and enhance productivity through intelligent automation and seamless integration. Our goal is to empower businesses and professionals with the tools they need to excel in their industries.
+                        <p className="text-muted-foreground mt-8 text-xl">
+                            At Swiftwave, we strive to simplify complex workflows and enhance productivity through cutting-edge automation technologies. By seamlessly integrating intelligent solutions, we empower businesses to operate at peak efficiency, saving valuable time and resources. Our vision is clear: to equip organizations with transformative tools that enable them to unlock growth potential and lead in their industries.
                         </p>
                     </div>
                 </Container>
             </Wrapper>
 
-            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+            <Wrapper className="flex flex-col items-center justify-center py-16 relative">
                 <Container>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
-                        <Card className="flex flex-col w-full border-neutral-700">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full">
+                    <Card className="flex flex-col w-full border-neutral-700">
                             <CardHeader>
                                 <CardTitle>Our Vision</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p>We envision a world where businesses can operate smarter and faster without technical barriers. By leveraging automation and AI-driven solutions, we aim to eliminate inefficiencies and unlock new opportunities for growth.</p>
+                                <p>
+                                    We envision a world where businesses can operate smarter and faster, without the need for complex coding or technical expertise. Through the power of automation and AI-driven solutions, we aim to eliminate inefficiencies, reduce human error, and unlock new opportunities for growth. Our vision is to help organizations not just keep up with industry demands but lead the way in innovation and progress.
+                                </p>
                             </CardContent>
                         </Card>
                         <Card className="flex flex-col w-full border-neutral-700">
@@ -53,7 +55,9 @@ const AboutPage = () => {
                                 <CardTitle>Our Values</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p>Integrity, innovation, and excellence drive everything we do. We are committed to continuous improvement, ensuring that our solutions evolve to meet the changing demands of businesses worldwide.</p>
+                                <p>
+                                    Integrity, innovation, and excellence are the cornerstones of Swiftwave. We believe in a strong ethical foundation that drives everything we do. By continuously innovating and improving, we ensure that our solutions are always aligned with the evolving needs of the global market. Our unwavering commitment to excellence is reflected in the quality of our products and the success of our clients.
+                                </p>
                             </CardContent>
                         </Card>
                         <Card className="flex flex-col w-full border-neutral-700">
@@ -61,26 +65,28 @@ const AboutPage = () => {
                                 <CardTitle>Join Us</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <p>Be part of our journey to redefine the future of work. Whether you re a business looking for smarter solutions or an innovator eager to push boundaries, Swiftwave offers the platform and community to help you succeed.</p>
+                                <p>
+                                    Join us in shaping the future of work. Whether you're a business seeking smarter, more efficient solutions or an innovator looking for a platform to push boundaries, Swiftwave offers a collaborative environment where growth and opportunity meet. We invite passionate individuals and organizations to partner with us and experience the power of transformative technology.
+                                </p>
                             </CardContent>
                         </Card>
                     </div>
                 </Container>
             </Wrapper>
 
-            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
+            <Wrapper className="flex flex-col items-center justify-center py-16 relative">
                 <Container>
                     <LampContainer>
                         <div className="flex flex-col items-center justify-center relative w-full text-center">
-                            <h2 className="text-4xl lg:text-5xl xl:text-6xl lg:!leading-snug font-semibold mt-8">
+                            <h2 className="text-5xl lg:text-6xl xl:text-7xl font-bold mt-10">
                                 Ready to Transform Your Workflow?
                             </h2>
-                            <p className="text-muted-foreground mt-6 max-w-md mx-auto">
-                                Discover how Swiftwave can revolutionize your business. Our tailored solutions are designed to optimize efficiency, reduce costs, and empower teams to focus on what truly matters.
+                            <p className="text-muted-foreground mt-8 text-xl max-w-2xl mx-auto">
+                                Discover how Swiftwave’s tailored solutions can revolutionize your business operations. We optimize efficiency, reduce costs, and empower teams to focus on what truly matters: driving innovation, delivering value, and achieving success. Experience the future of work, today.
                             </p>
-                            <Button variant="white" className="mt-6" asChild>
+                            <Button variant="white" className="mt-8 py-4 px-8 text-lg" asChild>
                                 <Link href="/contact">
-                                    Get in Touch
+                                    Get started
                                 </Link>
                             </Button>
                         </div>

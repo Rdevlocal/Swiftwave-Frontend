@@ -28,7 +28,7 @@ const Footer = () => {
                             <ul className="mt-4 text-sm text-muted-foreground">
                                 <li className="mt-2">
                                     <Link href="" className="hover:text-foreground transition-all duration-300">
-                                        Features
+                                        Products
                                     </Link>
                                 </li>
                                 <li className="mt-2">

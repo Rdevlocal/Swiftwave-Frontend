@@ -63,6 +63,16 @@ const PricingPage = () => {
                         ))}
                     </div>
                 </Container>
+                <Container className="max-w-4xl text-center mt-12">
+                    <h3 className="text-2xl font-bold">Still not sure which plan is right for you?</h3>
+                    <p className="text-muted-foreground mt-4">
+                        Contact our team for personalized recommendations or explore our FAQs to get more insights.
+                    </p>
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-4 mt-6">
+                        <Button className="bg-primary text-white px-6 py-3 rounded-md text-lg">Contact Us</Button>
+                        <Button className="bg-gray-800 text-white px-6 py-3 rounded-md text-lg">View FAQs</Button>
+                    </div>
+                </Container>
             </Wrapper>
         </section>
     );

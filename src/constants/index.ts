@@ -9,12 +9,12 @@ export const perks = [
     {
         icon: Icons.customize,
         title: "Customize",
-        info: "Build your product flows automate them or get notified.",
+        info: "Build your workflows automate them or get notified.",
     },
     {
         icon: Icons.launch,
         title: "Launch",
-        info: "Publish your Workflow and share it with the world.",
+        info: "Launch your workflow and start working on the things that you do best.",
     },
 ];
 
@@ -22,7 +22,7 @@ export const features = [
     {
         icon: Icons.bolt,
         title: "Fast Setup",
-        info: "Get your webshop up and running in minutes with our intuitive AI product tool.",
+        info: "Get your account up and running in minutes with our intuitive AI product tool.",
     },
     {
         icon: Icons.palette,
@@ -32,12 +32,12 @@ export const features = [
     {
         icon: Icons.seo,
         title: "SEO Optimized",
-        info: "Built-in SEO features ensure your products rank well on search engines.",
+        info: "Built-in SEO features ensure your website rank well on search engines.",
     },
     {
         icon: Icons.monitor,
         title: "Easy integrations",
-        info: "Integrate easily for with your webshop.",
+        info: "Integrate easily for with your system.",
     },
     {
         icon: Icons.shop,
@@ -47,7 +47,7 @@ export const features = [
     {
         icon: Icons.server,
         title: "Fast delivery",
-        info: "Enjoy peace of mind with getting notifications when your products are uploaded.",
+        info: "Enjoy peace of mind with getting notifications when your changes are uploaded.",
     },
 ];
 
@@ -59,7 +59,7 @@ export const pricingCards = [
         duration: "monthly",
         highlight: "Key features",
         buttonText: "Start for free",
-        features: ["1 Credit: €3,50", "1 Team member", "1 Integration", "Dashboard", "Max 20 products", "1 day speed"],
+        features: ["1 Credit: €3,50", "1 Team member", "1 Integration", "Dashboard", "Max 20 products", "Email suport"],
         priceId: "",
     },
     {
@@ -69,7 +69,7 @@ export const pricingCards = [
         duration: "monthly",
         highlight: "Key features",
         buttonText: "Upgrade to Lite",
-        features: ["1 Credit: €2,50", "1 Team member", "1 Integration", "Dashboard", "Max 250 products", "1 day speed"],
+        features: ["1 Credit: €2,50", "1 Team member", "1 Integration", "Dashboard", "Max 250 products", "Email and chat suport"],
         priceId: "",
     },
     {
@@ -79,7 +79,7 @@ export const pricingCards = [
         duration: "monthly",
         highlight: "Key features",
         buttonText: "Upgrade to Growth",
-        features: ["1 Credit: €2,20", "3 Team members", "3 Integrations", "Dashboard", "Max 1000 products", "1 hour speed", ],
+        features: ["1 Credit: €2,20", "3 Team members", "3 Integrations", "Dashboard", "Max 1000 products", "Email, Phone and chat suport", ],
         priceId: "",
     },
 

@@ -1,73 +1,54 @@
 import { Container, Wrapper } from "@/components";
-import { Button } from "@/components/ui/button";
-import { features } from "@/constants";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
 
-const FeaturesPage = () => {
+const PrivacyPage = () => {
     return (
         <section className="w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8">
-
-            {/* hero */}
             <Wrapper>
                 <Container>
-                    <div className="flex flex-col items-center justify-center py-20 h-full">
-                        <h1 className="text-4xl md:text-6xl lg:text-xl md:!leading-snug font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">
-                            Unlock Powerful Features for Your Business
+                    <div className="py-20 max-w-4xl mx-auto">
+                        <h1 className="text-4xl md:text-6xl font-semibold text-center text-gray-50">
+                            Privacy Policy
                         </h1>
-                        <p className="text-base md:text-lg text-foreground/80 mt-6 text-center">
-                            Explore the advanced features of our platform designed to take your enterprise to the next level.
+                        <p className="text-base md:text-lg text-foreground/80 mt-6 text-justify">
+                            Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and protect your personal information when you use our platform.
                         </p>
-                        <div className="flex relative items-center justify-center mt-8 md:mt-12 w-full">
-                            <Link href="#" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none">
-                                <p className="text-foreground text-sm text-center md:text-base font-medium pl-4 pr-4 lg:pr-0">
-                                    {"  "} See How These Features Can Transform Your Business
-                                </p>
-                                <Button size="sm" className="rounded-full hidden lg:flex border border-foreground/20">
-                                    Get Started
-                                    <ArrowRight className="w-4 h-4 ml-1" />
-                                </Button>
-                            </Link>
-                        </div>
+                        <h2 className="text-2xl font-semibold mt-8">1. Information We Collect</h2>
+                        <p className="mt-4 text-justify">
+                            We collect personal information that you provide directly, such as your name, email address, and payment details. We may also collect technical data, including IP addresses, browser types, and usage statistics to enhance our services.
+                        </p>
+                        <h2 className="text-2xl font-semibold mt-8">2. How We Use Your Information</h2>
+                        <p className="mt-4 text-justify">
+                            We use the information we collect to provide, improve, and personalize our services. This includes processing transactions, responding to inquiries, sending updates, and enhancing user experience through analytics.
+                        </p>
+                        <h2 className="text-2xl font-semibold mt-8">3. Sharing of Information</h2>
+                        <p className="mt-4 text-justify">
+                            We do not sell your personal information. However, we may share your data with trusted third-party service providers to facilitate payments, analytics, and customer support. We ensure these parties comply with strict data protection measures.
+                        </p>
+                        <h2 className="text-2xl font-semibold mt-8">4. Data Security</h2>
+                        <p className="mt-4 text-justify">
+                            We implement industry-standard security measures to protect your data from unauthorized access, disclosure, or alteration. Despite our efforts, no online service is completely secure, and we cannot guarantee absolute protection.
+                        </p>
+                        <h2 className="text-2xl font-semibold mt-8">5. Cookies and Tracking Technologies</h2>
+                        <p className="mt-4 text-justify">
+                            Our platform uses cookies and similar tracking technologies to enhance user experience, analyze trends, and monitor website traffic. You can manage cookie preferences through your browser settings.
+                        </p>
+                        <h2 className="text-2xl font-semibold mt-8">6. Your Rights</h2>
+                        <p className="mt-4 text-justify">
+                            You have the right to access, update, or delete your personal information. If you wish to exercise any of these rights, please contact us. We will respond to your request in accordance with applicable data protection laws.
+                        </p>
+                        <h2 className="text-2xl font-semibold mt-8">7. Changes to This Policy</h2>
+                        <p className="mt-4 text-justify">
+                            We may update this Privacy Policy from time to time to reflect changes in our practices. If we make significant modifications, we will notify you via email or through our website.
+                        </p>
+                        <h2 className="text-2xl font-semibold mt-8">8. Contact Us</h2>
+                        <p className="mt-4 text-justify">
+                            If you have any questions about this Privacy Policy, please contact us at support@example.com. We value your privacy and are committed to safeguarding your personal data.
+                        </p>
                     </div>
                 </Container>
             </Wrapper>
-
-            {/* features */}
-            <Wrapper className="flex flex-col items-center justify-center py-12 relative">
-                <Container>
-                    <div className="max-w-md mx-auto text-start md:text-center">
-                        <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                            Advanced Features for Enterprise Efficiency
-                        </h2>
-                        <p className="text-muted-foreground mt-6">
-                            Explore the cutting-edge features designed to improve enterprise productivity.
-                        </p>
-                    </div>
-                </Container>
-                <Container>
-                    <div className="flex flex-col items-center justify-center py-10 md:py-20 w-full">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-8">
-                            {features.map((feature) => (
-                                <div key={feature.title} className="flex flex-col items-start lg:items-start px-0 md:px-0">
-                                    <div className="flex items-center justify-center">
-                                        <feature.icon className="w-8 h-8" />
-                                    </div>
-                                    <h3 className="text-lg font-medium mt-4">
-                                        {feature.title}
-                                    </h3>
-                                    <p className="text-muted-foreground mt-2 text-start lg:text-start">
-                                        {feature.info}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </Container>
-            </Wrapper>
-
         </section>
     );
 };
 
-export default FeaturesPage;
+export default PrivacyPage;

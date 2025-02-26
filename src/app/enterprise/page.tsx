@@ -32,22 +32,22 @@ const EnterprisePage = () => {
                             <span className="h-full w-full blur-md absolute bottom-0 inset-x-0 bg-gradient-to-tr from-primary/40"></span>
                             <span className="z-10 py-0.5 text-sm text-neutral-100 flex items-center justify-center gap-1.5">
                                 <Image src="/icons/sparkles-dark.svg" alt="✨" width={24} height={24} className="w-4 h-4" />
-                                Enterprise-Grade Solutions
+                                Scalable Solutions for Modern Enterprises
                                 <ChevronRight className="w-4 h-4" />
                             </span>
                         </button>
 
                         <div className="flex flex-col items-center mt-8 max-w-3xl w-11/12 md:w-full">
                             <h1 className="text-4xl md:text-6xl lg:text-xl md:!leading-snug font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent">
-                                Empower Your Business with Scalable Solutions
+                                Unlock Enterprise Efficiency with Scalable Solutions
                             </h1>
                             <p className="text-base md:text-lg text-foreground/80 mt-6 text-center">
-                                Unlock your organizations full potential with our enterprise-grade platform designed to optimize productivity and performance.
+                                Drive performance, streamline workflows, and unlock new levels of productivity with our enterprise-grade platform tailored for large organizations.
                             </p>
                             <div className="hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full">
                                 <Link href="#" className="flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none">
                                     <p className="text-foreground text-sm text-center md:text-base font-medium pl-4 pr-4 lg:pr-0">
-                                         {"  "} Find out what Swiftwave can do for your business
+                                         {"  "} Discover How Our Platform Elevates Your Business
                                     </p>
                                     <Button size="sm" className="rounded-full hidden lg:flex border border-foreground/20">
                                         Get Started
@@ -66,10 +66,10 @@ const EnterprisePage = () => {
                     <div className="max-w-md mx-auto text-start md:text-center">
                         <SectionBadge title="Key Benefits" />
                         <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                            Why Choose Us for Your Enterprise?
+                            Why Choose Swiftwave for Your Enterprise?
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            Explore the core benefits that make our platform the ideal choice for large organizations.
+                            Unlock a wide range of benefits specifically designed for large-scale enterprises.
                         </p>
                     </div>
                 </Container>
@@ -100,10 +100,10 @@ const EnterprisePage = () => {
                     <div className="max-w-md mx-auto text-start md:text-center">
                         <SectionBadge title="Features" />
                         <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                            Advanced Features for Enterprise Efficiency
+                            Advanced Features for Enterprise Growth
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            Explore the cutting-edge features designed to improve enterprise productivity.
+                            Empower your teams with powerful tools that drive productivity and innovation.
                         </p>
                     </div>
                 </Container>
@@ -134,10 +134,10 @@ const EnterprisePage = () => {
                     <div className="max-w-md mx-auto text-start md:text-center">
                         <SectionBadge title="Client Success" />
                         <h2 className="text-3xl lg:text-4xl font-semibold mt-6">
-                            What Our Enterprise Clients Are Saying
+                            Hear from Our Leading Enterprise Clients
                         </h2>
                         <p className="text-muted-foreground mt-6">
-                            Discover how our platform has transformed large organizations.
+                            Discover the transformative impact of our platform on some of the world's largest organizations.
                         </p>
                     </div>
                 </Container>
@@ -172,7 +172,7 @@ const EnterprisePage = () => {
             </Wrapper>
 
         </section>
-    )
+    );
 };
 
 export default EnterprisePage;

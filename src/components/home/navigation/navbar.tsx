@@ -24,7 +24,7 @@ const Navbar = async () => {
                         <ul className="flex items-center justify-center gap-8">
                             <Link href="pricing" className="hover:text-foreground/80 text-sm">Pricing</Link>
                             <Link href="about" className="hover:text-foreground/80 text-sm">About</Link>
-                            <Link href="features" className="hover:text-foreground/80 text-sm">Features</Link>
+                            <Link href="products" className="hover:text-foreground/80 text-sm">Products</Link>
                             <Link href="blog" className="hover:text-foreground/80 text-sm">Blog</Link>
                             <Link href="contact" className="hover:text-foreground/80 text-sm">Contact</Link>
                         </ul>
