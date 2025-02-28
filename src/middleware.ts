@@ -3,15 +3,22 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 
 const isHomeRoute = createRouteMatcher(["/"]);
 
-export default clerkMiddleware((auth, req) => {
-    const { userId } = auth();
+export default clerkMiddleware(async (auth, req) => {
+    try {
+        const { userId } = await auth();
 
-    // if there is user and home route is accessed, redirect to dashboard or any other protected route
-    if (userId && isHomeRoute(req)) {
-        return NextResponse.rewrite(new URL("/", req.url));
+        // Redirect authenticated users away from the home page
+        if (userId && isHomeRoute(req)) {
+            return NextResponse.redirect(new URL("/dashboard", req.url));
+        }
+
+        return NextResponse.next();
+    } catch (error) {
+        console.error("Middleware error:", error);
+        return NextResponse.next(); // Fail gracefully instead of throwing an error
     }
 });
 
 export const config = {
-    matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+    matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
 };
